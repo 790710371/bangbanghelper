@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\viewpager_01.xml",
+        "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\layout\\viewpager_01.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\main_device_info.xml",
+        "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\layout\\main_device_info.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\main_middle_content.xml",
+        "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\layout\\main_middle_content.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\main_setting.xml",
+        "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\layout\\main_setting.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\layout_title.xml",
+        "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\layout\\layout_title.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\guide_view_page.xml",
+        "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\layout\\guide_view_page.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\viewpager_02.xml",
+        "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\layout\\viewpager_02.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\main_menu_item.xml",
+        "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\layout\\main_menu_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\welcom_activity.xml",
+        "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\layout\\welcom_activity.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\mix_text_image.xml",
+        "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\layout\\mix_text_image.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\viewpager_03.xml",
+        "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\layout\\viewpager_03.xml"
+    }
+]

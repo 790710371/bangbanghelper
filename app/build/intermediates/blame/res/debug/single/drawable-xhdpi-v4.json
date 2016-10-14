@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\common_full_open_on_phone.png",
+        "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable-xhdpi\\common_full_open_on_phone.png"
+    },
+    {
+        "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ic_launcher.png",
+        "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\drawable-xhdpi\\ic_launcher.png"
+    }
+]

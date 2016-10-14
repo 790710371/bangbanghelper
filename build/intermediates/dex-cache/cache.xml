@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
+        <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-8.4.0_c90b575d7f1b58801c34d0d06052d0a40657e8a3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\chenlei\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.0\support-annotations-23.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="990e7f98a7bad86a40b1f0bcfeb039023afd0839">
+        <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.0.0_bbdf8da29358bdf9fca77e22381368c8663a75b2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="a6cf924a14958be6af50671dcdf568fa664c2882">
+        <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_f45964efe2ea281f86812666df94ea151c2e8d26\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="fef2b3e4b6b1b0e5fe7b69fa137a5fa55a3182ab">
+        <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-8.4.0_95a6ac5867b8ff11403ec39fb0427a05c585cab9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="65d086ee9daaf87b5af62ad24471edafa433354c">
+        <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-appindexing-8.4.0_b406468e36d546e050f416b645146834ee3bd8b3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\libs\internal_impl-23.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="8bd336eeae661e8311330284897ee07f8ebaa297">
+        <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.0.0_4b20a05a97c8d8853a9a47309db2eb094ec6f5eb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="8413c27b45b7fe61dca4a98159f65e2cee215f5a">
+        <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.0.0_6e924994476f43a6d08492d44f40810c8d2deac8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="901426986db032051a507bc3f3d5ec8029056c3e">
+        <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_1ff958c05ace101be5bed33edeb7e854ef474cfb\classes.dex" />
+    </item>
+
+</items>

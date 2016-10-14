@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--图文混合控件 -->
+    <declare-styleable name="Mix">
+        <attr name="text" format="string" />
+        <attr name="text_color" format="color"/>
+        <attr name="text_size" format="dimension"/>
+		<attr name="image_src" format="reference"/>
+		<attr name="image_bg" format="reference"/>
+		<attr name="image_alpha" format="integer"/>
+		<attr name="image_width" format="dimension"/>
+		<attr name="image_height" format="dimension"/>
+     </declare-styleable>
+
+    <!--SwitchButton控件-->
+    - <declare-styleable name="SwitchButton">
+    <attr name="kswThumbDrawable" format="reference"/>
+    <attr name="kswThumbColor" format="color|reference"/>
+    <attr name="kswThumbMargin" format="dimension|reference"/>
+    <attr name="kswThumbMarginTop" format="dimension|reference"/>
+    <attr name="kswThumbMarginBottom" format="dimension|reference"/>
+    <attr name="kswThumbMarginLeft" format="dimension|reference"/>
+    <attr name="kswThumbMarginRight" format="dimension|reference"/>
+    <attr name="kswThumbWidth" format="dimension|reference"/>
+    <attr name="kswThumbHeight" format="dimension|reference"/>
+    <attr name="kswThumbRadius" format="dimension|reference"/>
+    <attr name="kswBackRadius" format="dimension|reference"/>
+    <attr name="kswBackDrawable" format="reference"/>
+    <attr name="kswBackColor" format="color|reference"/>
+    <attr name="kswFadeBack" format="boolean"/>
+    <attr name="kswBackMeasureRatio" format="float"/>
+    <attr name="kswAnimationDuration" format="integer"/>
+    <attr name="kswTintColor" format="color|reference"/>
+    <attr name="kswTextOn" format="string"/>
+    <attr name="kswTextOff" format="string"/>
+    <attr name="kswTextMarginH" format="dimension"/>
+    <attr name="kswAutoAdjustTextPosition" format="boolean"/>
+</declare-styleable>
+    <!--标题栏控件-->
+    <declare-styleable name="Title_bar">
+        <attr name="img_src" format="reference"/>
+        <attr name="img_bg" format="reference"/>
+        <attr name="img_alpha" format="float"/>
+        <attr name="img_width" format="dimension"/>
+        <attr name="img_height" format="dimension"/>
+        <attr name="text" />
+        <attr name="textColor" format="color"/>
+        <attr name="textSize" format="dimension"/>
+        <attr name="textWidth" format="dimension"/>
+        <attr name="textHeight" format="dimension"/>
+    </declare-styleable>
+
+</resources>

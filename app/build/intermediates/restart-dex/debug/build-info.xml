@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    api-level="21"
+    density="xhdpi"
+    format="8"
+    plugin-version="2.2.0"
+    timestamp="42157324792433"
+    token="-3657583092019380152"
+    verifier="CLASS_ADDED" >
+
+    <task
+        name="javac"
+        duration="499" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="69" />
+    <task
+        name="verifier"
+        duration="10" />
+
+    <artifact
+        location="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
+        type="RESOURCES" />
+    <artifact
+        location="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2\classes.dex"
+        type="DEX" />
+    <artifact
+        location="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_5\classes.dex"
+        type="DEX" />
+    <artifact
+        location="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_8\classes.dex"
+        type="DEX" />
+
+    <build
+        timestamp="39976187730727"
+        verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="C:\Users\chenlei\Desktop\bangbanghelper\app\build\outputs\apk\app-debug.apk"
+            type="MAIN" />
+    </build>
+    <build
+        timestamp="42157324792433"
+        verifier="CLASS_ADDED" >
+        <artifact
+            location="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
+            type="RESOURCES" />
+        <artifact
+            location="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2\classes.dex"
+            type="DEX" />
+        <artifact
+            location="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_5\classes.dex"
+            type="DEX" />
+        <artifact
+            location="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_8\classes.dex"
+            type="DEX" />
+    </build>
+
+</instant-run>
