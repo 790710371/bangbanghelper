@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Thu Oct 13 23:47:21 CST 2016
+#Fri Oct 14 14:00:34 CST 2016
 60.set=DEX
 52.set=ANDROID_RESOURCE
 53.base=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_
@@ -11,7 +11,7 @@
 13.base=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_
 45.file=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_4\\classes.dex
 60.base=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_5
-92.file=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\common_plus_signin_btn_icon_dark.xml
+92.file=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xhdpi-v4\\common_plus_signin_btn_icon_dark_normal.9.png
 8.file=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xhdpi-v4\\common_plus_signin_btn_icon_light_normal.9.png
 52.file=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xhdpi-v4\\common_google_signin_btn_text_dark_disabled.9.png
 62.base=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_
@@ -34,7 +34,7 @@
 89.set=ANDROID_RESOURCE
 21.file=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\welcom_activity.xml
 28.file=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\color\\common_google_signin_btn_text_light.xml
-75.file=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\common_google_signin_btn_text_dark.xml
+75.file=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\guide_view_page.xml
 8.set=ANDROID_RESOURCE
 1.base=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_
 35.file=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\color\\common_plus_signin_btn_text_dark.xml
@@ -42,7 +42,7 @@
 82.file=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xhdpi-v4\\common_google_signin_btn_icon_dark_normal.9.png
 92.base=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_
 8.base=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_
-89.file=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xhdpi-v4\\common_google_signin_btn_text_light_disabled.9.png
+89.file=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xhdpi-v4\\common_google_signin_btn_icon_light_normal.9.png
 50.set=ANDROID_RESOURCE
 42.set=ANDROID_RESOURCE
 52.base=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_
@@ -53,7 +53,7 @@
 96.set=ANDROID_RESOURCE
 88.set=ANDROID_RESOURCE
 0.file=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_2\\classes.dex
-44.file=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\activity_main.xml
+44.file=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-hdpi-v4\\dot_no_selected_shape.xml
 12.base=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_
 7.file=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_1ff958c05ace101be5bed33edeb7e854ef474cfb\\classes.dex
 91.file=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\common_plus_signin_btn_icon_light.xml
@@ -99,8 +99,8 @@
 86.set=ANDROID_RESOURCE
 78.set=DEX
 11.base=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\com.google.android.gms-play-services-base-8.4.0_95a6ac5867b8ff11403ec39fb0427a05c585cab9
-43.file=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-hdpi-v4\\dot_no_selected_shape.xml
-90.file=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xhdpi-v4\\common_google_signin_btn_icon_light_normal.9.png
+43.file=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\activity_main.xml
+90.file=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xhdpi-v4\\common_google_signin_btn_text_light_disabled.9.png
 6.file=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xhdpi-v4\\common_google_signin_btn_text_light_pressed.9.png
 97.file=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xhdpi-v4\\common_google_signin_btn_icon_dark_pressed.9.png
 5.set=ANDROID_RESOURCE
@@ -131,7 +131,7 @@
 80.file=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_6\\classes.dex
 90.base=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_
 6.base=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_
-87.file=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\main_menu_item.xml
+87.file=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-hdpi-v4\\viewpager03.png
 97.base=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_
 30.set=ANDROID_RESOURCE
 22.set=ANDROID_RESOURCE
@@ -151,7 +151,7 @@
 19.base=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_1
 56.file=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\main_middle_content.xml
 66.base=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_
-16.file=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\viewpager_02.xml
+16.file=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-hdpi-v4\\common_ic_googleplayservices.png
 26.base=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\support-annotations-23.0.0_bbdf8da29358bdf9fca77e22381368c8663a75b2
 73.base=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_
 21.set=ANDROID_RESOURCE
@@ -175,7 +175,7 @@
 39.file=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\com.android.support-support-v4-23.0.0_6e924994476f43a6d08492d44f40810c8d2deac8\\classes.dex
 5.base=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_
 49.base=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_
-86.file=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-hdpi-v4\\viewpager03.png
+86.file=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\main_menu_item.xml
 96.base=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_
 20.set=ANDROID_RESOURCE
 12.set=ANDROID_RESOURCE
@@ -202,7 +202,7 @@ count=99
 79.base=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_
 81.set=ANDROID_RESOURCE
 73.set=ANDROID_RESOURCE
-17.file=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-hdpi-v4\\common_ic_googleplayservices.png
+17.file=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\viewpager_02.xml
 65.set=ANDROID_RESOURCE
 64.file=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xhdpi-v4\\common_full_open_on_phone.png
 32.base=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\com.google.android.gms-play-services-basement-8.4.0_c90b575d7f1b58801c34d0d06052d0a40657e8a3
@@ -270,7 +270,7 @@ count=99
 14.base=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_9
 46.file=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xhdpi-v4\\common_plus_signin_btn_text_dark_normal.9.png
 61.base=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_
-93.file=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xhdpi-v4\\common_plus_signin_btn_icon_dark_normal.9.png
+93.file=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\common_plus_signin_btn_icon_dark.xml
 9.file=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xhdpi-v4\\common_plus_signin_btn_icon_dark_disabled.9.png
 53.file=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\viewpager_03.xml
 63.base=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_
@@ -291,7 +291,7 @@ count=99
 84.base=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_
 22.file=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\main_device_info.xml
 29.file=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_\\AndroidManifest.xml
-76.file=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\guide_view_page.xml
+76.file=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\common_google_signin_btn_text_dark.xml
 36.file=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\mix_text_image.xml
 2.base=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_
 46.base=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_

@@ -4,58 +4,33 @@
     density="xhdpi"
     format="8"
     plugin-version="2.2.0"
-    timestamp="42157324792433"
+    timestamp="8937403063401"
     token="-3657583092019380152"
-    verifier="CLASS_ADDED" >
+    verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="499" />
+        duration="6277" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="69" />
+        duration="2194" />
     <task
         name="verifier"
-        duration="10" />
+        duration="249" />
 
     <artifact
-        location="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
-        type="RESOURCES" />
-    <artifact
-        location="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2\classes.dex"
-        type="DEX" />
-    <artifact
-        location="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_5\classes.dex"
-        type="DEX" />
-    <artifact
-        location="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_8\classes.dex"
-        type="DEX" />
+        location="C:\Users\chenlei\Desktop\bangbanghelper\app\build\outputs\apk\app-debug.apk"
+        type="MAIN" />
 
     <build
-        timestamp="39976187730727"
+        timestamp="8937403063401"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\chenlei\Desktop\bangbanghelper\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
-    </build>
-    <build
-        timestamp="42157324792433"
-        verifier="CLASS_ADDED" >
-        <artifact
-            location="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
-            type="RESOURCES" />
-        <artifact
-            location="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2\classes.dex"
-            type="DEX" />
-        <artifact
-            location="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_5\classes.dex"
-            type="DEX" />
-        <artifact
-            location="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_8\classes.dex"
-            type="DEX" />
     </build>
 
 </instant-run>
