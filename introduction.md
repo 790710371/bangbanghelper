@@ -3,7 +3,7 @@
 目前该类新机及注册软件市场拥有较大潜力，我们将进行一次完整的开发。
 ###1.2项目背景  
 软件名称：帮帮助手  
-项目github托管地址[https://github.com/790710371/bangbanghelper/](https://github.com/790710371/bangbanghelper/ "github项目地址")
+项目github托管地址[https://github.com/790710371/bangbanghelper/](https://github.com/790710371/bangbanghelper/ "github项目地址")	
 ###1.3术语说明
 接口：interface  
 类：Class  
