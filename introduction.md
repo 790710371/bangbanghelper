@@ -9,7 +9,7 @@
 类：Class  
 对象：Object
 ###1.4参考资料
-- xposed API地址https://github.com/rovo89/XposedBridge/wiki/Using-the-Xposed-Framework-API
+xposed API地址https://github.com/rovo89/XposedBridge/wiki/Using-the-Xposed-Framework-API  
 ###2. 项目概述  
 ###2.1软件的一般描述
 主要目的是实现对设备信息及其他信息的修改实现新机功能
