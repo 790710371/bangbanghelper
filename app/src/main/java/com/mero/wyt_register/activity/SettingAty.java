@@ -46,9 +46,7 @@ public class SettingAty extends Activity{
         customTitleBar = (CustomTitleBar) findViewById(R.id.title_bar_setting);
         auto_change = (SwitchButton) findViewById(R.id.switch_btn_auto_change);
         open_notify = (SwitchButton) findViewById(R.id.switch_btn_open_notify);
-        auto_change.setCheckedImmediately(true);
-        open_notify.setCheckedImmediately(true);
-        auto_change.setChecked(isAutoChanged);//初始化
+        auto_change.setCheckedImmediately(isAutoChanged);
         open_notify.setCheckedImmediately(isOpenNotify);
     }
 

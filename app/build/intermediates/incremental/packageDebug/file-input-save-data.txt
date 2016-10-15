@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sat Oct 15 21:50:19 CST 2016
+#Sat Oct 15 22:04:30 CST 2016
 60.set=DEX
 52.set=ANDROID_RESOURCE
 53.base=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_
