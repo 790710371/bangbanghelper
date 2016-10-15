@@ -3,24 +3,6 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\chenlei\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.0\support-annotations-23.0.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="990e7f98a7bad86a40b1f0bcfeb039023afd0839">
-        <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.0.0_bbdf8da29358bdf9fca77e22381368c8663a75b2\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="97068259b0523c0254c208f6341284839c991fca">
-        <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_1ff958c05ace101be5bed33edeb7e854ef474cfb\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -30,11 +12,20 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\chenlei\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.0\support-annotations-23.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="990e7f98a7bad86a40b1f0bcfeb039023afd0839">
+        <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.0.0_bbdf8da29358bdf9fca77e22381368c8663a75b2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="9647de3f3c0ccdce817f369876e9fd1740c7caf5">
+        sha1="a60a95f1fa4d129aa6e2ec5e6283325ad3582bac">
         <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_f45964efe2ea281f86812666df94ea151c2e8d26\classes.dex" />
     </item>
     <item
@@ -57,6 +48,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\chenlei\Desktop\bangbanghelper\app\libs\android-support-v4.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="7329492e76650ee661f6af7704b0c79151d8e1ef">
+        <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\transforms\dex\debug\folders\1000\2\android-support-v4_d77d69ae8d0d41bfa0eb7a19743aa37e0c66f4c5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\libs\internal_impl-23.0.0.jar"
         jumboMode="true"
         optimize="true"
@@ -72,6 +72,15 @@
         revision="24.0.3"
         sha1="8413c27b45b7fe61dca4a98159f65e2cee215f5a">
         <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.0.0_6e924994476f43a6d08492d44f40810c8d2deac8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="18616d28237cb5522397c437d2c306e4661e0820">
+        <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_1ff958c05ace101be5bed33edeb7e854ef474cfb\classes.dex" />
     </item>
 
 </items>
