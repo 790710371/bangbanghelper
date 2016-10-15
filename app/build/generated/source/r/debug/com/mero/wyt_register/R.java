@@ -555,19 +555,13 @@ containing a value of this type.
         public static final int common_signin_button_text=0x7f04001b;
         public static final int common_signin_button_text_long=0x7f04001c;
         public static final int hello_world=0x7f040021;
+        public static final int xposed_app_description=0x7f040022;
     }
     public static final class style {
         /**  API 11 theme customizations can go here. 
  API 14 theme customizations can go here. 
-
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        
          */
         public static final int AppBaseTheme=0x7f060000;
-        /**  All customizations that are NOT specific to a particular API-level can go here. 
-         */
         public static final int AppTheme=0x7f060001;
         public static final int SwitchButtonMD=0x7f060002;
     }

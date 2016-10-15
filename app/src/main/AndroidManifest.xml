@@ -43,6 +43,17 @@
         <activity android:name=".activity.SettingAty"
             android:screenOrientation="portrait"
             android:launchMode="singleTask"/>
+
+        <!-- Xposed -->
+        <meta-data
+            android:name="xposedmodule"
+            android:value="true" />
+        <meta-data
+            android:name="xposedminversion"
+            android:value="54" />
+        <meta-data
+            android:name="xposeddescription"
+            android:value="@string/xposed_app_description" />
     </application>
 
 </manifest>

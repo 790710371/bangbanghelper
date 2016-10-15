@@ -22,4 +22,7 @@ android {
 dependencies {
     compile 'com.android.support:support-v4:19.1.0'
     compile 'com.google.android.gms:play-services-appindexing:8.4.0'
+    compile files('libs/android-support-v4.jar')
+    provided 'de.robv.android.xposed:api:82'
+    provided 'de.robv.android.xposed:api:82:sources'
 }

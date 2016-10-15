@@ -226,6 +226,7 @@ int string common_open_on_phone 0x7f04001a
 int string common_signin_button_text 0x7f04001b
 int string common_signin_button_text_long 0x7f04001c
 int string hello_world 0x7f040021
+int string xposed_app_description 0x7f040022
 int style AppBaseTheme 0x7f060000
 int style AppTheme 0x7f060001
 int style SwitchButtonMD 0x7f060002

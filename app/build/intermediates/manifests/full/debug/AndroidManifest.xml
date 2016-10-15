@@ -45,6 +45,17 @@
             android:name="com.mero.wyt_register.activity.SettingAty"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
+
+        <!-- Xposed -->
+        <meta-data
+            android:name="xposedmodule"
+            android:value="true" />
+        <meta-data
+            android:name="xposedminversion"
+            android:value="54" />
+        <meta-data
+            android:name="xposeddescription"
+            android:value="@string/xposed_app_description" />
     </application>
 
 </manifest>
