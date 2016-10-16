@@ -4,29 +4,29 @@
     density="xhdpi"
     format="8"
     plugin-version="2.2.0"
-    timestamp="14219887988392"
+    timestamp="20671618961960"
     token="-3657583092019380152"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="347" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="33" />
+        duration="0" />
     <task
         name="verifier"
-        duration="6" />
+        duration="0" />
 
     <artifact
         location="C:\Users\chenlei\Desktop\bangbanghelper\app\build\outputs\apk\app-debug.apk"
         type="MAIN" />
 
     <build
-        timestamp="14219887988392"
+        timestamp="20671618961960"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\chenlei\Desktop\bangbanghelper\app\build\outputs\apk\app-debug.apk"

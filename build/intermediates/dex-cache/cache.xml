@@ -3,24 +3,6 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\chenlei\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.0\support-annotations-23.0.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="990e7f98a7bad86a40b1f0bcfeb039023afd0839">
-        <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.0.0_bbdf8da29358bdf9fca77e22381368c8663a75b2\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="4cf12160c0a603a55ee3036da09cec0d9d19946b">
-        <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_1ff958c05ace101be5bed33edeb7e854ef474cfb\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -30,11 +12,20 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\chenlei\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.0\support-annotations-23.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="990e7f98a7bad86a40b1f0bcfeb039023afd0839">
+        <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.0.0_bbdf8da29358bdf9fca77e22381368c8663a75b2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="01c48aec5638705876ae43d9f6e3a47c8c0d4ae2">
+        sha1="7f3c210a3f3317a47937ec9e6cb082f2fb28719b">
         <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_f45964efe2ea281f86812666df94ea151c2e8d26\classes.dex" />
     </item>
     <item
@@ -81,6 +72,15 @@
         revision="24.0.3"
         sha1="8413c27b45b7fe61dca4a98159f65e2cee215f5a">
         <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.0.0_6e924994476f43a6d08492d44f40810c8d2deac8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="4cf12160c0a603a55ee3036da09cec0d9d19946b">
+        <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_1ff958c05ace101be5bed33edeb7e854ef474cfb\classes.dex" />
     </item>
 
 </items>
