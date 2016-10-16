@@ -3,7 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
+    android:background="#c0c0c0"
     android:orientation="vertical">
     <!--标题栏-->
     <com.mero.wyt_register.widget.CustomTitleBar
@@ -17,102 +18,142 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#c0c0c0"
         android:scrollbars="vertical">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <TextView
+                android:id="@+id/tx_sim_xulie_num"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="序列号"
+                android:text="SIM卡序列号"
                 android:textColor="#000000"/>
             <EditText
+                android:id="@+id/edt_sim_xulie_num"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="A055512da33d"/>
+                android:text=""
+                android:maxLines="1"/>
             <TextView
+                android:id="@+id/tx_IMEI"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="android_id"
+                android:text="IMEI"
                 android:textColor="#000000"/>
             <EditText
+                android:id="@+id/edt_IMEI"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="5456445131654"/>
+                android:text=""
+                android:maxLines="1"/>
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="手机号码"
-                android:textColor="#000000"/>
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="17865676238"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="手机卡序列号"
-                android:textColor="#000000"/>
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="a4sda21ada21"/>
-            <TextView
+                android:id="@+id/tx_IMSI"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="IMSI"
                 android:textColor="#000000"/>
             <EditText
+                android:id="@+id/edt_IMSI"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="asd15a4sda12"/>
+                android:text=""
+                android:maxLines="1"/>
             <TextView
+                android:id="@+id/tx_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="手机号码"
+                android:textColor="#000000"/>
+            <EditText
+                android:id="@+id/edt_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:maxLines="1"/>
+            <TextView
+                android:id="@+id/tx_phone_country"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="手机卡国家"
                 android:textColor="#000000"/>
             <EditText
+                android:id="@+id/edt_phone_country"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="cn"/>
+                android:text=""
+                android:maxLines="1"/>
             <TextView
+                android:id="@+id/tx_yunyingshang_code"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="运营商"
                 android:textColor="#000000"/>
             <EditText
+                android:id="@+id/edt_yuunyingshang_code"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="46003"/>
+                android:text=""/>
             <TextView
+                android:id="@+id/tx_yunyingshang"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="运营商名字"
                 android:textColor="#000000"/>
             <EditText
+                android:id="@+id/edt_yunyingshang"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="中国移动"/>
+                android:text=""
+                android:maxLines="1"/>
             <TextView
+                android:id="@+id/tx_yunyingshang1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="运营商名字"
                 android:textColor="#000000"/>
             <EditText
+                android:id="@+id/edt_yunyingshang2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="中国移动"/>
+                android:text=""
+                android:maxLines="1"/>
             <TextView
+                android:id="@+id/tx_yunyingshang4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="运营商名字"
                 android:textColor="#000000"/>
             <EditText
+                android:id="@+id/edt_yunyingshang22"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="中国移动"/>
+                android:text=""
+                android:maxLines="1"/>
+            <TextView
+                android:id="@+id/tx_yunyingshang222"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="运营商名字"
+                android:textColor="#000000"/>
+            <EditText
+                android:id="@+id/edt_yunyingshang444"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:maxLines="1"/>
+            <TextView
+                android:id="@+id/tx_yunyingshang47"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="运营商名字"
+                android:textColor="#000000"/>
+            <EditText
+                android:id="@+id/edt_yunyingshang7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:maxLines="1"/>
         </LinearLayout>
 
     </ScrollView>

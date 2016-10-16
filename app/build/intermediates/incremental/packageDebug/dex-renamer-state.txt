@@ -1,4 +1,4 @@
-#Sat Oct 15 22:04:30 CST 2016
+#Sun Oct 16 14:04:01 CST 2016
 base.0=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_f45964efe2ea281f86812666df94ea151c2e8d26
 renamed.1=classes.dex
 renamed.0=classes2.dex

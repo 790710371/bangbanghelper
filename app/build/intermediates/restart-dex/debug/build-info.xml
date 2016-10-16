@@ -4,47 +4,33 @@
     density="xhdpi"
     format="8"
     plugin-version="2.2.0"
-    timestamp="32475054605386"
+    timestamp="14219887988392"
     token="-3657583092019380152"
-    verifier="COMPATIBLE" >
+    verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="301" />
+        duration="347" />
     <task
         name="instant-run-dex"
-        duration="664" />
+        duration="0" />
     <task
         name="instant-run-transform"
-        duration="57" />
+        duration="33" />
     <task
         name="verifier"
-        duration="9" />
+        duration="6" />
 
     <artifact
-        location="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\reload-dex\debug\classes.dex"
-        type="RELOAD_DEX" />
+        location="C:\Users\chenlei\Desktop\bangbanghelper\app\build\outputs\apk\app-debug.apk"
+        type="MAIN" />
 
     <build
-        timestamp="31858140262133"
+        timestamp="14219887988392"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\chenlei\Desktop\bangbanghelper\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
-    </build>
-    <build
-        timestamp="32037066621974"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\builds\debug\32037066621974\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        timestamp="32475054605386"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\reload-dex\debug\classes.dex"
-            type="RELOAD_DEX" />
     </build>
 
 </instant-run>
