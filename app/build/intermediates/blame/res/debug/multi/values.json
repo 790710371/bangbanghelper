@@ -1337,9 +1337,28 @@
                     "startLine": 89,
                     "startColumn": 4,
                     "startOffset": 9829,
-                    "endLine": 95,
+                    "endColumn": 80,
+                    "endOffset": 9905
+                },
+                "from": {
+                    "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 278,
+                        "endColumn": 80,
+                        "endOffset": 354
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 90,
+                    "startColumn": 4,
+                    "startOffset": 9910,
+                    "endLine": 96,
                     "endColumn": 12,
-                    "endOffset": 10115
+                    "endOffset": 10196
                 },
                 "from": {
                     "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\values\\styles.xml",
@@ -1355,12 +1374,12 @@
             },
             {
                 "to": {
-                    "startLine": 96,
+                    "startLine": 97,
                     "startColumn": 4,
-                    "startOffset": 10120,
-                    "endLine": 98,
+                    "startOffset": 10201,
+                    "endLine": 99,
                     "endColumn": 12,
-                    "endOffset": 10275
+                    "endOffset": 10356
                 },
                 "from": {
                     "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\values\\styles.xml",
@@ -1376,12 +1395,12 @@
             },
             {
                 "to": {
-                    "startLine": 99,
+                    "startLine": 100,
                     "startColumn": 4,
-                    "startOffset": 10280,
-                    "endLine": 109,
+                    "startOffset": 10361,
+                    "endLine": 110,
                     "endColumn": 12,
-                    "endOffset": 10872
+                    "endOffset": 10953
                 },
                 "from": {
                     "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\values\\styles.xml",

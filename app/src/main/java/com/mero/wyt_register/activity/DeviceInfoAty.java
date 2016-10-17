@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
@@ -83,5 +84,7 @@ public class DeviceInfoAty extends Activity {
         edt_phone_country.setText(countryCode);//设置国家代码
         edt_yunyingshang_code.setText(providerCode);//设置运营商代码
         edt_yunyingshang.setText(providerName);//设置运营商
+
+
     }
 }

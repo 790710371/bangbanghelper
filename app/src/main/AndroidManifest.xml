@@ -54,9 +54,13 @@
             android:name="xposeddescription"
             android:value="@string/xposed_app_description" />
 
-        <activity android:name=".activity.DeviceInfoAty"
+        <activity
+            android:name=".activity.DeviceInfoAty"
+            android:launchMode="singleTask"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden|adjustPan"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name=".activity.InstallXposed"
+            android:screenOrientation="portrait"
             android:launchMode="singleTask"></activity>
     </application>
 

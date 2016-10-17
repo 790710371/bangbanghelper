@@ -19,6 +19,7 @@ public class MyApplication extends Application {
         /*
         * 在这里配置初始配置
         * */
+        editor.putBoolean(Config.IS_INSTALL_XPOSED,false);//是否已经安装xposed
         editor.putBoolean("isAutoChanged",false);
         editor.putBoolean("isOpenNotify",false);
         editor.commit();

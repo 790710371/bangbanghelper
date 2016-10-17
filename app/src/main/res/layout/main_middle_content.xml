@@ -95,8 +95,8 @@
        
    </LinearLayout>
    <Button
-       android:id="@+id/panel_register_right_img"
-       android:text="未安装"
+       android:id="@+id/btn_xposed_install"
+       android:text="点击安装"
        android:textColor="#000000"
        android:background="@drawable/button_shape"
        android:layout_width="80dp"

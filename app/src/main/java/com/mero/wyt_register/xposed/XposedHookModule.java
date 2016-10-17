@@ -8,6 +8,7 @@ import java.util.logging.Logger;
 import de.robv.android.xposed.IXposedHookLoadPackage;
 import de.robv.android.xposed.XC_MethodHook;
 import de.robv.android.xposed.XSharedPreferences;
+import de.robv.android.xposed.XposedBridge;
 import de.robv.android.xposed.XposedHelpers;
 import de.robv.android.xposed.callbacks.XC_LoadPackage;
 
@@ -42,7 +43,7 @@ public class XposedHookModule implements IXposedHookLoadPackage {
                     } });
         } catch (Throwable e)
         {
-          Logger.getAnonymousLogger().log(Level.ALL,"所有日志信息");
+            XposedBridge.log("Hook错误");
         }
     }
 }
