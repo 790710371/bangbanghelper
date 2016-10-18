@@ -41,7 +41,7 @@
 
         <activity
             android:name="com.mero.wyt_register.activity.SettingAty"
-            android:launchMode="singleTask"
+            android:launchMode="singleTop"
             android:screenOrientation="portrait" />
 
         <!-- Xposed -->
@@ -57,12 +57,12 @@
 
         <activity
             android:name="com.mero.wyt_register.activity.DeviceInfoAty"
-            android:launchMode="singleTask"
+            android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name="com.mero.wyt_register.activity.InstallXposedAty"
-            android:launchMode="singleTask"
+            android:launchMode="singleTop"
             android:screenOrientation="portrait" />
     </application>
 

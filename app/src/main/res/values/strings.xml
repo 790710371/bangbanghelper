@@ -3,6 +3,6 @@
     <string name="app_name">帮帮助手</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
-    <string name="xposed_app_description">the xposed module</string>
+    <string name="xposed_app_description">一款牛逼的Xposed模块</string>
     <string name="xposed_package_name">de.robv.android.xposed.installer</string>
 </resources>

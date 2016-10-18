@@ -1,8 +1,13 @@
 package com.mero.wyt_register.xposed;
 
+import android.app.Application;
+import android.content.pm.ApplicationInfo;
 import android.telephony.TelephonyManager;
+import android.util.Log;
 
 import com.mero.wyt_register.Config;
+import com.mero.wyt_register.MyApplication;
+import com.mero.wyt_register.utils.AppUtils;
 import com.mero.wyt_register.utils.DeviceUtils;
 
 import java.util.logging.Level;
@@ -16,41 +21,39 @@ import de.robv.android.xposed.XposedHelpers;
 import de.robv.android.xposed.callbacks.XC_LoadPackage;
 
 import static android.view.View.X;
+import static android.view.View.inflate;
 
 /**
  * Created by chenlei on 2016/10/15.
  */
 
 public class XposedHookModule implements IXposedHookLoadPackage {
+
+
     @Override
     public void handleLoadPackage(XC_LoadPackage.LoadPackageParam lpparam) throws Throwable {
-        //过滤包
-//        if(!lpparam.equals("android.telephony")){
-//            return;
-//        }
-        XSharedPreferences xSharedPreferences = new XSharedPreferences(this.getClass().getPackage().getName(), Config.ID);
-        String result = xSharedPreferences.getString("imei",null);
-        //获取IMEI
-        hookMethod("android.telephony.TelephonyManager","getDeviceId",lpparam,result);
-
-
-
+        MyApplication.getMyApplication().setLpparam(lpparam);
+        final Class<?> cl = XposedHelpers.findClass("android.telephony.TelephonyManager",lpparam.classLoader);
+        XSharedPreferences xpre = new XSharedPreferences("com.mero.wyt_register",Config.ID);
+        hookMethod(cl,"getSimSerialNumber",xpre.getString("simSerialNumber",null));
     }
 
-    public void hookMethod(String className,String methodHook,XC_LoadPackage.LoadPackageParam lpparam,final String result){
-        final Class<?> myClass = XposedHelpers.findClass(className,lpparam.classLoader);
-        XposedBridge.hookAllMethods(myClass, methodHook, new XC_MethodHook() {
-            @Override
-            protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
-                super.beforeHookedMethod(param);
-                XposedBridge.log("更新前");
-            }
+    private void hookMethod(Class<?> clz,String methodName,final String result) {
+        XposedHelpers.findAndHookMethod(clz,methodName,new Object[]{
+                new XC_MethodHook() {
+                    @Override
+                    protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
+                        super.beforeHookedMethod(param);
+                    }
 
-            @Override
-            protected void afterHookedMethod(MethodHookParam param) throws Throwable {
-                param.setResult(result);
-            }
+                    @Override
+                    protected void afterHookedMethod(MethodHookParam param) throws Throwable {
+                        super.afterHookedMethod(param);
+                        param.setResult(result);
+                    }
+                }
+
+
         });
     }
-
 }

@@ -4,22 +4,22 @@
     density="xhdpi"
     format="8"
     plugin-version="2.2.0"
-    timestamp="139442782061483"
+    timestamp="4148590632104"
     token="-3657583092019380152"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="4553" />
+        duration="10274" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="208" />
+        duration="664" />
     <task
         name="verifier"
-        duration="86" />
+        duration="186" />
 
     <artifact
         location="C:\Users\chenlei\Desktop\bangbanghelper\app\build\outputs\apk\app-debug.apk"

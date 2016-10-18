@@ -40,7 +40,7 @@
 
         <activity
             android:name=".activity.SettingAty"
-            android:launchMode="singleTask"
+            android:launchMode="singleTop"
             android:screenOrientation="portrait" />
 
         <!-- Xposed -->
@@ -56,12 +56,12 @@
 
         <activity
             android:name=".activity.DeviceInfoAty"
-            android:launchMode="singleTask"
+            android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity android:name=".activity.InstallXposedAty"
             android:screenOrientation="portrait"
-            android:launchMode="singleTask"></activity>
+            android:launchMode="singleTop"></activity>
     </application>
 
 </manifest>
