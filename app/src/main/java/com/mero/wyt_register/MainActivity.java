@@ -4,14 +4,14 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.media.Image;
 import android.net.Uri;
 import android.os.Build.VERSION;
 import android.os.Build.VERSION_CODES;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.Gravity;
@@ -30,14 +30,11 @@ import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.mero.wyt_register.activity.DeviceInfoAty;
-import com.mero.wyt_register.activity.InstallXposed;
+import com.mero.wyt_register.activity.InstallXposedAty;
 import com.mero.wyt_register.activity.SettingAty;
 import com.mero.wyt_register.widget.MixTextImage;
 
 import java.util.List;
-
-import static android.content.ContentValues.TAG;
-import static android.view.View.X;
 
 public class MainActivity extends Activity implements OnClickListener {
 	private static final String TAG = "MainActivity";
@@ -81,8 +78,18 @@ public class MainActivity extends Activity implements OnClickListener {
 //			}
 //		}
 //	}
-
+	private Handler handler =new Handler(){
+	@Override
+	public void handleMessage(Message msg) {
+		super.handleMessage(msg);
+		Bundle bundle = msg.getData();
+		String s = bundle.getString("isInstalled");
+		btn_install_xposed.setText(s);
+		if(s.equals("已安装"))btn_install_xposed.setEnabled(false);
+	}
+	};
 	private void initView() {
+		checkPackageInstalled(MainActivity.this);
 		//得到配置信息
 		boolean isInstalledXposed = sharedPreferences.getBoolean(Config.IS_INSTALL_XPOSED,false);
 		btn_install_xposed = (Button) findViewById(R.id.btn_xposed_install);
@@ -91,16 +98,46 @@ public class MainActivity extends Activity implements OnClickListener {
 		mixTextImage.setOnClickListener(this);
 		menuImage.setOnClickListener(this);
 		btn_install_xposed.setOnClickListener(this);
-		if(isInstalledXposed==true){
-			//已经安装
-			btn_install_xposed.setEnabled(false);
-			btn_install_xposed.setText("已安装");
-		}else{
-			//未安装
-			btn_install_xposed.setText("点击安装");
-		}
 	}
 
+	private void checkPackageInstalled(Context context) {
+		PackageManager pm = context.getPackageManager();
+		List<PackageInfo> listInfo = pm.getInstalledPackages(0);
+		for (PackageInfo packageInfo : listInfo) {
+			Log.e(TAG, packageInfo.packageName);
+			if (packageInfo.packageName.equals(getResources().getString(R.string.xposed_package_name))) {
+				SharedPreferences.Editor editor = sharedPreferences.edit();
+				editor.putBoolean(Config.IS_INSTALL_XPOSED, true);
+				editor.commit();
+				//更新ui，将按钮马上安装变成已安装
+				new Thread() {
+					@Override
+					public void run() {
+						Message msg = new Message();
+						Bundle bundle = new Bundle();
+						bundle.putString("isInstalled", "已安装");
+						msg.setData(bundle);
+						handler.sendMessage(msg);
+						Log.e(TAG,"正在提交UI更新信息");
+					}
+				}.start();
+				return;
+			}
+		}
+		new Thread(){
+			@Override
+			public void run() {
+				Message msg = new Message();
+				Bundle bundle = new Bundle();
+				bundle.putString("isInstalled", "点击安装");
+				msg.setData(bundle);
+				handler.sendMessage(msg);
+				Log.e(TAG,"正在提交UI更新信息");
+			}
+		}.start();
+		SharedPreferences.Editor editor = sharedPreferences.edit();
+		editor.putBoolean(Config.IS_INSTALL_XPOSED, false);
+	}
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
@@ -132,7 +169,8 @@ public class MainActivity extends Activity implements OnClickListener {
 				String s = btn_install_xposed.getText().toString();
 				Log.e(TAG,"点击按钮的文字是："+s);
 				if((!TextUtils.isEmpty(s))&&s.equals("点击安装")){
-					startActivity(new Intent(MainActivity.this,InstallXposed.class));
+					startActivity(new Intent(MainActivity.this,InstallXposedAty.class));
+					finish();
 				}else{
 					return;
 				}

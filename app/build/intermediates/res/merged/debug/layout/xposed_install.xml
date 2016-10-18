@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/background_install_xposed">
     <com.mero.wyt_register.widget.CustomTitleBar
+        android:id="@+id/title_bar_xposed_install"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:text="帮帮助手"

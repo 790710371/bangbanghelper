@@ -9,7 +9,36 @@
 类：Class  
 对象：Object
 ###1.4参考资料
-xposed API地址https://github.com/rovo89/XposedBridge/wiki/Using-the-Xposed-Framework-API  
+xposed API地址https://github.com/rovo89/XposedBridge/wiki/Using-the-Xposed-Framework-API
+Xposed框架原理分析:  
+一：导入jar包，配置xposed入口，在assets目录下放置入口文件xposed_init，里面放置入口类，格式为包名+类名  
+二：配置AndroidManifest.xml文件，新增加三个<meta-data>标签。形式如下
+
+     <!-- Xposed -->
+        <meta-data
+            android:name="xposedmodule"
+            android:value="true" />
+        <meta-data
+            android:name="xposedminversion"
+            android:value="83" />
+        <meta-data
+            android:name="xposeddescription"
+            android:value="@string/xposed_app_description" />
+ 
+三：编写xposed入口类，继承IXposedHookLoadPackage类。重写handleLoaderPackage方法。IXposedHookLoadPackage方法的函数如下：  
+
+    `public void handleLoadPackage(XC_LoadPackage.LoadPackageParam lpparam) throws Throwable { }`
+在这个方法内部，我们需要调用hookAllMethods方法，里面传入三个参数，第一个参数是所需要Hook的类，第二个是所需要Hook的方法名，第三个是回调接口XC_MethodHook。在这个回调接口内实现了2个函数，一个是Hook前，一个是Hook后。具体代码如下：  
+    `  @Override
+            protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
+                super.beforeHookedMethod(param);
+            }`
+	`   @Override
+            protected void afterHookedMethod(MethodHookParam param) throws Throwable {
+                super.afterHookedMethod(param);
+            }`
+
+
 ###2. 项目概述  
 ###2.1软件的一般描述
 主要目的是实现对设备信息及其他信息的修改实现新机功能
@@ -34,7 +63,7 @@ Android4.0以上系统
 	- 功能注册
 - xposed安装界面(XposedInstallAty)
 	- 检查root权限
-	- 安装xposed
+	- 安装xposed(apk)
 	- 安装模块
 	- 完成
 - 设置界面(SettingAty)

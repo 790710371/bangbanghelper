@@ -10,21 +10,27 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.telephony.TelephonyManager;
 import android.util.Log;
+import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.mero.wyt_register.Config;
 import com.mero.wyt_register.MainActivity;
 import com.mero.wyt_register.R;
 import com.mero.wyt_register.utils.DeviceUtils;
 import com.mero.wyt_register.widget.CustomTitleBar;
+
+import java.util.logging.Logger;
 
 import static android.content.ContentValues.TAG;
 import static com.mero.wyt_register.R.id.edt_IMEI;
 import static com.mero.wyt_register.R.id.edt_phone_country;
 import static com.mero.wyt_register.R.id.edt_sim_xulie_num;
 
-public class DeviceInfoAty extends Activity {
+public class DeviceInfoAty extends Activity implements View.OnClickListener{
     private static final String TAG = "DeviceInfoAty";
     private CustomTitleBar customTitleBar;
     private EditText edt_sim_xulie_num;//序列号
@@ -35,6 +41,7 @@ public class DeviceInfoAty extends Activity {
     private EditText edt_phone_country;//手机卡国家
     private EditText edt_yunyingshang_code;//运营商代码
     private EditText edt_yunyingshang;//运营商
+    private Button btn_save,btn_get_random;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,6 +70,10 @@ public class DeviceInfoAty extends Activity {
         });
 
         //初始化手机数据
+        btn_save = (Button) findViewById(R.id.btn_device_info_save);
+        btn_get_random = (Button) findViewById(R.id.btn_device_info_get_random);
+        btn_save.setOnClickListener(this);
+        btn_get_random.setOnClickListener(this);
         edt_IMEI = (EditText) findViewById(R.id.edt_IMEI);
         edt_IMSI = (EditText) findViewById(R.id.edt_IMSI);
         edt_phone = (EditText) findViewById(R.id.edt_phone);
@@ -86,5 +97,28 @@ public class DeviceInfoAty extends Activity {
         edt_yunyingshang.setText(providerName);//设置运营商
 
 
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.btn_device_info_get_random:
+                Toast.makeText(DeviceInfoAty.this,DeviceUtils.getIMEI(this),Toast.LENGTH_SHORT).show();
+                break;
+            case  R.id.btn_device_info_save:
+                Toast.makeText(DeviceInfoAty.this,"正在保存",Toast.LENGTH_SHORT).show();
+                try {
+                    SharedPreferences sharedPreferences =getSharedPreferences(Config.ID,Context.MODE_WORLD_READABLE);
+                    SharedPreferences.Editor editor =  sharedPreferences.edit();
+                    editor.putString("imei","dsaaaaaaaaaaaaaaaaa");
+                    editor.apply();
+                    String s = DeviceUtils.getIMEI(this);
+                    Toast.makeText(DeviceInfoAty.this,s,Toast.LENGTH_LONG).show();
+                }catch (Exception e){
+                    e.printStackTrace();
+                    Toast.makeText(DeviceInfoAty.this,"写入失败",Toast.LENGTH_LONG).show();
+                }
+                break;
+        }
     }
 }

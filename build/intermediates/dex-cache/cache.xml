@@ -12,6 +12,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_ed94d3f8ecdca8c4c5d0ac8805bfff90684ed8ff\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
         jumboMode="true"
         optimize="true"
@@ -30,12 +39,39 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_39219643c11c09d795632fa9d0f47d12456dfc6b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="7da7da5a5f2d379c8760cbad28b36ce563a104fd">
+        <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_1ff958c05ace101be5bed33edeb7e854ef474cfb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
         sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
         <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-24.2.1_6cc8725bf33d8ac32840bbd76b15528b1b384376\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
+        <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-8.4.0_c90b575d7f1b58801c34d0d06052d0a40657e8a3\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -52,62 +88,8 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="5c27d8efb1256a2acf3ed8cfa782b19ce654f3c4">
+        sha1="60ccecced166a5c033a200b87ea5cfda1210f99e">
         <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_f45964efe2ea281f86812666df94ea151c2e8d26\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\chenlei\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
-        <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.2.1_e0a96d741a8b47e01d6ae4762c00664764fcb2cd\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
-        <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_7a09374757a9f167d31e79f1c8227ec2917ff96e\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
-        <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_ed94d3f8ecdca8c4c5d0ac8805bfff90684ed8ff\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
-        <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_39219643c11c09d795632fa9d0f47d12456dfc6b\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="fa366ecaa69dfb6321ca6cce756c32d8aa498308">
-        <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_1ff958c05ace101be5bed33edeb7e854ef474cfb\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
-        <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-8.4.0_c90b575d7f1b58801c34d0d06052d0a40657e8a3\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -126,6 +108,15 @@
         revision="24.0.3"
         sha1="fef2b3e4b6b1b0e5fe7b69fa137a5fa55a3182ab">
         <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-8.4.0_95a6ac5867b8ff11403ec39fb0427a05c585cab9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\chenlei\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.2.1_e0a96d741a8b47e01d6ae4762c00664764fcb2cd\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -162,6 +153,15 @@
         revision="24.0.3"
         sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
         <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-24.2.1_6ba8d079643fff5ae62461ef18117dcc4b3a7228\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_7a09374757a9f167d31e79f1c8227ec2917ff96e\classes.dex" />
     </item>
 
 </items>

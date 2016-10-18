@@ -8,10 +8,10 @@
     <uses-sdk
         android:minSdkVersion="9"
         android:targetSdkVersion="24" />
-
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
 
     <application
         android:name=".MyApplication"
@@ -31,8 +31,8 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".MainActivity"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"/>
 
         <meta-data
             android:name="com.google.android.gms.version"
@@ -59,7 +59,7 @@
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustPan" />
-        <activity android:name=".activity.InstallXposed"
+        <activity android:name=".activity.InstallXposedAty"
             android:screenOrientation="portrait"
             android:launchMode="singleTask"></activity>
     </application>

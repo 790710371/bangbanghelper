@@ -2,6 +2,8 @@ package com.mero.wyt_register.xposed;
 
 import android.telephony.TelephonyManager;
 
+import com.mero.wyt_register.Config;
+
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -21,29 +23,32 @@ import static android.view.View.X;
 public class XposedHookModule implements IXposedHookLoadPackage {
     @Override
     public void handleLoadPackage(XC_LoadPackage.LoadPackageParam lpparam) throws Throwable {
-        XSharedPreferences pre = new XSharedPreferences(this.getClass().getPackage().getName(),"prefs");
-        HookMethod(TelephonyManager.class, "getDeviceId",
-                pre.getString("imei", null));
+        //过滤包
+//        if(!lpparam.equals("android.telephony")){
+//            return;
+//        }
+        XSharedPreferences xSharedPreferences = new XSharedPreferences(this.getClass().getPackage().getName(), Config.ID);
+        String result = xSharedPreferences.getString("imei",null);
+        //获取IMEI
+        hookMethod("android.telephony.TelephonyManager","getDeviceId",lpparam,result);
+
+
+
     }
 
-    private void HookMethod(final Class cl, final String method,
-                            final String result)
-    {
-        try
-        {
-            XposedHelpers.findAndHookMethod(cl, method,
-                    new Object[] { new XC_MethodHook()
-                    {
-                        protected void afterHookedMethod(MethodHookParam param)
-                                throws Throwable
-                        {
-                            param.setResult(result);
-                        }
+    public void hookMethod(String className,String methodHook,XC_LoadPackage.LoadPackageParam lpparam,String result){
+        final Class<?> myClass = XposedHelpers.findClass(className,lpparam.classLoader);
+        XposedBridge.hookAllMethods(myClass, methodHook, new XC_MethodHook() {
+            @Override
+            protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
+                super.beforeHookedMethod(param);
+            }
 
-                    } });
-        } catch (Throwable e)
-        {
-            XposedBridge.log("Hook错误");
-        }
+            @Override
+            protected void afterHookedMethod(MethodHookParam param) throws Throwable {
+                param.setResult(param);
+            }
+        });
     }
+
 }

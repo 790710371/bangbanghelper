@@ -39,17 +39,21 @@ MERGED from [com.android.support:support-fragment:24.2.1] C:\Users\chenlei\Deskt
 		INJECTED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:12:5-81
+ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:11:5-81
 	android:name
-		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:12:22-78
+		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:11:22-78
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:12:5-80
+	android:name
+		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:12:22-77
 uses-permission#android.permission.READ_PHONE_STATE
 ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:13:5-75
 	android:name
 		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:13:22-72
-uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:14:5-80
+uses-permission#android.permission.MOUNT_UNMOUNT_FILESYSTEMS
+ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:14:5-83
 	android:name
-		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:14:22-77
+		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:14:22-81
 application
 ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:16:5-65:19
 MERGED from [com.google.android.gms:play-services-appindexing:8.4.0] C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.4.0\AndroidManifest.xml:19:5-20
@@ -91,11 +95,11 @@ ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.
 	android:name
 		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:30:13-46
 activity#com.mero.wyt_register.MainActivity
-ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:32:9-35:52
+ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:32:9-35:45
 	android:screenOrientation
-		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:35:13-49
+		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:34:13-49
 	android:launchMode
-		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:34:13-44
+		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:35:13-43
 	android:name
 		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:33:13-41
 meta-data#com.google.android.gms.version
@@ -141,11 +145,11 @@ ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.
 		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:61:13-64
 	android:name
 		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:58:13-51
-activity#com.mero.wyt_register.activity.InstallXposed
+activity#com.mero.wyt_register.activity.InstallXposedAty
 ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:62:9-64:56
 	android:screenOrientation
 		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:63:13-49
 	android:launchMode
 		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:64:13-44
 	android:name
-		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:62:19-57
+		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:62:19-60
