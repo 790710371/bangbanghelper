@@ -3,6 +3,7 @@ package com.mero.wyt_register.xposed;
 import android.telephony.TelephonyManager;
 
 import com.mero.wyt_register.Config;
+import com.mero.wyt_register.utils.DeviceUtils;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -36,17 +37,18 @@ public class XposedHookModule implements IXposedHookLoadPackage {
 
     }
 
-    public void hookMethod(String className,String methodHook,XC_LoadPackage.LoadPackageParam lpparam,String result){
+    public void hookMethod(String className,String methodHook,XC_LoadPackage.LoadPackageParam lpparam,final String result){
         final Class<?> myClass = XposedHelpers.findClass(className,lpparam.classLoader);
         XposedBridge.hookAllMethods(myClass, methodHook, new XC_MethodHook() {
             @Override
             protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
                 super.beforeHookedMethod(param);
+                XposedBridge.log("更新前");
             }
 
             @Override
             protected void afterHookedMethod(MethodHookParam param) throws Throwable {
-                param.setResult(param);
+                param.setResult(result);
             }
         });
     }
