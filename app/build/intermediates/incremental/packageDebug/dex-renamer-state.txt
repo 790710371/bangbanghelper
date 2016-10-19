@@ -1,4 +1,4 @@
-#Tue Oct 18 22:11:57 CST 2016
+#Wed Oct 19 09:34:42 CST 2016
 base.0=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
 renamed.0=classes.dex
 file.0=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex

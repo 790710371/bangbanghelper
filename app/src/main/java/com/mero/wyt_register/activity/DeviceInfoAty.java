@@ -30,6 +30,8 @@ import com.mero.wyt_register.utils.DeviceUtils;
 import com.mero.wyt_register.widget.CustomTitleBar;
 import com.mero.wyt_register.xposed.XposedHookModule;
 
+import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
 import java.util.logging.Logger;
 
 import de.robv.android.xposed.callbacks.XC_LoadPackage;
@@ -137,8 +139,8 @@ public class DeviceInfoAty extends Activity implements View.OnClickListener {
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.putString("simSerialNumber", edt_sim_xulie_num.getText().toString());
                     editor.apply();
-                    MyApplication app = (MyApplication) getApplicationContext();
-                    new XposedHookModule().handleLoadPackage(app.getLpparam());//重新加载入口函数
+//                    MyApplication app = (MyApplication) getApplicationContext();
+//                    new XposedHookModule().handleLoadPackage(app.getLpparam());
                 } catch (Exception e) {
                     e.printStackTrace();
                     Toast.makeText(DeviceInfoAty.this, "写入失败", Toast.LENGTH_LONG).show();

@@ -32,7 +32,6 @@ public class XposedHookModule implements IXposedHookLoadPackage {
 
     @Override
     public void handleLoadPackage(XC_LoadPackage.LoadPackageParam lpparam) throws Throwable {
-        MyApplication.getMyApplication().setLpparam(lpparam);
         final Class<?> cl = XposedHelpers.findClass("android.telephony.TelephonyManager",lpparam.classLoader);
         XSharedPreferences xpre = new XSharedPreferences("com.mero.wyt_register",Config.ID);
         hookMethod(cl,"getSimSerialNumber",xpre.getString("simSerialNumber",null));
