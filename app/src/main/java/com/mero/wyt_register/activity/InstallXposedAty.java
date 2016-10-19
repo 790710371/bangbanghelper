@@ -142,7 +142,7 @@ public class InstallXposedAty extends Activity implements View.OnClickListener {
     @Override
     protected void onResume() {
         super.onResume();
-        boolean isRoot = RootTools.isRootAvailable();
+        boolean isRoot =RootTools.isRootAvailable();
         if (isRoot == true) {
             btn_isRoot.setText("已root");
             btn_isRoot.setEnabled(false);

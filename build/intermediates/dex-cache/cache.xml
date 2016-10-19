@@ -12,12 +12,30 @@
     </item>
     <item
         is-multidex="false"
+        jar="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_7a09374757a9f167d31e79f1c8227ec2917ff96e.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
         jumboMode="false"
         optimize="true"
         revision="24.0.3"
         sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
         <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_f0b5130608a555fa8d86f54adca3a90a8035f99d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_ed94d3f8ecdca8c4c5d0ac8805bfff90684ed8ff.jar" />
     </item>
     <item
         is-multidex="false"
@@ -39,51 +57,6 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.3"
-        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
-        <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-24.2.1_61692e1ebf2d1ae5544967f553ef46a4d3d028f8.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.3"
-        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
-        <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-24.2.1_6cc8725bf33d8ac32840bbd76b15528b1b384376.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\chenlei\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.3"
-        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
-        <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\pre-dexed\debug\support-annotations-24.2.1_e0a96d741a8b47e01d6ae4762c00664764fcb2cd.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.3"
-        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
-        <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_7a09374757a9f167d31e79f1c8227ec2917ff96e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.3"
-        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
-        <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_ed94d3f8ecdca8c4c5d0ac8805bfff90684ed8ff.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
@@ -102,6 +75,24 @@
     </item>
     <item
         is-multidex="false"
+        jar="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-24.2.1_61692e1ebf2d1ae5544967f553ef46a4d3d028f8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-24.2.1_6cc8725bf33d8ac32840bbd76b15528b1b384376.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\jars\classes.jar"
         jumboMode="false"
         optimize="true"
@@ -111,21 +102,21 @@
     </item>
     <item
         is-multidex="false"
+        jar="C:\Users\chenlei\Desktop\bangbanghelper\app\libs\RootTools.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="5f20254cf0ef9dd3e07c200540ec606668a713fa">
+        <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\pre-dexed\debug\RootTools_6031165de59f0f4f6a0f32c80abb415d20c0311f.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.4.0\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="24.0.3"
         sha1="65d086ee9daaf87b5af62ad24471edafa433354c">
         <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-appindexing-8.4.0_b406468e36d546e050f416b645146834ee3bd8b3.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\chenlei\Desktop\bangbanghelper\app\libs\RootTools.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.3"
-        sha1="16b2d49a7359c9ddbfcb1bc66f9c342c502e821b">
-        <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\pre-dexed\debug\RootTools_6031165de59f0f4f6a0f32c80abb415d20c0311f.jar" />
     </item>
     <item
         is-multidex="false"
@@ -144,6 +135,15 @@
         revision="24.0.3"
         sha1="fef2b3e4b6b1b0e5fe7b69fa137a5fa55a3182ab">
         <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-base-8.4.0_95a6ac5867b8ff11403ec39fb0427a05c585cab9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\chenlei\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\pre-dexed\debug\support-annotations-24.2.1_e0a96d741a8b47e01d6ae4762c00664764fcb2cd.jar" />
     </item>
 
 </items>
