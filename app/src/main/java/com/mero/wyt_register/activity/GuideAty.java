@@ -64,6 +64,7 @@ public class GuideAty extends Activity implements OnPageChangeListener{
 			public void onClick(View v) {
 				Intent intent = new Intent(GuideAty.this,MainActivity.class);
 				startActivity(intent);
+				finish();
 			}
 		});
 		viewPager.setOnPageChangeListener(this);

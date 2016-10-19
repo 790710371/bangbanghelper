@@ -89,7 +89,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	}
 	};
 	private void initView() {
-		checkPackageInstalled(MainActivity.this);
+//		checkPackageInstalled(MainActivity.this);
 		//得到配置信息
 		boolean isInstalledXposed = sharedPreferences.getBoolean(Config.IS_INSTALL_XPOSED,false);
 		btn_install_xposed = (Button) findViewById(R.id.btn_xposed_install);
@@ -138,6 +138,19 @@ public class MainActivity extends Activity implements OnClickListener {
 		SharedPreferences.Editor editor = sharedPreferences.edit();
 		editor.putBoolean(Config.IS_INSTALL_XPOSED, false);
 	}
+
+	@Override
+	protected void onResume() {
+		super.onResume();
+		SharedPreferences sharedPreferences = getSharedPreferences(Config.ID,Context.MODE_PRIVATE);
+		boolean is = sharedPreferences.getBoolean(Config.IS_INSTALL_XPOSED,false);
+		if(is==true){
+			btn_install_xposed.setText("已安装");
+		}else{
+			btn_install_xposed.setText("点击安装");
+		}
+	}
+
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {

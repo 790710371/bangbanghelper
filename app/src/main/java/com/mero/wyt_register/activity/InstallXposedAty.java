@@ -94,14 +94,8 @@ public class InstallXposedAty extends Activity implements View.OnClickListener {
         btn_install_module.setOnClickListener(this);
         btn_install_xposed.setOnClickListener(this);
         btn_fresh.setOnClickListener(this);
-        boolean isRoot = RootTools.isRootAvailable();
-        if (isRoot == true) {
-            btn_isRoot.setText("已root");
-            btn_isRoot.setEnabled(false);
-        } else {
-            btn_isRoot.setText("未root");
-        }
-        checkPackageInstalled(InstallXposedAty.this);
+
+//        checkPackageInstalled(InstallXposedAty.this);
         boolean isInstalled = sharedPreferences.getBoolean(Config.IS_INSTALL_XPOSED, false);
         String tx = btn_install_xposed.getText().toString();
     }
@@ -144,6 +138,20 @@ public class InstallXposedAty extends Activity implements View.OnClickListener {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putBoolean(Config.IS_INSTALL_XPOSED, false);
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        boolean isRoot = RootTools.isRootAvailable();
+        if (isRoot == true) {
+            btn_isRoot.setText("已root");
+            btn_isRoot.setEnabled(false);
+        } else {
+            btn_isRoot.setText("未root");
+        }
+        checkPackageInstalled(this);
+    }
+
     private static final String path = Environment.getExternalStorageDirectory().toString();
     @Override
     public void onClick(View v) {

@@ -9,6 +9,7 @@ import android.util.Log;
 import com.mero.wyt_register.Config;
 import com.mero.wyt_register.MainActivity;
 import com.mero.wyt_register.R;
+import com.mero.wyt_register.utils.DeviceUtils;
 
 /**
  *@项目名称: 简易通注册助手

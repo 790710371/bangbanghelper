@@ -55,6 +55,7 @@ public class SettingAty extends Activity{
             @Override
             public void onClick() {
                 startActivity(new Intent(SettingAty.this,MainActivity.class));
+                finish();
             }
         });
         auto_change.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {

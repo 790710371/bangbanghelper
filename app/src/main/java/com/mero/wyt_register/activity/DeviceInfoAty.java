@@ -2,12 +2,14 @@ package com.mero.wyt_register.activity;
 
 import android.app.Activity;
 import android.app.Service;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.UserHandle;
 import android.provider.Settings;
 import android.telephony.TelephonyManager;
 import android.util.Log;
@@ -37,6 +39,7 @@ import java.util.logging.Logger;
 import de.robv.android.xposed.callbacks.XC_LoadPackage;
 
 import static android.content.ContentValues.TAG;
+import static android.os.Build.VERSION_CODES.M;
 import static com.mero.wyt_register.R.id.edt_IMEI;
 import static com.mero.wyt_register.R.id.edt_phone_country;
 import static com.mero.wyt_register.R.id.edt_sim_xulie_num;
@@ -88,6 +91,7 @@ public class DeviceInfoAty extends Activity implements View.OnClickListener {
             @Override
             public void onClick() {
                 startActivity(new Intent(DeviceInfoAty.this, MainActivity.class));
+                finish();
             }
         });
 
@@ -103,13 +107,6 @@ public class DeviceInfoAty extends Activity implements View.OnClickListener {
         edt_sim_xulie_num = (EditText) findViewById(R.id.edt_sim_xulie_num);
         edt_yunyingshang = (EditText) findViewById(R.id.edt_yunyingshang);
         edt_yunyingshang_code = (EditText) findViewById(R.id.edt_yuunyingshang_code);
-//        edt_sim_xulie_num.setText(simNum);//设置手机卡序列号
-//        edt_IMEI.setText(IMEI);//设置手机IMEI
-//        edt_IMSI.setText(IMSI);//设置手机IMSI
-//        edt_phone.setText(phoneNum);//设置手机号
-//        edt_phone_country.setText(countryCode);//设置国家代码
-//        edt_yunyingshang_code.setText(providerCode);//设置运营商代码
-//        edt_yunyingshang.setText(providerName);//设置运营商
 
 
     }
@@ -139,8 +136,7 @@ public class DeviceInfoAty extends Activity implements View.OnClickListener {
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.putString("simSerialNumber", edt_sim_xulie_num.getText().toString());
                     editor.apply();
-//                    MyApplication app = (MyApplication) getApplicationContext();
-//                    new XposedHookModule().handleLoadPackage(app.getLpparam());
+                    startActivity(new Intent(DeviceInfoAty.this,WelcomeAty.class));
                 } catch (Exception e) {
                     e.printStackTrace();
                     Toast.makeText(DeviceInfoAty.this, "写入失败", Toast.LENGTH_LONG).show();

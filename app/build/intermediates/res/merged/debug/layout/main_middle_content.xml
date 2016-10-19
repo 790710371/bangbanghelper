@@ -139,7 +139,7 @@
           <TextView 
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:text="一键清机"
+              android:text="一键新机"
               android:textSize="14sp"
               android:textColor="#292421"
               android:gravity="center_vertical"
@@ -167,7 +167,7 @@
    		    android:background="@drawable/button_shape"
    		    android:textColor="#000000"
    		    android:gravity="center"
-   		    android:text="一键清机"/>
+   		    android:text="一键新机"/>
 	<TextView 
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
@@ -243,7 +243,7 @@
 		    android:layout_width="wrap_content"
 		    android:layout_height="80dp"
 		    android:layout_weight="1"
-		    mero:text="天猫注册"
+		    mero:text="网易注册"
 		    mero:text_color="#000000"
 		    mero:text_size="7sp"
 		    mero:image_src="@drawable/tianmao"
