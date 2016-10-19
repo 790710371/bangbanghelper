@@ -54,6 +54,10 @@ uses-permission#android.permission.MOUNT_UNMOUNT_FILESYSTEMS
 ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:14:5-83
 	android:name
 		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:14:22-81
+uses-permission#android.permission.KILL_BACKGROUND_PROCESSES
+ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:15:5-83
+	android:name
+		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:15:22-81
 application
 ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:16:5-65:19
 MERGED from [com.google.android.gms:play-services-appindexing:8.4.0] C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.4.0\AndroidManifest.xml:19:5-20

@@ -146,6 +146,7 @@ public class MainActivity extends Activity implements OnClickListener {
 		boolean is = sharedPreferences.getBoolean(Config.IS_INSTALL_XPOSED,false);
 		if(is==true){
 			btn_install_xposed.setText("已安装");
+			btn_install_xposed.setEnabled(false);
 		}else{
 			btn_install_xposed.setText("点击安装");
 		}
@@ -196,12 +197,14 @@ public class MainActivity extends Activity implements OnClickListener {
 				if(null!=window){
 					window.dismiss();
 				}
+				finish();
 				break;
 			case R.id.tx_item_main_item2:
 				startActivity(new Intent(this, DeviceInfoAty.class));
 				if(null!=window){
 					window.dismiss();
 				}
+				finish();
 				break;
 			case R.id.tx_item_main_item3:
 				Toast.makeText(this,"正在点击帮助按钮",Toast.LENGTH_SHORT).show();

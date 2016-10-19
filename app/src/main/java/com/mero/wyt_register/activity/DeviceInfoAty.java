@@ -1,6 +1,7 @@
 package com.mero.wyt_register.activity;
 
 import android.app.Activity;
+import android.app.ActivityManager;
 import android.app.Service;
 import android.content.ComponentName;
 import android.content.Context;
@@ -31,6 +32,7 @@ import com.mero.wyt_register.R;
 import com.mero.wyt_register.utils.DeviceUtils;
 import com.mero.wyt_register.widget.CustomTitleBar;
 import com.mero.wyt_register.xposed.XposedHookModule;
+import com.stericson.RootTools.RootTools;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
@@ -136,10 +138,12 @@ public class DeviceInfoAty extends Activity implements View.OnClickListener {
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.putString("simSerialNumber", edt_sim_xulie_num.getText().toString());
                     editor.apply();
-                    startActivity(new Intent(DeviceInfoAty.this,WelcomeAty.class));
+                    //关闭App并且重启
+                    RootTools.killProcess(android.os.Process.myPid()+"");
+                    RootTools.restartAndroid();
                 } catch (Exception e) {
                     e.printStackTrace();
-                    Toast.makeText(DeviceInfoAty.this, "写入失败", Toast.LENGTH_LONG).show();
+                    Toast.makeText(DeviceInfoAty.this, "写入失败"+e.getMessage(), Toast.LENGTH_LONG).show();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                 }
