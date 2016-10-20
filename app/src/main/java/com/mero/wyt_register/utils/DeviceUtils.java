@@ -81,19 +81,6 @@ public class DeviceUtils {
             return providerInfo;
         }
     }
-    //获取运营商代码
-    public static String getSubScriberId(Context context){
-        String subScriberId= "";
-        TelephonyManager tm = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
-        try{
-            subScriberId = tm.getSubscriberId();
-        }catch (Exception e){
-            Log.e(TAG,e.getMessage()==null?"e.getMessage()为null":e.getMessage());
-            subScriberId = "获取运营商代码失败";
-        }finally {
-            return subScriberId;
-        }
-    }
     //获取IMSI
     public static String getIMSI(Context context){
         String IMSI = "";

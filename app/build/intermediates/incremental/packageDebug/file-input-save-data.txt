@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed Oct 19 13:21:14 CST 2016
+#Wed Oct 19 23:00:52 CST 2016
 76.base=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_
 5.base=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_
 86.base=C\:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\resources-debug.ap_

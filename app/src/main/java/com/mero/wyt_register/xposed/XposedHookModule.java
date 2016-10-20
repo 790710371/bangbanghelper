@@ -10,6 +10,8 @@ import com.mero.wyt_register.MyApplication;
 import com.mero.wyt_register.utils.AppUtils;
 import com.mero.wyt_register.utils.DeviceUtils;
 
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -20,8 +22,10 @@ import de.robv.android.xposed.XposedBridge;
 import de.robv.android.xposed.XposedHelpers;
 import de.robv.android.xposed.callbacks.XC_LoadPackage;
 
+import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
 import static android.view.View.X;
 import static android.view.View.inflate;
+import static de.robv.android.xposed.XposedHelpers.getParameterTypes;
 
 /**
  * Created by chenlei on 2016/10/15.
@@ -32,17 +36,24 @@ public class XposedHookModule implements IXposedHookLoadPackage {
 
     @Override
     public void handleLoadPackage(XC_LoadPackage.LoadPackageParam lpparam) throws Throwable {
-        final Class<?> cl = XposedHelpers.findClass("android.telephony.TelephonyManager",lpparam.classLoader);
-        XSharedPreferences xpre = new XSharedPreferences("com.mero.wyt_register",Config.ID);
-        hookMethod(cl,"getSimSerialNumber",xpre.getString("simSerialNumber",null));//修改sim序列号
+            XSharedPreferences xpre = new XSharedPreferences("com.mero.wyt_register",Config.ID);
+            final Class<?> cl = XposedHelpers.findClass("android.telephony.TelephonyManager",lpparam.classLoader);
+            if(cl!=null){
+                hookMethod(cl,"getSimSerialNumber",xpre.getString("simSerialNumber",null));//修改sim序列号
+                hookMethod(cl,"getDeviceId",xpre.getString("imei",null));
+                hookMethod(cl,"getSubscriberId",xpre.getString("imsi",null));
+            }else {
+                throw new IllegalAccessError();
+            }
     }
 
-    private void hookMethod(Class<?> clz,String methodName,final String result) {
+    private void hookMethod(final Class<?> clz, String methodName,final String result) {
         XposedHelpers.findAndHookMethod(clz,methodName,new Object[]{
                 new XC_MethodHook() {
                     @Override
                     protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
                         super.beforeHookedMethod(param);
+                        XposedBridge.log("正在测试beforeHookedMethod");
                     }
 
                     @Override
@@ -51,8 +62,8 @@ public class XposedHookModule implements IXposedHookLoadPackage {
                         param.setResult(result);
                     }
                 }
-
-
         });
+
     }
+
 }

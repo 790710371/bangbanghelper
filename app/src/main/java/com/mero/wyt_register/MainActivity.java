@@ -33,6 +33,7 @@ import com.mero.wyt_register.activity.DeviceInfoAty;
 import com.mero.wyt_register.activity.InstallXposedAty;
 import com.mero.wyt_register.activity.SettingAty;
 import com.mero.wyt_register.widget.MixTextImage;
+import com.stericson.RootTools.RootTools;
 
 import java.util.List;
 
@@ -144,7 +145,7 @@ public class MainActivity extends Activity implements OnClickListener {
 		super.onResume();
 		SharedPreferences sharedPreferences = getSharedPreferences(Config.ID,Context.MODE_PRIVATE);
 		boolean is = sharedPreferences.getBoolean(Config.IS_INSTALL_XPOSED,false);
-		if(is==true){
+		if(is==true&& RootTools.isRootAvailable()==true){
 			btn_install_xposed.setText("已安装");
 			btn_install_xposed.setEnabled(false);
 		}else{

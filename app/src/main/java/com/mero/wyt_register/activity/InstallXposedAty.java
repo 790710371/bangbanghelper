@@ -1,7 +1,9 @@
 package com.mero.wyt_register.activity;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
@@ -258,11 +260,16 @@ public class InstallXposedAty extends Activity implements View.OnClickListener {
 
 
 
-        } else if (Environment.MEDIA_MOUNTED_READ_ONLY.equals(state)) {
+        } else{
             // We can only read the media
-            Log.e(TAG, "sd卡可只可读不可写");
-        } else {
-            Log.e(TAG, "sd卡不可读");
+            final AlertDialog.Builder builder =new AlertDialog.Builder(this);
+            builder.setTitle("温馨提示").setMessage("sd卡不可读写").setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+
+                }
+            });
+            builder.create().show();;
         }
     }
 

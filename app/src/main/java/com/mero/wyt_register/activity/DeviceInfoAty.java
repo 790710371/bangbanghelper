@@ -1,24 +1,19 @@
 package com.mero.wyt_register.activity;
 
 import android.app.Activity;
-import android.app.ActivityManager;
-import android.app.Service;
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.UserHandle;
-import android.provider.Settings;
-import android.telephony.TelephonyManager;
+import android.os.Handler;
+import android.os.Process;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.appindexing.Action;
@@ -27,24 +22,10 @@ import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.mero.wyt_register.Config;
 import com.mero.wyt_register.MainActivity;
-import com.mero.wyt_register.MyApplication;
 import com.mero.wyt_register.R;
 import com.mero.wyt_register.utils.DeviceUtils;
 import com.mero.wyt_register.widget.CustomTitleBar;
-import com.mero.wyt_register.xposed.XposedHookModule;
-import com.stericson.RootTools.RootTools;
 
-import java.lang.reflect.Method;
-import java.lang.reflect.Modifier;
-import java.util.logging.Logger;
-
-import de.robv.android.xposed.callbacks.XC_LoadPackage;
-
-import static android.content.ContentValues.TAG;
-import static android.os.Build.VERSION_CODES.M;
-import static com.mero.wyt_register.R.id.edt_IMEI;
-import static com.mero.wyt_register.R.id.edt_phone_country;
-import static com.mero.wyt_register.R.id.edt_sim_xulie_num;
 
 public class DeviceInfoAty extends Activity implements View.OnClickListener {
     private static final String TAG = "DeviceInfoAty";
@@ -116,15 +97,10 @@ public class DeviceInfoAty extends Activity implements View.OnClickListener {
     @Override
     protected void onResume() {
         super.onResume();
-        //        edt_sim_xulie_num.setText(simNum);//设置手机卡序列号
-        edt_sim_xulie_num.setText(DeviceUtils.getSimNumber(this));
-//        edt_IMSI.setText(IMSI);//设置手机IMSI
-//        edt_phone.setText(phoneNum);//设置手机号
-//        edt_phone_country.setText(countryCode);//设置国家代码
-//        edt_yunyingshang_code.setText(providerCode);//设置运营商代码
-//        edt_yunyingshang.setText(providerName);//设置运营商
+        edt_sim_xulie_num.setText(DeviceUtils.getSimNumber(this));//设置手机卡序列号
+        edt_IMSI.setText(DeviceUtils.getIMSI(this));//设置imsi
+        edt_IMEI.setText(DeviceUtils.getIMEI(this));//设置IMEI
     }
-
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -137,10 +113,19 @@ public class DeviceInfoAty extends Activity implements View.OnClickListener {
                     SharedPreferences sharedPreferences = getSharedPreferences(Config.ID, Context.MODE_WORLD_READABLE);
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.putString("simSerialNumber", edt_sim_xulie_num.getText().toString());
+                    editor.putString("imei",edt_IMEI.getText().toString());
+                    editor.putString("imsi",edt_IMSI.getText().toString());
                     editor.apply();
                     //关闭App并且重启
-                    RootTools.killProcess(android.os.Process.myPid()+"");
-                    RootTools.restartAndroid();
+                    Log.e("DeviceInfoAty",Process.myPid()+"");
+                    sendBroadcast(new Intent("restart.app"));
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            Process.killProcess(Process.myPid());
+                        }
+                    },3000);
+
                 } catch (Exception e) {
                     e.printStackTrace();
                     Toast.makeText(DeviceInfoAty.this, "写入失败"+e.getMessage(), Toast.LENGTH_LONG).show();
