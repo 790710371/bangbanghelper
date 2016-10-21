@@ -24,7 +24,12 @@ import com.mero.wyt_register.Config;
 import com.mero.wyt_register.MainActivity;
 import com.mero.wyt_register.R;
 import com.mero.wyt_register.utils.DeviceUtils;
+import com.mero.wyt_register.utils.NetUtils;
 import com.mero.wyt_register.widget.CustomTitleBar;
+
+import org.w3c.dom.Text;
+
+import static android.R.id.edit;
 
 
 public class DeviceInfoAty extends Activity implements View.OnClickListener {
@@ -34,11 +39,9 @@ public class DeviceInfoAty extends Activity implements View.OnClickListener {
     private EditText edt_IMEI;//IMEI
     private EditText edt_IMSI;//IMSI
     private EditText edt_phone;//手机号码
-    private EditText edt_phone_xulie_num;//手机卡序列号
+    private EditText edt_ip_address;//IP地址
     private EditText edt_phone_country;//手机卡国家
-    private EditText edt_yunyingshang_code;//运营商代码
-    private EditText edt_yunyingshang;//运营商
-    private Button btn_save, btn_get_random;
+    private Button btn_save, btn_get_random;//随机生成
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -60,14 +63,6 @@ public class DeviceInfoAty extends Activity implements View.OnClickListener {
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
 
-    private String simNum;//Sim卡序列号
-    private String IMEI;//IMEI
-    private String IMSI;//IMSI
-    private String phoneNum;//手机号码
-    private String countryCode;//国家代码
-    private String providerCode;//运营商代码
-    private String providerName;//运营商名字
-
     private void initView() {
         customTitleBar = (CustomTitleBar) findViewById(R.id.title_bar_device_info);
         customTitleBar.onClick(new CustomTitleBar.TitleBarImageListener() {
@@ -88,10 +83,7 @@ public class DeviceInfoAty extends Activity implements View.OnClickListener {
         edt_phone = (EditText) findViewById(R.id.edt_phone);
         edt_phone_country = (EditText) findViewById(R.id.edt_phone_country);
         edt_sim_xulie_num = (EditText) findViewById(R.id.edt_sim_xulie_num);
-        edt_yunyingshang = (EditText) findViewById(R.id.edt_yunyingshang);
-        edt_yunyingshang_code = (EditText) findViewById(R.id.edt_yuunyingshang_code);
-
-
+        edt_ip_address = (EditText) findViewById(R.id.edt_ip_address);
     }
 
     @Override
@@ -100,6 +92,9 @@ public class DeviceInfoAty extends Activity implements View.OnClickListener {
         edt_sim_xulie_num.setText(DeviceUtils.getSimNumber(this));//设置手机卡序列号
         edt_IMSI.setText(DeviceUtils.getIMSI(this));//设置imsi
         edt_IMEI.setText(DeviceUtils.getIMEI(this));//设置IMEI
+        edt_phone.setText(DeviceUtils.getPhoneNum(this));//设置手机号
+        edt_phone_country.setText(DeviceUtils.getCountryZipCode(this));//设置国家
+        edt_ip_address.setText(NetUtils.getLocalIpAddress());
     }
     @Override
     public void onClick(View v) {
@@ -115,6 +110,8 @@ public class DeviceInfoAty extends Activity implements View.OnClickListener {
                     editor.putString("simSerialNumber", edt_sim_xulie_num.getText().toString());
                     editor.putString("imei",edt_IMEI.getText().toString());
                     editor.putString("imsi",edt_IMSI.getText().toString());
+                    editor.putString("phoneNumber",edt_phone.getText().toString());
+                    editor.putString("phoneCountry",edt_phone_country.getText().toString());
                     editor.apply();
                     //关闭App并且重启
                     Log.e("DeviceInfoAty",Process.myPid()+"");
@@ -164,8 +161,8 @@ public class DeviceInfoAty extends Activity implements View.OnClickListener {
 
     @Override
     public void onStop() {
-        super.onStop();
-
+        super
+        .onStop();
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         AppIndex.AppIndexApi.end(client, getIndexApiAction());
