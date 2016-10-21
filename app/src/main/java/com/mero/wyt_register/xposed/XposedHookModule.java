@@ -38,13 +38,10 @@ public class XposedHookModule implements IXposedHookLoadPackage {
     public void handleLoadPackage(XC_LoadPackage.LoadPackageParam lpparam) throws Throwable {
             XSharedPreferences xpre = new XSharedPreferences("com.mero.wyt_register",Config.ID);
             final Class<?> cl = XposedHelpers.findClass("android.telephony.TelephonyManager",lpparam.classLoader);
-            if(cl!=null){
                 hookMethod(cl,"getSimSerialNumber",xpre.getString("simSerialNumber",null));//修改sim序列号
-                hookMethod(cl,"getDeviceId",xpre.getString("imei",null));
-                hookMethod(cl,"getSubscriberId",xpre.getString("imsi",null));
-            }else {
-                throw new IllegalAccessError();
-            }
+                hookMethod(cl,"getDeviceId",xpre.getString("imei",null));//修改设备IMEI
+                hookMethod(cl,"getSubscriberId",xpre.getString("imsi",null));//修改IMSI
+                hookMethod(cl,"getSimCountryIso",xpre.getString("phoneCountry",null));//设置国家
     }
 
     private void hookMethod(final Class<?> clz, String methodName,final String result) {

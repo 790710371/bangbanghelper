@@ -24,11 +24,15 @@
         "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_plus_signin_btn_icon_light.xml"
     },
     {
+        "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_light.xml",
+        "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_google_signin_btn_text_light.xml"
+    },
+    {
         "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_plus_signin_btn_text_dark.xml",
         "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_plus_signin_btn_text_dark.xml"
     },
     {
-        "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_light.xml",
-        "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_google_signin_btn_text_light.xml"
+        "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cpb_background.xml",
+        "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.github.dmytrodanylyk.circular-progress-button\\library\\1.1.3\\res\\drawable\\cpb_background.xml"
     }
 ]

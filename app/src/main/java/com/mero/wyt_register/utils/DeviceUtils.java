@@ -53,6 +53,9 @@ public class DeviceUtils {
         TelephonyManager tm = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
         try {
             countryID = tm.getSimCountryIso();
+            if(TextUtils.isEmpty(countryID)){
+                countryID = "cn";
+            }
         }catch (Exception e){
             countryID = "获取国家码失败";
         }finally {
@@ -66,14 +69,14 @@ public class DeviceUtils {
         TelephonyManager tm = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
         try{
             IMSI = tm.getSubscriberId();
-            if(IMSI.startsWith("46000")||IMSI.startsWith("46002")){
+            if(IMSI.startsWith("46000")||IMSI.startsWith("46002")) {
                 providerInfo = "中国移动";
-            }
-            if(IMSI.startsWith("46001")){
+            }else if(IMSI.startsWith("46001")){
                 providerInfo = "中国联通";
-            }
-            if(IMSI.startsWith("46003")){
+            }else if(IMSI.startsWith("46003")){
                 providerInfo = "中国电信";
+            }else{
+                providerInfo = "中国移动";
             }
         }catch (Exception e){
             providerInfo = "获取运营商信息失败"+e.getMessage();

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- From: file:/C:/Work/android-gradle-projects/circular-progress-button/library/src/main/res/values/colors.xml -->
+    <eat-comment />
+
+    <color name="cpb_blue">#ff0099cc</color>
+    <color name="cpb_blue_dark">#ff00719b</color>
+    <color name="cpb_green">#ff99cc00</color>
+    <color name="cpb_green_dark">#ff6d9b00</color>
+    <color name="cpb_grey">#ffdedede</color>
+    <color name="cpb_red">#ffff4444</color>
+    <color name="cpb_red_dark">#ffcd3a3a</color>
+    <color name="cpb_white">@android:color/white</color>
+    <!-- From: file:/C:/Work/android-gradle-projects/circular-progress-button/library/src/main/res/values/styles.xml -->
+    <eat-comment />
+
+    <declare-styleable name="CircularProgressButton">
+        <attr name="cpb_selectorIdle" format="reference" />
+        <attr name="cpb_selectorComplete" format="reference" />
+        <attr name="cpb_selectorError" format="reference" />
+        <attr name="cpb_textComplete" format="string" />
+        <attr name="cpb_textIdle" format="string" />
+        <attr name="cpb_textError" format="string" />
+        <attr name="cpb_textProgress" format="string" />
+        <attr name="cpb_colorProgress" format="color" />
+        <attr name="cpb_colorIndicator" format="color" />
+        <attr name="cpb_colorIndicatorBackground" format="color" />
+        <attr name="cpb_iconError" format="reference" />
+        <attr name="cpb_iconComplete" format="reference" />
+        <attr name="cpb_cornerRadius" format="dimension" />
+        <attr name="cpb_paddingProgress" format="dimension" />
+    </declare-styleable>
+    <!-- From: file:/C:/Work/android-gradle-projects/circular-progress-button/library/src/main/res/values/dimen.xml -->
+    <eat-comment />
+
+    <dimen name="cpb_stroke_width">4dp</dimen>
+    <!-- From: file:/C:/Work/android-gradle-projects/circular-progress-button/library/src/main/res/values/library_circularprogressbutton_strings.xml -->
+    <eat-comment />
+
+    <string name="define_circularprogressbutton">circularprogressbutton</string>
+    <string name="library_circularprogressbutton_author">Dmytro Danylyk</string>
+    <string name="library_circularprogressbutton_authorWebsite">http://dmytrodanylyk.com/</string>
+    <string name="library_circularprogressbutton_isOpenSource">true</string>
+    <string name="library_circularprogressbutton_libraryDescription">Android Button which can morph to Circular Progress.</string>
+    <string name="library_circularprogressbutton_libraryName">Circular Progress Button</string>
+    <string name="library_circularprogressbutton_libraryVersion">1.1.0</string>
+    <string name="library_circularprogressbutton_libraryWebsite">http://dmytrodanylyk.com/pages/portfolio/circular-progress-button.html</string>
+    <string name="library_circularprogressbutton_licenseId">mit</string>
+    <string name="library_circularprogressbutton_repositoryLink">https://github.com/dmytrodanylyk/circular-progress-button</string>
+
+</resources>

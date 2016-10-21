@@ -7,7 +7,7 @@ android {
     aaptOptions.useNewCruncher = false
     defaultConfig {
         applicationId "com.mero.wyt_register"
-        minSdkVersion 9
+        minSdkVersion 14
         targetSdkVersion 24
     }
 
@@ -25,4 +25,5 @@ dependencies {
     provided 'de.robv.android.xposed:api:82:sources'
     compile 'com.android.support:support-v4:24.2.1'
     compile files('libs/RootTools.jar')
+    compile 'com.github.dmytrodanylyk.circular-progress-button:library:1.1.3'
 }

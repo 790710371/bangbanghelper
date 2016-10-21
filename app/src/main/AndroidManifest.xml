@@ -4,13 +4,16 @@
     android:installLocation="auto"
     android:versionCode="1"
     android:versionName="1.0">
+
     <uses-sdk
         android:minSdkVersion="9"
         android:targetSdkVersion="24" />
+
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
@@ -22,15 +25,19 @@
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustPan" />
-        <activity android:name=".activity.InstallXposedAty"
-            android:screenOrientation="portrait"
-            android:launchMode="singleTop"></activity>
+        <activity
+            android:name=".activity.InstallXposedAty"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
         <receiver android:name=".receiver.RestartAppReceiver">
             <intent-filter>
-                <action android:name="restart.app"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="restart.app" />
+
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </receiver>
+
         <activity android:name=".activity.WelcomeAty">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -43,8 +50,8 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".MainActivity"
-            android:screenOrientation="portrait"
-            android:launchMode="singleTop"/>
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
 
         <meta-data
             android:name="com.google.android.gms.version"
@@ -66,6 +73,9 @@
             android:name="xposeddescription"
             android:value="@string/xposed_app_description" />
 
+        <activity android:name=".activity.ProcessorInfoAty"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

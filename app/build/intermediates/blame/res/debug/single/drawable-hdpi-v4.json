@@ -8,16 +8,20 @@
         "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\drawable-hdpi\\dot_no_selected_shape.xml"
     },
     {
+        "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\arrow_left.png",
+        "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\drawable-hdpi\\arrow_left.png"
+    },
+    {
         "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\dot_no_selected.xml",
         "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\drawable-hdpi\\dot_no_selected.xml"
     },
     {
-        "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\viewpager02.png",
-        "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\drawable-hdpi\\viewpager02.png"
-    },
-    {
         "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\background_install_xposed.png",
         "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\drawable-hdpi\\background_install_xposed.png"
+    },
+    {
+        "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\viewpager02.png",
+        "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\drawable-hdpi\\viewpager02.png"
     },
     {
         "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\dot_selected_shape.xml",
@@ -32,12 +36,12 @@
         "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\dot_selected.xml",
-        "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\drawable-hdpi\\dot_selected.xml"
-    },
-    {
         "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\common_full_open_on_phone.png",
         "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable-hdpi\\common_full_open_on_phone.png"
+    },
+    {
+        "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\dot_selected.xml",
+        "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\drawable-hdpi\\dot_selected.xml"
     },
     {
         "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\button_shape.xml",
@@ -52,11 +56,11 @@
         "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\drawable-hdpi\\viewpager01.png"
     },
     {
-        "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ksw_md_thumb.xml",
-        "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\drawable-hdpi\\ksw_md_thumb.xml"
-    },
-    {
         "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\button_shape_be_pressed.xml",
         "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\drawable-hdpi\\button_shape_be_pressed.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ksw_md_thumb.xml",
+        "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\drawable-hdpi\\ksw_md_thumb.xml"
     }
 ]

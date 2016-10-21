@@ -66,19 +66,6 @@ public class MainActivity extends Activity implements OnClickListener {
 		// See https://g.co/AppIndexing/AndroidStudio for more information.
 		client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
 	}
-
-//	private void initEvent(Context context) {
-//		PackageManager pm = context.getPackageManager();
-//		List<PackageInfo> listInfo = pm.getInstalledPackages(0);
-//		for(PackageInfo packageInfo:listInfo){
-//			Log.e(TAG,packageInfo.packageName);
-//			if(packageInfo.packageName.equals(getResources().getString(R.string.xposed_package_name))){
-//				SharedPreferences.Editor editor = sharedPreferences.edit();
-//				editor.putBoolean(Config.IS_INSTALL_XPOSED,true);
-//				editor.apply();
-//			}
-//		}
-//	}
 	private Handler handler =new Handler(){
 	@Override
 	public void handleMessage(Message msg) {

@@ -9,13 +9,18 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Process;
+import android.text.Editable;
+import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.dd.CircularProgressButton;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
@@ -25,23 +30,22 @@ import com.mero.wyt_register.MainActivity;
 import com.mero.wyt_register.R;
 import com.mero.wyt_register.utils.DeviceUtils;
 import com.mero.wyt_register.utils.NetUtils;
+import com.mero.wyt_register.utils.RegexUtils;
 import com.mero.wyt_register.widget.CustomTitleBar;
-
-import org.w3c.dom.Text;
-
-import static android.R.id.edit;
-
 
 public class DeviceInfoAty extends Activity implements View.OnClickListener {
     private static final String TAG = "DeviceInfoAty";
     private CustomTitleBar customTitleBar;
+    private CircularProgressButton circularProgressButton;
     private EditText edt_sim_xulie_num;//序列号
     private EditText edt_IMEI;//IMEI
     private EditText edt_IMSI;//IMSI
-    private EditText edt_phone;//手机号码
     private EditText edt_ip_address;//IP地址
     private EditText edt_phone_country;//手机卡国家
+    private EditText edt_yunyingshang;//运营商
     private Button btn_save, btn_get_random;//随机生成
+
+    private LinearLayout layout_cpu;
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -72,18 +76,61 @@ public class DeviceInfoAty extends Activity implements View.OnClickListener {
                 finish();
             }
         });
+        circularProgressButton = (CircularProgressButton) findViewById(R.id.device_info_progress_btn);
+        circularProgressButton.setText("随机生成");
+        circularProgressButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CircularProgressButton c = (CircularProgressButton) v;
+                c.setIndeterminateProgressMode(true);
+                int progress = c.getProgress();
+                if(progress==0){
+                    c.setProgress(50);
+                }else if(progress==100){
+                    c.setProgress(0);
+                }else if(progress==50){
+                    c.setProgress(100);
+                }
+            }
+        });
+        layout_cpu = (LinearLayout) findViewById(R.id.device_info_cpu_item);
+        layout_cpu.setOnClickListener(this);
 
         //初始化手机数据
         btn_save = (Button) findViewById(R.id.btn_device_info_save);
-        btn_get_random = (Button) findViewById(R.id.btn_device_info_get_random);
         btn_save.setOnClickListener(this);
-        btn_get_random.setOnClickListener(this);
         edt_IMEI = (EditText) findViewById(R.id.edt_IMEI);
         edt_IMSI = (EditText) findViewById(R.id.edt_IMSI);
-        edt_phone = (EditText) findViewById(R.id.edt_phone);
         edt_phone_country = (EditText) findViewById(R.id.edt_phone_country);
         edt_sim_xulie_num = (EditText) findViewById(R.id.edt_sim_xulie_num);
+        edt_yunyingshang = (EditText) findViewById(R.id.edt_yunyingshang);
+        edt_yunyingshang.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if(hasFocus==false){
+                    //检查是否为三大运营商
+                    String  c = edt_yunyingshang.getText().toString();
+                    if(!c.contains("中国")){
+                     Toast.makeText(DeviceInfoAty.this,"请输入合法运营商",Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+        });
         edt_ip_address = (EditText) findViewById(R.id.edt_ip_address);
+        edt_ip_address.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if(hasFocus==false){
+                    //进行正则匹配
+                    boolean flag = RegexUtils.checkIpAddress(edt_ip_address.getText().toString());
+                    if(flag==false){
+                        //不是IP地址,提示IP地址不对
+                        Toast.makeText(DeviceInfoAty.this,"ip格式不符合",Toast.LENGTH_SHORT).show();
+                        edt_ip_address.setText("127.0.0.1");
+                    }
+                }
+            }
+        });
     }
 
     @Override
@@ -92,15 +139,19 @@ public class DeviceInfoAty extends Activity implements View.OnClickListener {
         edt_sim_xulie_num.setText(DeviceUtils.getSimNumber(this));//设置手机卡序列号
         edt_IMSI.setText(DeviceUtils.getIMSI(this));//设置imsi
         edt_IMEI.setText(DeviceUtils.getIMEI(this));//设置IMEI
-        edt_phone.setText(DeviceUtils.getPhoneNum(this));//设置手机号
         edt_phone_country.setText(DeviceUtils.getCountryZipCode(this));//设置国家
-        edt_ip_address.setText(NetUtils.getLocalIpAddress());
+        edt_yunyingshang .setText(DeviceUtils.getProviderInfo(this));//设置运营商
+        edt_ip_address.setText(NetUtils.getPhoneIp());//设置IP地址
     }
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.btn_device_info_get_random:
+            case R.id.device_info_progress_btn:
 //                DeviceUtils.getIMEI(DeviceInfoAty.this);
+                break;
+            case R.id.device_info_cpu_item:
+                startActivity(new Intent(DeviceInfoAty.this,ProcessorInfoAty.class));
+                finish();
                 break;
             case R.id.btn_device_info_save:
                 Toast.makeText(DeviceInfoAty.this, "正在保存", Toast.LENGTH_SHORT).show();
@@ -110,7 +161,6 @@ public class DeviceInfoAty extends Activity implements View.OnClickListener {
                     editor.putString("simSerialNumber", edt_sim_xulie_num.getText().toString());
                     editor.putString("imei",edt_IMEI.getText().toString());
                     editor.putString("imsi",edt_IMSI.getText().toString());
-                    editor.putString("phoneNumber",edt_phone.getText().toString());
                     editor.putString("phoneCountry",edt_phone_country.getText().toString());
                     editor.apply();
                     //关闭App并且重启
@@ -161,8 +211,7 @@ public class DeviceInfoAty extends Activity implements View.OnClickListener {
 
     @Override
     public void onStop() {
-        super
-        .onStop();
+        super.onStop();
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         AppIndex.AppIndexApi.end(client, getIndexApiAction());
