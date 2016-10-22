@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
     <com.mero.wyt_register.widget.CustomTitleBar
         android:id="@+id/processor_info_title_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:text="处理器信息" />
+        app:text="CPU信息" />
+
+    <TextView
+        android:id="@+id/tx_show_cpu_info"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="cpu信息"
+        android:textColor="#000000"
+        android:background="#FFFFFF"/>
 </LinearLayout>

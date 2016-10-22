@@ -56,7 +56,7 @@ public class MainActivity extends Activity implements OnClickListener {
 		//沉浸式状态栏
 		if (VERSION.SDK_INT >= VERSION_CODES.KITKAT) {
 			getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-			getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+//			getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
 		}
 		setContentView(R.layout.activity_main);
 		sharedPreferences = this.getSharedPreferences(Config.ID, Context.MODE_PRIVATE);

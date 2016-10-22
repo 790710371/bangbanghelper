@@ -1,8 +1,10 @@
 package com.mero.wyt_register.utils;
 
 import android.app.ActivityManager;
+import android.app.AlertDialog;
 import android.content.ComponentName;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
@@ -236,7 +238,16 @@ public final class AppUtils {
         return false;
     }
 
+    //显示对话框
+    public static void showMsg(Context context,String title,String msg){
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        builder.setTitle(title).setMessage(msg).setPositiveButton("确定", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
 
+            }
+        });
+    }
     /**
      * whether application is in background
      * <ul>
