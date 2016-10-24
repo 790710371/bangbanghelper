@@ -1,0 +1,19 @@
+<com.mero.wyt_register.widget.SlidingMenu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:fadingEdge="none"
+    android:background="@drawable/background_install_xposed"
+    >
+    <!--上面的最后2行是为了去除滚动条和阴影效果-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal" >
+
+        <include layout="@layout/menu"/>
+        <include layout="@layout/activity_main"/>
+    </LinearLayout>
+</com.mero.wyt_register.widget.SlidingMenu>

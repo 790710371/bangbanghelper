@@ -101,7 +101,7 @@
         
     </style></file><file path="C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\res\values-v14\styles.xml" qualifiers="v14"><style name="AppBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar">
         
-    </style></file></source><source path="C:\Users\chenlei\Desktop\bangbanghelper\app\build\generated\res\rs\debug"/><source path="C:\Users\chenlei\Desktop\bangbanghelper\app\build\generated\res\resValues\debug"/></dataSet><dataSet config="debug" generated-set="debug$Generated"><source path="C:\Users\chenlei\Desktop\bangbanghelper\app\src\debug\res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="SignInButton"><attr format="reference|enum" name="buttonSize">
+    </style></file><file name="menu" path="C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\res\layout\menu.xml" qualifiers="" type="layout"/><file name="main" path="C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\res\layout\main.xml" qualifiers="" type="layout"/></source><source path="C:\Users\chenlei\Desktop\bangbanghelper\app\build\generated\res\rs\debug"/><source path="C:\Users\chenlei\Desktop\bangbanghelper\app\build\generated\res\resValues\debug"/></dataSet><dataSet config="debug" generated-set="debug$Generated"><source path="C:\Users\chenlei\Desktop\bangbanghelper\app\src\debug\res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="SignInButton"><attr format="reference|enum" name="buttonSize">
             <enum name="standard" value="0"/>
             <enum name="wide" value="1"/>
             <enum name="icon_only" value="2"/>

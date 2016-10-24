@@ -96,7 +96,7 @@ public class DeviceUtils {
                 providerInfo = "中国移动";
             }
         } catch (Exception e) {
-            providerInfo = "获取运营商信息失败" + e.getMessage();
+            providerInfo = "获取运营商信息失败" ;
         } finally {
             return providerInfo;
         }

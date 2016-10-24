@@ -58,7 +58,7 @@ public class MainActivity extends Activity implements OnClickListener {
 			getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
 //			getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
 		}
-		setContentView(R.layout.activity_main);
+		setContentView(R.layout.main);
 		sharedPreferences = this.getSharedPreferences(Config.ID, Context.MODE_PRIVATE);
 //		initEvent(this);
 		initView();
