@@ -9,7 +9,6 @@ import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.mero.wyt_register.R;
 import com.mero.wyt_register.widget.CustomTitleBar;
@@ -56,7 +55,7 @@ public class ProcessorInfoAty extends Activity {
         
     }
     private void readCpuInfo() throws IOException {
-        new GetProcessorInfo(this, new GetProcessorInfo.SuccessCallback() {
+        new DeviceInfoGetProcessorInfo(this, new DeviceInfoGetProcessorInfo.SuccessCallback() {
             @Override
             public void onSuccess() {
                 Log.e("TAG","写入成功");
@@ -64,7 +63,7 @@ public class ProcessorInfoAty extends Activity {
                 String toshow = readSdFile();
                 tx_show_cpu_info.setText(toshow);
             }
-        }, new GetProcessorInfo.FailCallback() {
+        }, new DeviceInfoGetProcessorInfo.FailCallback() {
             @Override
             public void onFail() {
                 Log.e("TAG","写入失败");

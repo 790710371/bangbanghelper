@@ -32,15 +32,14 @@
                 android:layout_height="80dp"
                 android:orientation="horizontal"
                 android:layout_gravity="center_horizontal">
-               <com.dd.CircularProgressButton
-                   android:id="@+id/device_info_progress_btn"
+
+                <Button
+                    android:id="@+id/device_info_random_btn"
+                    android:background="@drawable/button_shape"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:textColor="#FFFFFF"
-                    app:cpb_textError="error"
-                    app:cpb_textComplete="完成"
-                   android:layout_gravity="center"
-                />
+                    android:text="随机生成"
+                    android:layout_gravity="center"/>
                 <Button
                     android:id="@+id/btn_device_info_save"
                     android:background="@drawable/button_shape"
@@ -56,47 +55,19 @@
                 android:hint="@null"
                 android:background="#F5F5F5"/>
             <LinearLayout
-                android:id="@+id/layout_user_id_item"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:orientation="horizontal">
-                <TextView
-                    android:id="@+id/tx_user_id"
-                    android:layout_width="100dp"
-                    android:layout_height="50dp"
-                    android:text="ID"
-                    android:gravity="center"
-                    android:textColor="#000000"/>
-                <EditText
-                    android:id="@+id/edt_user_id"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:text=""
-                    android:hint="@null"
-                    android:background="@null"
-                    android:gravity="center"
-                    android:maxLines="1"/>
-            </LinearLayout>
-            <!--分割线-->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:hint="@null"
-                android:background="#F5F5F5"/>
-            <LinearLayout
                 android:id="@+id/layout_resolution_item"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:orientation="horizontal">
                 <TextView
-                    android:id="@+id/tx_resolution_item"
+                    android:id="@+id/tx_resolution"
                     android:layout_width="100dp"
                     android:layout_height="50dp"
                     android:text="分辨率"
                     android:gravity="center"
                     android:textColor="#000000"/>
                 <EditText
-                    android:id="@+id/edt_resolution_item"
+                    android:id="@+id/edt_resolution"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:text=""
@@ -105,33 +76,7 @@
                     android:gravity="center"
                     android:maxLines="1"/>
             </LinearLayout>
-            <!--分割线-->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:hint="@null"
-                android:background="#F5F5F5"/>
-            <LinearLayout
-                android:id="@+id/device_info_cpu_item"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:orientation="horizontal">
-                <TextView
-                    android:id="@+id/tx_cpu_Processor"
-                    android:layout_width="100dp"
-                    android:layout_height="50dp"
-                    android:text="cpu信息"
-                    android:gravity="center"
-                    android:textColor="#000000"/>
-                <ImageView
-                    android:id="@+id/img_device_info__cpu_left"
-                    android:layout_width="25px"
-                    android:layout_height="44px"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="230dp"
-                    android:src="@drawable/arrow_left"/>
-            </LinearLayout>
-            <!--分割线-->
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -384,33 +329,7 @@
                     android:gravity="center"
                     android:hint="@null"/>
             </LinearLayout>
-            <!--分割线-->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#f5f5f5"/>
-            <LinearLayout
-                android:id="@+id/layout_xinpian_item"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:orientation="horizontal">
-                <TextView
-                    android:id="@+id/tx_xinpian"
-                    android:layout_width="100dp"
-                    android:layout_height="50dp"
-                    android:text="硬件"
-                    android:gravity="center"
-                    android:textColor="#000000"/>
-                <EditText
-                    android:id="@+id/edt_xinpian"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:text=""
-                    android:textColor="#dd000000"
-                    android:background="@null"
-                    android:gravity="center"
-                    android:hint="@null"/>
-            </LinearLayout>
+
             <!--分割线-->
             <TextView
                 android:layout_width="match_parent"
@@ -422,14 +341,14 @@
                 android:layout_height="50dp"
                 android:orientation="horizontal">
                 <TextView
-                    android:id="@+id/tx_wifi_ssid"
+                    android:id="@+id/tx_mac"
                     android:layout_width="100dp"
                     android:layout_height="50dp"
                     android:text="Mac"
                     android:gravity="center"
                     android:textColor="#000000"/>
                 <EditText
-                    android:id="@+id/edt_mac_item"
+                    android:id="@+id/edt_mac"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:text=""

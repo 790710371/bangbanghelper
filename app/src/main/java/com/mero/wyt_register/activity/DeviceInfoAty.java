@@ -1,75 +1,44 @@
 package com.mero.wyt_register.activity;
 
-import android.Manifest;
 import android.app.Activity;
-import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.pm.ApplicationInfo;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
-import android.location.Address;
-import android.location.Criteria;
-import android.location.Geocoder;
-import android.location.GpsSatellite;
-import android.location.GpsStatus;
-import android.location.Location;
-import android.location.LocationListener;
 import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Process;
-import android.provider.Settings;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.content.PermissionChecker;
-import android.text.Editable;
-import android.text.TextUtils;
-import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.amap.api.location.AMapLocation;
 import com.amap.api.location.AMapLocationClient;
 import com.amap.api.location.AMapLocationClientOption;
 import com.amap.api.location.AMapLocationListener;
-import com.dd.CircularProgressButton;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.mero.wyt_register.Config;
 import com.mero.wyt_register.MainActivity;
-import com.mero.wyt_register.MyApplication;
 import com.mero.wyt_register.R;
-import com.mero.wyt_register.utils.AppUtils;
 import com.mero.wyt_register.utils.DeviceUtils;
 import com.mero.wyt_register.utils.MapUtils;
 import com.mero.wyt_register.utils.NetUtils;
 import com.mero.wyt_register.utils.RegexUtils;
 import com.mero.wyt_register.widget.CustomTitleBar;
 
-import java.io.IOException;
-import java.security.Provider;
-import java.util.Iterator;
-import java.util.List;
-
-import static android.R.attr.targetSdkVersion;
-import static android.icu.lang.UCharacter.GraphemeClusterBreak.L;
-import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
-
 public class DeviceInfoAty extends Activity implements View.OnClickListener {
     private static final String TAG = "DeviceInfoAty";
     private CustomTitleBar customTitleBar;
-    private CircularProgressButton circularProgressButton;
+    private Button randomButton;
+    private EditText edt_random_resolution;//分辨率
     private EditText edt_sim_xulie_num;//序列号
     private EditText edt_IMEI;//IMEI
     private EditText edt_IMSI;//IMSI
@@ -77,12 +46,29 @@ public class DeviceInfoAty extends Activity implements View.OnClickListener {
     private EditText edt_phone_country;//手机卡国家
     private EditText edt_yunyingshang;//运营商
     private EditText edt_device_type;//手机型号
+    private EditText edt_mac;//手机mac地址
+    private EditText edt_ssid;//手机WiFi名称，即ssid
+    private EditText edt_luyou_mac;//路由mac地址
     private static EditText edt_show_location;//地理位置
-    private Button btn_save, btn_get_random;//随机生成
+    private Button btn_save;//随机生成
     private static LocationManager lm = null;
     private static String providerLocation = null;
-    private LinearLayout layout_cpu;
     private String s;//定位字符串
+
+    private String fenbianlv;//分辨率
+    private String android_id ;//IMEI
+    private String xuliehao;//序列号
+    private String imsi;//imsi
+    private String country;//国家
+    private String yunyingshang;//运营商
+    private String IP;//ip
+    private String xinghao;//手机型号
+    private String jingdu;//经度
+    private String weidu;//纬度
+    private String mac;//mac地址
+    private String ssid;//WiFi名称
+    private String luyou;//路由mac地址
+
 
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
@@ -114,29 +100,12 @@ public class DeviceInfoAty extends Activity implements View.OnClickListener {
                 finish();
             }
         });
-        circularProgressButton = (CircularProgressButton) findViewById(R.id.device_info_progress_btn);
-        circularProgressButton.setText("随机生成");
-        circularProgressButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                CircularProgressButton c = (CircularProgressButton) v;
-                c.setIndeterminateProgressMode(true);
-                int progress = c.getProgress();
-                if (progress == 0) {
-                    c.setProgress(50);
-                } else if (progress == 100) {
-                    c.setProgress(0);
-                } else if (progress == 50) {
-                    c.setProgress(100);
-                }
-            }
-        });
-        layout_cpu = (LinearLayout) findViewById(R.id.device_info_cpu_item);
-        layout_cpu.setOnClickListener(this);
-
+        randomButton = (Button) findViewById(R.id.device_info_random_btn);
+        randomButton.setOnClickListener(this);
         //初始化手机数据
         btn_save = (Button) findViewById(R.id.btn_device_info_save);
         btn_save.setOnClickListener(this);
+        edt_random_resolution = (EditText) findViewById(R.id.edt_resolution);
         edt_IMEI = (EditText) findViewById(R.id.edt_IMEI);
         edt_IMSI = (EditText) findViewById(R.id.edt_IMSI);
         edt_phone_country = (EditText) findViewById(R.id.edt_phone_country);
@@ -175,7 +144,14 @@ public class DeviceInfoAty extends Activity implements View.OnClickListener {
         edt_show_location = (EditText) findViewById(R.id.edt_location);
         Log.e("TAG","正在尝试获取地理位置");
         getLocation(this);
+        edt_mac = (EditText) findViewById(R.id.edt_mac);
+        edt_ssid = (EditText) findViewById(R.id.edt_ssid);
+        edt_luyou_mac = (EditText) findViewById(R.id.edt_bssid);//路由器MAC地址
+
     }
+
+
+
 
     //得到地理位置方法
     private synchronized void getLocation(Context context){
@@ -240,12 +216,34 @@ public class DeviceInfoAty extends Activity implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.device_info_progress_btn:
-//                DeviceUtils.getIMEI(DeviceInfoAty.this);
-                break;
-            case R.id.device_info_cpu_item:
-                startActivity(new Intent(DeviceInfoAty.this, ProcessorInfoAty.class));
-                finish();
+            case R.id.device_info_random_btn:
+                //当点击随机生成按钮
+                //开始生成随机数据
+                //随机分辨率
+                fenbianlv = DeviceInfoGetRandom.getRandomFenbianlvData();
+                //随机android_id
+                android_id = DeviceInfoGetRandom.getIMEI();
+                //随机序列号
+                xuliehao = DeviceInfoGetRandom.getRandomSimNumber();
+                //随机IMSI
+                imsi = DeviceInfoGetRandom.getIMSI();
+                //随机Mac
+                mac = DeviceInfoGetRandom.getMacAddrWithFormat(":");
+                //随机称号
+                ssid = DeviceInfoGetRandom.genRandomSsid(10);
+                //路由器mac地址
+                luyou = DeviceInfoGetRandom.getMacAddrWithFormat(":");
+
+                //设置到输入框上去
+                edt_random_resolution.setText(fenbianlv);
+                edt_IMEI.setText(android_id);
+                edt_sim_xulie_num.setText(xuliehao);
+                edt_IMSI.setText(imsi);
+                edt_mac.setText(mac);
+                edt_ssid.setText(ssid);
+                edt_luyou_mac.setText(luyou);
+                Log.e("TAG","fenbianlv:"+fenbianlv+"\t"+"android_id:"+android_id+"\t"+"xuliehao:"+xuliehao+"\t"+"imsi:"+imsi+"\t"+"mac:"+mac
+                +"\t"+"ssid:"+ssid+"\t"+"luyou:"+luyou);
                 break;
             case R.id.btn_device_info_save:
                 Toast.makeText(DeviceInfoAty.this, "正在保存", Toast.LENGTH_SHORT).show();
