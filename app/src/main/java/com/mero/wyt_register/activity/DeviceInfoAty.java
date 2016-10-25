@@ -256,7 +256,7 @@ public  class DeviceInfoAty extends Activity implements View.OnClickListener {
                         location = lm.getLastKnownLocation(providerLocation);
                 }else{
                     //权限不够，即便开启GPS或者网络也无法定位
-                    location = null;c
+                    location = null;
                     Log.e("TAG","权限不够，即便开启GPS或者网络也无法定位");
                 }
                 return  location;
