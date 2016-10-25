@@ -2,8 +2,6 @@ package com.mero.wyt_register.activity;
 
 import java.util.Random;
 
-import static com.amap.loc.c.n;
-
 /**
  * Created by chenlei on 2016/10/25.
  */
