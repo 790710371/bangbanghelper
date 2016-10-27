@@ -37,13 +37,4 @@
         android:text="安装模块"
         android:textColor="#FFFFFF"
         android:background="@drawable/button_shape"/>
-    <Button
-        android:id="@+id/btn_fresh"
-        android:layout_width="80dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="70dp"
-        android:layout_gravity="center_horizontal"
-        android:text="刷新"
-        android:textColor="#FFFFFF"
-        android:background="@drawable/button_shape"/>
 </LinearLayout>

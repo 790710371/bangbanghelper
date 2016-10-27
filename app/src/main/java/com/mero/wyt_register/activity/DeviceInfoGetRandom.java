@@ -1,5 +1,6 @@
 package com.mero.wyt_register.activity;
 
+import java.text.DecimalFormat;
 import java.util.Random;
 
 /**
@@ -462,6 +463,29 @@ public final  class DeviceInfoGetRandom {
         }
         return sb.toString();
     }
-
-
+    //得到经度
+    public static String getLaLocation(){
+        //73~135
+        Random random =new Random();
+        double b =(random.nextDouble()+1)*70;//生成70到140范围内
+        if(b>70&&b<80){
+            b+=20;//偏移进到90到100范围内
+        }
+        if(b>135&&b<140){
+            b-=20;//同样偏移进去
+        }
+        DecimalFormat decimal = new DecimalFormat("###.######");
+        return  decimal.format(b);
+    }
+    //得到纬度
+    public static String getLongLocation(){
+        //3~53
+        Random random =new Random();
+        double b =(random.nextDouble()+1)*30;//生成70到140范围内
+        if(b>53&&b<60){
+            b-=10;
+        }
+        DecimalFormat decimal = new DecimalFormat("###.######");
+        return  decimal.format(b);
+    }
 }

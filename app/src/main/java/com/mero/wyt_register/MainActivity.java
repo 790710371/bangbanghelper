@@ -60,26 +60,13 @@ public class MainActivity extends Activity implements OnClickListener {
 		}
 		setContentView(R.layout.main);
 		sharedPreferences = this.getSharedPreferences(Config.ID, Context.MODE_PRIVATE);
-//		initEvent(this);
 		initView();
 		// ATTENTION: This was auto-generated to implement the App Indexing API.
 		// See https://g.co/AppIndexing/AndroidStudio for more information.
 		client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
 	}
-	private Handler handler =new Handler(){
-	@Override
-	public void handleMessage(Message msg) {
-		super.handleMessage(msg);
-		Bundle bundle = msg.getData();
-		String s = bundle.getString("isInstalled");
-		btn_install_xposed.setText(s);
-		if(s.equals("已安装"))btn_install_xposed.setEnabled(false);
-	}
-	};
 	private void initView() {
-//		checkPackageInstalled(MainActivity.this);
 		//得到配置信息
-		boolean isInstalledXposed = sharedPreferences.getBoolean(Config.IS_INSTALL_XPOSED,false);
 		btn_install_xposed = (Button) findViewById(R.id.btn_xposed_install);
 		mixTextImage = (MixTextImage) findViewById(R.id.mix_01);
 		menuImage = (ImageView) findViewById(R.id.menu_icon);
@@ -87,56 +74,21 @@ public class MainActivity extends Activity implements OnClickListener {
 		menuImage.setOnClickListener(this);
 		btn_install_xposed.setOnClickListener(this);
 	}
-
-	private void checkPackageInstalled(Context context) {
-		PackageManager pm = context.getPackageManager();
-		List<PackageInfo> listInfo = pm.getInstalledPackages(0);
-		for (PackageInfo packageInfo : listInfo) {
-			Log.e(TAG, packageInfo.packageName);
-			if (packageInfo.packageName.equals(getResources().getString(R.string.xposed_package_name))) {
-				SharedPreferences.Editor editor = sharedPreferences.edit();
-				editor.putBoolean(Config.IS_INSTALL_XPOSED, true);
-				editor.commit();
-				//更新ui，将按钮马上安装变成已安装
-				new Thread() {
-					@Override
-					public void run() {
-						Message msg = new Message();
-						Bundle bundle = new Bundle();
-						bundle.putString("isInstalled", "已安装");
-						msg.setData(bundle);
-						handler.sendMessage(msg);
-						Log.e(TAG,"正在提交UI更新信息");
-					}
-				}.start();
-				return;
-			}
-		}
-		new Thread(){
-			@Override
-			public void run() {
-				Message msg = new Message();
-				Bundle bundle = new Bundle();
-				bundle.putString("isInstalled", "点击安装");
-				msg.setData(bundle);
-				handler.sendMessage(msg);
-				Log.e(TAG,"正在提交UI更新信息");
-			}
-		}.start();
-		SharedPreferences.Editor editor = sharedPreferences.edit();
-		editor.putBoolean(Config.IS_INSTALL_XPOSED, false);
+	//用于判断模块是否安装
+	public static  String getResult(){
+		return "未安装";
 	}
 
 	@Override
 	protected void onResume() {
 		super.onResume();
-		SharedPreferences sharedPreferences = getSharedPreferences(Config.ID,Context.MODE_PRIVATE);
-		boolean is = sharedPreferences.getBoolean(Config.IS_INSTALL_XPOSED,false);
-		if(is==true&& RootTools.isRootAvailable()==true){
+		sharedPreferences = getSharedPreferences(Config.ID,MODE_PRIVATE);
+		boolean isRoot = RootTools.isRootAvailable();
+		String isXposedInstalled = sharedPreferences.getString(Config.KEY_IS_INSTALL_XPOSED,Config.VALUE_NOT_INSTALLED);
+		String isModuleInstalled = sharedPreferences.getString(Config.KEY_IS_MODULE_INSTALLED,Config.VALUE_NOT_INSTALLED);
+		if(isRoot==true&&isXposedInstalled.equals("已安装")&&isModuleInstalled.equals("已安装")){
 			btn_install_xposed.setText("已安装");
 			btn_install_xposed.setEnabled(false);
-		}else{
-			btn_install_xposed.setText("点击安装");
 		}
 	}
 
@@ -173,8 +125,6 @@ public class MainActivity extends Activity implements OnClickListener {
 				if((!TextUtils.isEmpty(s))&&s.equals("点击安装")){
 					startActivity(new Intent(MainActivity.this,InstallXposedAty.class));
 					finish();
-				}else{
-					return;
 				}
 				break;
 			case R.id.mix_01:

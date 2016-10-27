@@ -4,8 +4,11 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.location.Location;
 import android.location.LocationManager;
 import android.net.Uri;
+import android.net.wifi.WifiInfo;
+import android.net.wifi.WifiManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -33,6 +36,14 @@ import com.mero.wyt_register.utils.MapUtils;
 import com.mero.wyt_register.utils.NetUtils;
 import com.mero.wyt_register.utils.RegexUtils;
 import com.mero.wyt_register.widget.CustomTitleBar;
+import com.stericson.RootTools.RootTools;
+import com.stericson.RootTools.RootToolsException;
+
+import java.io.IOException;
+import java.util.concurrent.TimeoutException;
+
+import static android.R.id.edit;
+import static android.icu.lang.UCharacter.GraphemeClusterBreak.L;
 
 public class DeviceInfoAty extends Activity implements View.OnClickListener {
     private static final String TAG = "DeviceInfoAty";
@@ -46,9 +57,11 @@ public class DeviceInfoAty extends Activity implements View.OnClickListener {
     private EditText edt_phone_country;//手机卡国家
     private EditText edt_yunyingshang;//运营商
     private EditText edt_device_type;//手机型号
+//    private EditText edt_location_la;//经度
+//    private EditText edt_location_long;//纬度
     private EditText edt_mac;//手机mac地址
     private EditText edt_ssid;//手机WiFi名称，即ssid
-    private EditText edt_luyou_mac;//路由mac地址
+    private EditText edt_bssid;//手机的路由Mac
     private static EditText edt_show_location;//地理位置
     private Button btn_save;//随机生成
     private static LocationManager lm = null;
@@ -63,11 +76,11 @@ public class DeviceInfoAty extends Activity implements View.OnClickListener {
     private String yunyingshang;//运营商
     private String IP;//ip
     private String xinghao;//手机型号
-    private String jingdu;//经度
-    private String weidu;//纬度
+    private String location_la;//经度
+    private String location_long;//纬度
     private String mac;//mac地址
     private String ssid;//WiFi名称
-    private String luyou;//路由mac地址
+    private String bssid;//路由Mac地址
 
 
     /**
@@ -141,12 +154,14 @@ public class DeviceInfoAty extends Activity implements View.OnClickListener {
         });
         edt_device_type = (EditText) findViewById(R.id.edt_device_type);
         edt_device_type.setText(Build.MODEL);
+//        edt_location_la = (EditText) findViewById(R.id.edt_location_la);
+//        edt_location_long = (EditText) findViewById(R.id.edt_location_long);
         edt_show_location = (EditText) findViewById(R.id.edt_location);
         Log.e("TAG","正在尝试获取地理位置");
         getLocation(this);
         edt_mac = (EditText) findViewById(R.id.edt_mac);
         edt_ssid = (EditText) findViewById(R.id.edt_ssid);
-        edt_luyou_mac = (EditText) findViewById(R.id.edt_bssid);//路由器MAC地址
+        edt_bssid = (EditText) findViewById(R.id.edt_bssid);
 
     }
 
@@ -205,6 +220,9 @@ public class DeviceInfoAty extends Activity implements View.OnClickListener {
         edt_yunyingshang.setText(DeviceUtils.getProviderInfo(this));//设置运营商
         edt_ip_address.setText(NetUtils.getPhoneIp());//设置IP地址
         edt_device_type.setText(Build.MANUFACTURER + Build.MODEL);//手机类型
+        edt_mac.setText(NetUtils.getMacAddress(this));//设置mac地址
+        edt_ssid.setText(NetUtils.getSSID(this));//设置ssid
+        edt_bssid.setText(NetUtils.getBssid(this));//设置bssid
     }
 
 
@@ -216,8 +234,8 @@ public class DeviceInfoAty extends Activity implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+            //正在点击随机生成按钮
             case R.id.device_info_random_btn:
-                //当点击随机生成按钮
                 //开始生成随机数据
                 //随机分辨率
                 fenbianlv = DeviceInfoGetRandom.getRandomFenbianlvData();
@@ -227,57 +245,83 @@ public class DeviceInfoAty extends Activity implements View.OnClickListener {
                 xuliehao = DeviceInfoGetRandom.getRandomSimNumber();
                 //随机IMSI
                 imsi = DeviceInfoGetRandom.getIMSI();
+//                //随机经度
+//                location_la = DeviceInfoGetRandom.getLaLocation();
+//                //随机纬度
+//                location_long = DeviceInfoGetRandom.getLongLocation();
                 //随机Mac
                 mac = DeviceInfoGetRandom.getMacAddrWithFormat(":");
                 //随机称号
                 ssid = DeviceInfoGetRandom.genRandomSsid(10);
                 //路由器mac地址
-                luyou = DeviceInfoGetRandom.getMacAddrWithFormat(":");
-
+                bssid = DeviceInfoGetRandom.getMacAddrWithFormat(":");
                 //设置到输入框上去
                 edt_random_resolution.setText(fenbianlv);
                 edt_IMEI.setText(android_id);
                 edt_sim_xulie_num.setText(xuliehao);
                 edt_IMSI.setText(imsi);
+//                edt_location_la.setText(location_la);
+//                edt_location_long.setText(location_long);
                 edt_mac.setText(mac);
                 edt_ssid.setText(ssid);
-                edt_luyou_mac.setText(luyou);
+                edt_bssid.setText(bssid);
                 Log.e("TAG","fenbianlv:"+fenbianlv+"\t"+"android_id:"+android_id+"\t"+"xuliehao:"+xuliehao+"\t"+"imsi:"+imsi+"\t"+"mac:"+mac
-                +"\t"+"ssid:"+ssid+"\t"+"luyou:"+luyou);
+                +"\t"+"ssid:"+ssid+"\t"+"location_la:"+location_la+"\t"+"location_long:"+location_long+"\t"+"mac:"+mac+"\t"+"ssid:"+ssid+"\t"+"bssid"+bssid);
+
                 break;
             case R.id.btn_device_info_save:
                 Toast.makeText(DeviceInfoAty.this, "正在保存", Toast.LENGTH_SHORT).show();
+                //修改分辨率
                 try {
-                    SharedPreferences sharedPreferences = getSharedPreferences(Config.ID, Context.MODE_WORLD_READABLE);
-                    SharedPreferences.Editor editor = sharedPreferences.edit();
-                    editor.putString("simSerialNumber", edt_sim_xulie_num.getText().toString());
-                    editor.putString("imei", edt_IMEI.getText().toString());
-                    editor.putString("imsi", edt_IMSI.getText().toString());
-                    editor.putString("phoneCountry", edt_phone_country.getText().toString());
-                    editor.apply();
-                    //关闭App并且重启
-                    Log.e("DeviceInfoAty", Process.myPid() + "");
-                    sendBroadcast(new Intent("restart.app"));
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            Process.killProcess(Process.myPid());
-                        }
-                    }, 3000);
+                    RootTools.sendShell("wm size "+fenbianlv,0);
+                    try {
+                        SharedPreferences sharedPreferences = getSharedPreferences(Config.ID, Context.MODE_WORLD_READABLE);
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.putString("simSerialNumber", edt_sim_xulie_num.getText().toString());
+                        editor.putString("imei", edt_IMEI.getText().toString());
+                        editor.putString("imsi", edt_IMSI.getText().toString());
+                        //国家默认不注入
+                        editor.putString("phoneCountry", edt_phone_country.getText().toString());
+                        //注入经度
+                        editor.putString("locationLa",location_la);
+                        //注入纬度
+                        editor.putString("locationLong",location_long);
+                        //注入WiFiMac
+                        editor.putString("macWifi",mac);
+                        //注入ssid
+                        editor.putString("ssid",ssid);
+                        //注入bssid
+                        editor.putString("bssid",bssid);
+                        editor.apply();
+                        //关闭App并且重启
+                        Log.e("DeviceInfoAty", Process.myPid() + "");
+                        sendBroadcast(new Intent("restart.app"));
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                Process.killProcess(Process.myPid());
+                            }
+                        }, 3000);
 
-                } catch (Exception e) {
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                        Toast.makeText(DeviceInfoAty.this, "写入失败" + e.getMessage(), Toast.LENGTH_LONG).show();
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                    }
+                } catch (IOException e) {
                     e.printStackTrace();
-                    Toast.makeText(DeviceInfoAty.this, "写入失败" + e.getMessage(), Toast.LENGTH_LONG).show();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
+                } catch (RootToolsException e) {
+                    e.printStackTrace();
+                } catch (TimeoutException e) {
+                    e.printStackTrace();
                 }
+
                 break;
         }
     }
 
 
-
-    //创建位置监听器
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.

@@ -12,5 +12,8 @@ public class Config {
 	public static final String DEBUGGING="T";//可调试开发阶段标志
 	public static final String URL="www.haoma.com";//临时接码平台地址
 	public static final String VERSION="1.0";//版本信息
-	public static final String IS_INSTALL_XPOSED = "isInstalledXposed";//是否安装xposed
+	public static final String KEY_IS_INSTALL_XPOSED = "isInstalledXposed";//是否安装XPOSED
+	public static final String KEY_IS_MODULE_INSTALLED = "isInstalledModule";//是否已经安装MODULE
+	public static final String VALUE_IS_INSTALL = "已安装";
+	public static final String VALUE_NOT_INSTALLED = "未安装";
 }

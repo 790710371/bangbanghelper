@@ -56,7 +56,12 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </receiver>
-
+        <receiver android:name=".receiver.XposedModelIsOrNotInstalled">
+            <intent-filter>
+                <action android:name="xposed.isInstalledOrNot"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
         <activity android:name=".activity.WelcomeAty">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -92,9 +97,6 @@
             android:name="xposeddescription"
             android:value="@string/xposed_app_description" />
 
-        <activity android:name=".activity.ProcessorInfoAty"
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

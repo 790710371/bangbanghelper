@@ -57,6 +57,13 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </receiver>
+        <receiver android:name="com.mero.wyt_register.receiver.XposedModelIsOrNotInstalled" >
+            <intent-filter>
+                <action android:name="xposed.isInstalledOrNot" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
 
         <activity android:name="com.mero.wyt_register.activity.WelcomeAty" >
             <intent-filter>
@@ -92,11 +99,6 @@
         <meta-data
             android:name="xposeddescription"
             android:value="@string/xposed_app_description" />
-
-        <activity
-            android:name="com.mero.wyt_register.activity.ProcessorInfoAty"
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
