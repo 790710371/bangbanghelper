@@ -245,6 +245,10 @@ public class DeviceInfoAty extends Activity implements View.OnClickListener {
                 xuliehao = DeviceInfoGetRandom.getRandomSimNumber();
                 //随机IMSI
                 imsi = DeviceInfoGetRandom.getIMSI();
+                //随机手机型号
+
+                //随机手机品牌
+
 //                //随机经度
 //                location_la = DeviceInfoGetRandom.getLaLocation();
 //                //随机纬度
