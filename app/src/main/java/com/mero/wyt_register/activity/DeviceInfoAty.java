@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.sqlite.SQLiteDatabase;
 import android.location.Location;
 import android.location.LocationManager;
 import android.net.Uri;
@@ -31,6 +32,8 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.mero.wyt_register.Config;
 import com.mero.wyt_register.MainActivity;
 import com.mero.wyt_register.R;
+import com.mero.wyt_register.db.DbHelper;
+import com.mero.wyt_register.db.DeviceModelDao;
 import com.mero.wyt_register.utils.DeviceUtils;
 import com.mero.wyt_register.utils.MapUtils;
 import com.mero.wyt_register.utils.NetUtils;
@@ -40,6 +43,7 @@ import com.stericson.RootTools.RootTools;
 import com.stericson.RootTools.RootToolsException;
 
 import java.io.IOException;
+import java.util.Random;
 import java.util.concurrent.TimeoutException;
 
 import static android.R.id.edit;
@@ -57,8 +61,6 @@ public class DeviceInfoAty extends Activity implements View.OnClickListener {
     private EditText edt_phone_country;//手机卡国家
     private EditText edt_yunyingshang;//运营商
     private EditText edt_device_type;//手机型号
-//    private EditText edt_location_la;//经度
-//    private EditText edt_location_long;//纬度
     private EditText edt_mac;//手机mac地址
     private EditText edt_ssid;//手机WiFi名称，即ssid
     private EditText edt_bssid;//手机的路由Mac
@@ -72,10 +74,11 @@ public class DeviceInfoAty extends Activity implements View.OnClickListener {
     private String android_id ;//IMEI
     private String xuliehao;//序列号
     private String imsi;//imsi
+    private String model;//随机型号
+    private String brand;//随机品牌
     private String country;//国家
     private String yunyingshang;//运营商
     private String IP;//ip
-    private String xinghao;//手机型号
     private String location_la;//经度
     private String location_long;//纬度
     private String mac;//mac地址
@@ -154,8 +157,6 @@ public class DeviceInfoAty extends Activity implements View.OnClickListener {
         });
         edt_device_type = (EditText) findViewById(R.id.edt_device_type);
         edt_device_type.setText(Build.MODEL);
-//        edt_location_la = (EditText) findViewById(R.id.edt_location_la);
-//        edt_location_long = (EditText) findViewById(R.id.edt_location_long);
         edt_show_location = (EditText) findViewById(R.id.edt_location);
         Log.e("TAG","正在尝试获取地理位置");
         getLocation(this);
@@ -219,7 +220,7 @@ public class DeviceInfoAty extends Activity implements View.OnClickListener {
         edt_phone_country.setText(DeviceUtils.getCountryZipCode(this));//设置国家
         edt_yunyingshang.setText(DeviceUtils.getProviderInfo(this));//设置运营商
         edt_ip_address.setText(NetUtils.getPhoneIp());//设置IP地址
-        edt_device_type.setText(Build.MANUFACTURER + Build.MODEL);//手机类型
+        edt_device_type.setText(Build.BRAND + Build.MODEL);//手机类型
         edt_mac.setText(NetUtils.getMacAddress(this));//设置mac地址
         edt_ssid.setText(NetUtils.getSSID(this));//设置ssid
         edt_bssid.setText(NetUtils.getBssid(this));//设置bssid
@@ -246,13 +247,13 @@ public class DeviceInfoAty extends Activity implements View.OnClickListener {
                 //随机IMSI
                 imsi = DeviceInfoGetRandom.getIMSI();
                 //随机手机型号
+                int id = new Random().nextInt(51)+1;
+                DeviceModelDao dao = new DeviceModelDao(this);
+                Object[] obj = dao.queryDeviceInfo(id);
+                model =(String)obj[1];//得到手机型号
+                brand = (String) obj[2];//得到手机品牌
 
-                //随机手机品牌
 
-//                //随机经度
-//                location_la = DeviceInfoGetRandom.getLaLocation();
-//                //随机纬度
-//                location_long = DeviceInfoGetRandom.getLongLocation();
                 //随机Mac
                 mac = DeviceInfoGetRandom.getMacAddrWithFormat(":");
                 //随机称号
@@ -269,9 +270,10 @@ public class DeviceInfoAty extends Activity implements View.OnClickListener {
                 edt_mac.setText(mac);
                 edt_ssid.setText(ssid);
                 edt_bssid.setText(bssid);
+                edt_device_type.setText(brand+"\t"+model);
                 Log.e("TAG","fenbianlv:"+fenbianlv+"\t"+"android_id:"+android_id+"\t"+"xuliehao:"+xuliehao+"\t"+"imsi:"+imsi+"\t"+"mac:"+mac
-                +"\t"+"ssid:"+ssid+"\t"+"location_la:"+location_la+"\t"+"location_long:"+location_long+"\t"+"mac:"+mac+"\t"+"ssid:"+ssid+"\t"+"bssid"+bssid);
-
+                +"\t"+"ssid:"+ssid+"\t"+"location_la:"+location_la+"\t"+"location_long:"+location_long+"\t"+"mac:"+mac+"\t"+"ssid:"+ssid+"\t"+"bssid"+bssid+
+                        "brand:"+brand+"model:"+model);
                 break;
             case R.id.btn_device_info_save:
                 Toast.makeText(DeviceInfoAty.this, "正在保存", Toast.LENGTH_SHORT).show();
@@ -281,21 +283,15 @@ public class DeviceInfoAty extends Activity implements View.OnClickListener {
                     try {
                         SharedPreferences sharedPreferences = getSharedPreferences(Config.ID, Context.MODE_WORLD_READABLE);
                         SharedPreferences.Editor editor = sharedPreferences.edit();
-                        editor.putString("simSerialNumber", edt_sim_xulie_num.getText().toString());
-                        editor.putString("imei", edt_IMEI.getText().toString());
-                        editor.putString("imsi", edt_IMSI.getText().toString());
-                        //国家默认不注入
-                        editor.putString("phoneCountry", edt_phone_country.getText().toString());
-                        //注入经度
-                        editor.putString("locationLa",location_la);
-                        //注入纬度
-                        editor.putString("locationLong",location_long);
-                        //注入WiFiMac
-                        editor.putString("macWifi",mac);
-                        //注入ssid
-                        editor.putString("ssid",ssid);
-                        //注入bssid
-                        editor.putString("bssid",bssid);
+                        editor.putString("simSerialNumber", edt_sim_xulie_num.getText().toString());//sim序列号
+                        editor.putString("imei", edt_IMEI.getText().toString());//IMEI
+                        editor.putString("imsi", edt_IMSI.getText().toString());//IMSI
+                        editor.putString("phoneCountry", edt_phone_country.getText().toString());//国家编号
+                        editor.putString("macWifi",mac);//手机的mac地址
+                        editor.putString("ssid",ssid);//WiFi名称
+                        editor.putString("bssid",bssid);//路由mac地址
+                        editor.putString("model",model);//手机型号
+                        editor.putString("brand",brand);//手机品牌
                         editor.apply();
                         //关闭App并且重启
                         Log.e("DeviceInfoAty", Process.myPid() + "");

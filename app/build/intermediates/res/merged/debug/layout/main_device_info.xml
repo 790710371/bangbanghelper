@@ -55,6 +55,34 @@
                 android:hint="@null"
                 android:background="#F5F5F5"/>
             <LinearLayout
+                android:id="@+id/layout_device_model_item"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tx_device_model"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="手机型号"
+                    android:gravity="center"
+                    android:textColor="#000000"/>
+                <EditText
+                    android:id="@+id/edt_device_model"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text=""
+                    android:hint="@null"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:maxLines="1"/>
+            </LinearLayout>
+            <!--分割线-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:hint="@null"
+                android:background="#F5F5F5"/>
+            <LinearLayout
                 android:id="@+id/layout_resolution_item"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"

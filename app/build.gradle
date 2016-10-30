@@ -28,4 +28,5 @@ dependencies {
     compile 'com.github.dmytrodanylyk.circular-progress-button:library:1.1.3'
     compile files('libs/nineoldandroids-2.4.0.jar')
     compile files('libs/AMap_Location_V3.0.0_20160922.jar')
+    compile files('libs/gson-2.3.1.jar')
 }

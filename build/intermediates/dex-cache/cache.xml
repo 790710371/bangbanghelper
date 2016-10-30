@@ -129,6 +129,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="C:\Users\chenlei\Desktop\bangbanghelper\app\libs\gson-2.3.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="ecb6e1f8e4b0e84c4b886c2f14a1500caf309757">
+        <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\pre-dexed\debug\gson-2.3.1_c8f2a8f684bb91b4f4974490905f25a1d36c3148.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\jars\classes.jar"
         jumboMode="false"
         optimize="true"
