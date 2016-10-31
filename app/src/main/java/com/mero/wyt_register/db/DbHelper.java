@@ -19,7 +19,7 @@ public class DbHelper extends SQLiteOpenHelper {
     //创建表
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String sql1 = "create table if not exists device_model_info(id integer primary key AUTOINCREMENT,model varchar(20),brand varchar(20))";
+        String sql1 = "create table if not exists device_model_info(id integer primary key AUTOINCREMENT,model varchar(20),brand varchar(20),manufacturer varchar(20))";
         db.execSQL(sql1);
     }
     //删除数据库

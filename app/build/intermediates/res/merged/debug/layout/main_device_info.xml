@@ -48,34 +48,7 @@
                     android:text="保存"
                     android:layout_gravity="center"/>
             </LinearLayout>
-            <!--分割线-->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:hint="@null"
-                android:background="#F5F5F5"/>
-            <LinearLayout
-                android:id="@+id/layout_device_model_item"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:orientation="horizontal">
-                <TextView
-                    android:id="@+id/tx_device_model"
-                    android:layout_width="100dp"
-                    android:layout_height="50dp"
-                    android:text="手机型号"
-                    android:gravity="center"
-                    android:textColor="#000000"/>
-                <EditText
-                    android:id="@+id/edt_device_model"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:text=""
-                    android:hint="@null"
-                    android:background="@null"
-                    android:gravity="center"
-                    android:maxLines="1"/>
-            </LinearLayout>
+
             <!--分割线-->
             <TextView
                 android:layout_width="match_parent"
@@ -230,6 +203,34 @@
                 android:layout_height="1dp"
                 android:background="#f5f5f5"/>
             <LinearLayout
+                android:id="@+id/layout_phone_number_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tx_phone_number"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="手机号"
+                    android:gravity="center"
+                    android:textColor="#000000"/>
+                <EditText
+                    android:id="@+id/edt_phone_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="#dd000000"
+                    android:hint="@null"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:maxLines="1"/>
+            </LinearLayout>
+            <!--分割线-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f5f5f5"/>
+            <LinearLayout
                 android:id="@+id/layout_yunyingshang_item"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -251,6 +252,116 @@
                     android:gravity="center"
                     android:hint="@null"/>
             </LinearLayout>
+            <!--分割线-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f5f5f5"/>
+            <LinearLayout
+                android:id="@+id/layout_SDK_item"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tx__SDK"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="SDK版本"
+                    android:gravity="center"
+                    android:textColor="#000000"/>
+                <EditText
+                    android:id="@+id/edt_SDK"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text=""
+                    android:textColor="#dd000000"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:hint="@null"/>
+            </LinearLayout>
+            <!--分割线-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f5f5f5"/>
+            <LinearLayout
+                android:id="@+id/layout_release_item"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tx__release"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="系统版本"
+                    android:gravity="center"
+                    android:textColor="#000000"/>
+                <EditText
+                    android:id="@+id/edt_release"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text=""
+                    android:textColor="#dd000000"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:hint="@null"/>
+            </LinearLayout>
+            <!--分割线-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f5f5f5"/>
+            <LinearLayout
+                android:id="@+id/layout_hardware_item"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tx__hardware"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="硬件"
+                    android:gravity="center"
+                    android:textColor="#000000"/>
+                <EditText
+                    android:id="@+id/edt_hardware"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text=""
+                    android:textColor="#dd000000"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:hint="@null"/>
+            </LinearLayout>
+            <!--分割线-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f5f5f5"/>
+            <LinearLayout
+                android:id="@+id/layout_manufacturer_item"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tx__manufacturer"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="制造商"
+                    android:gravity="center"
+                    android:textColor="#000000"/>
+                <EditText
+                    android:id="@+id/edt_manufacturer"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text=""
+                    android:textColor="#dd000000"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:hint="@null"/>
+            </LinearLayout>
+
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="1dp"

@@ -27,6 +27,17 @@ public class DeviceModelBean implements Parcelable {
 
     public String model;//型号
     public String brand;//品牌
+    public String manufacturer;//制造商
+
+    public String getManufacturer() {
+        return manufacturer;
+    }
+
+    public void setManufacturer(String manufacturer) {
+        this.manufacturer = manufacturer;
+    }
+
+
     @Override
     public int describeContents() {
         return 0;
@@ -36,11 +47,16 @@ public class DeviceModelBean implements Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(this.model);
         dest.writeString(this.brand);
+        dest.writeString(this.manufacturer);
+    }
+
+    public DeviceModelBean() {
     }
 
     protected DeviceModelBean(Parcel in) {
         this.model = in.readString();
         this.brand = in.readString();
+        this.manufacturer = in.readString();
     }
 
     public static final Parcelable.Creator<DeviceModelBean> CREATOR = new Parcelable.Creator<DeviceModelBean>() {

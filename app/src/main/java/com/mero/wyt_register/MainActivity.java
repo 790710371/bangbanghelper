@@ -85,7 +85,7 @@ public class MainActivity extends Activity implements OnClickListener {
 		sharedPreferences = getSharedPreferences(Config.ID,MODE_PRIVATE);
 		boolean isRoot = RootTools.isRootAvailable();
 		String isXposedInstalled = sharedPreferences.getString(Config.KEY_IS_INSTALL_XPOSED,Config.VALUE_NOT_INSTALLED);
-		String isModuleInstalled = sharedPreferences.getString(Config.KEY_IS_MODULE_INSTALLED,Config.VALUE_NOT_INSTALLED);
+		String isModuleInstalled =getResult();
 		if(isRoot==true&&isXposedInstalled.equals("已安装")&&isModuleInstalled.equals("已安装")){
 			btn_install_xposed.setText("已安装");
 			btn_install_xposed.setEnabled(false);

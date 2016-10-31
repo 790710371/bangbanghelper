@@ -3,8 +3,12 @@ package com.mero.wyt_register.xposed;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.net.wifi.WifiInfo;
+import android.os.Build;
+import android.telephony.TelephonyManager;
 
 import com.mero.wyt_register.Config;
+import com.mero.wyt_register.MainActivity;
 
 import java.lang.reflect.Method;
 import java.text.DecimalFormat;
@@ -31,49 +35,36 @@ public class XposedHookModule implements IXposedHookLoadPackage {
             }
             XSharedPreferences xpre = new XSharedPreferences("com.mero.wyt_register",Config.ID);
             final Class<?> thiz = XposedHelpers.findClass("com.mero.wyt_register.MainActivity",lpparam.classLoader);
-            final Class<?> cl = XposedHelpers.findClass("android.telephony.TelephonyManager",lpparam.classLoader);
             final Class<?> cz = XposedHelpers.findClass("android.location.LocationManager",lpparam.classLoader);
-            final Class<?> cc = XposedHelpers.findClass("android.net.wifi.WifiInfo",lpparam.classLoader);
-            final Class<?> build = XposedHelpers.findClass("android.os.Build",lpparam.classLoader);
             final Class<?> wi = XposedHelpers.findClass("android.net.wifi.WifiManager",lpparam.classLoader);
-            try{
                 hookMethod(thiz,"getResult","已安装");
-                hookMethod(cl,"getSimSerialNumber",xpre.getString("simSerialNumber",null));//修改sim序列号
-                hookMethod(cl,"getDeviceId",xpre.getString("imei",null));//修改设备IMEI
-                hookMethod(cl,"getSubscriberId",xpre.getString("imsi",null));//修改IMSI
-                hookMethod(cl,"getSimCountryIso",xpre.getString("phoneCountry",null));//设置国家
-            }catch (Exception e){
-                e.printStackTrace();
-            }
-            try {
-                hookMethod(cc,"getMacAddress",xpre.getString("macWifi","00:00:00:00:00:00"));
-                hookMethod(cc,"getSSID",xpre.getString("ssid","当前无WiFi名称"));
-                hookMethod(cc,"getBSSID",xpre.getString("bssid","00:00:00:00:00:00"));
-            }catch (Exception e){
-                e.printStackTrace();
-            }
-        try{
-            /**
-             * hook地理位置，排除除了GPS定位的其他定位，基站和WiFi定位方式
-             * 有参数的为GPS定位
-             */
-            hookMethod(cl,"getCellLocation",null);
-            hookMethod(cl,"getNeighboringCellInfo",null);
-            hookMethod(wi,"getScanResults",null);
-            hookMethod(cz,"requestLocationUpdates",null);
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-            try{
-                /**
-                 * hook 手机型号
-                 * */
-                hookMethod(build,"getString",xpre.getString("model",null));//设置手机型号
-                hookMethod(build,"getString",xpre.getString("brand",null));//修改手机品牌
-            }catch (Exception e){
-                e.printStackTrace();
-            }
-
+                hookMethod(TelephonyManager.class,"getSimSerialNumber",xpre.getString("simSerialNumber",null));//修改sim序列号
+                hookMethod(TelephonyManager.class,"getDeviceId",xpre.getString("imei",null));//修改设备IMEI
+                hookMethod(TelephonyManager.class,"getSubscriberId",xpre.getString("imsi",null));//修改IMSI
+                hookMethod(TelephonyManager.class,"getSimCountryIso",xpre.getString("phoneCountry",null));//设置国家
+                hookMethod(TelephonyManager.class,"getLine1Number",xpre.getString("phoneNum",null));//设置手机号
+                hookMethod(WifiInfo.class,"getMacAddress",xpre.getString("macWifi","00:00:00:00:00:00"));//设置手机mac地址
+                hookMethod(WifiInfo.class,"getSSID",xpre.getString("ssid","当前无WiFi名称"));//设置WiFi名称
+                hookMethod(WifiInfo.class,"getBSSID",xpre.getString("bssid","00:00:00:00:00:00"));//设置路由mac
+                XposedHelpers.setStaticObjectField(Build.class,"MODEL",xpre.getString("model",null)); //设置手机型号
+                XposedHelpers.setStaticObjectField(Build.class,"BRAND",xpre.getString("brand",null));//设置手机品牌
+                XposedHelpers.setStaticObjectField(Build.class,"MANUFACTURER",xpre.getString("manufacturer",null));//设置手机制造商
+//                XposedHelpers.setStaticObjectField(Build.class,"MANUFACTURER",xpre.getString("munufacturer",null));//设置手机制造商
+//                XposedHelpers.setStaticObjectField(Build.class,"HARDWARE",xpre.getString("hardware",null));//设置硬件型号
+//                XposedHelpers.setStaticObjectField(Build.VERSION.class,"SDK_INT",Integer.parseInt(xpre.getString("sdk_int",null)));//设置sdk版本
+//                XposedHelpers.setStaticObjectField(Build.VERSION.class,"RELEASE",xpre.getString("release",null));//设置系统版本
+//        try{
+//            /**
+//             * hook地理位置，排除除了GPS定位的其他定位，基站和WiFi定位方式
+//             * 有参数的为GPS定位
+//             */
+//            hookMethod(cl,"getCellLocation",null);
+//            hookMethod(cl,"getNeighboringCellInfo",null);
+//            hookMethod(wi,"getScanResults",null);
+//            hookMethod(cz,"requestLocationUpdates",null);
+//        }catch (Exception e){
+//            e.printStackTrace();
+//        }
 
 
     }
@@ -118,33 +109,12 @@ public class XposedHookModule implements IXposedHookLoadPackage {
                             }
                             return;
                         }
-                        //修改手机型号和品牌
-                        if(methodName.equals("getString")){
-                            if(((String)param.args[0]).equals("ro.product.model")){
-                                model = true;
-                                return;
-                            }
-                            if(((String)param.args[0]).equals("ro.product.brand")){
-                                brand = true;
-                                return;
-                            }
-                        }
+
 
                     }
 
                     @Override
                     protected void afterHookedMethod(MethodHookParam param) throws Throwable {
-                        if(model==true){
-                            param.setResult(result);
-                            return;
-                        }
-                        if(brand==true){
-                            param.setResult(result);
-                            return;
-                        }
-                        if(result==null){
-                            return;
-                        }
                         param.setResult(result);
                     }
                 }
