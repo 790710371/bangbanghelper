@@ -32,6 +32,7 @@ import com.mero.wyt_register.R;
 import com.mero.wyt_register.utils.AppUtils;
 import com.mero.wyt_register.widget.CustomTitleBar;
 import com.stericson.RootTools.RootTools;
+import com.stericson.RootTools.RootToolsException;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -39,6 +40,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.List;
+import java.util.concurrent.TimeoutException;
+
+import static com.mero.wyt_register.MainActivity.getResult;
 
 public class InstallXposedAty extends Activity implements View.OnClickListener {
     private static final String TAG = "InstallXposedAty";
@@ -46,7 +50,6 @@ public class InstallXposedAty extends Activity implements View.OnClickListener {
     private Button btn_isRoot;
     private Button btn_install_xposed;
     private Button btn_install_module;
-    private Button btn_fresh;
     private SharedPreferences sharedPreferences;
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
@@ -62,22 +65,13 @@ public class InstallXposedAty extends Activity implements View.OnClickListener {
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
         }
-        sharedPreferences = getSharedPreferences(Config.ID, Context.MODE_PRIVATE);
+        sharedPreferences = getSharedPreferences(Config.ID,MODE_PRIVATE);
         setContentView(R.layout.xposed_install);
         initView();
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
-
-    private final Handler handler = new Handler() {
-        @Override
-        public void handleMessage(Message msg) {
-            Bundle bundle = msg.getData();
-            String s = bundle.getString("isInstalled");
-            btn_install_xposed.setText(s);
-        }
-    };
 
     private void initView() {
         title_bar= (CustomTitleBar) findViewById(R.id.title_bar_xposed_install);
@@ -91,15 +85,20 @@ public class InstallXposedAty extends Activity implements View.OnClickListener {
         btn_isRoot = (Button) findViewById(R.id.btn_root);
         btn_install_module = (Button) findViewById(R.id.btn_xposed_install_module);
         btn_install_xposed = (Button) findViewById(R.id.btn_xposed_click_install);
-        btn_fresh = (Button) findViewById(R.id.btn_fresh);
         btn_isRoot.setOnClickListener(this);
         btn_install_module.setOnClickListener(this);
         btn_install_xposed.setOnClickListener(this);
-        btn_fresh.setOnClickListener(this);
 
-//        checkPackageInstalled(InstallXposedAty.this);
-        boolean isInstalled = sharedPreferences.getBoolean(Config.IS_INSTALL_XPOSED, false);
-        String tx = btn_install_xposed.getText().toString();
+
+    }
+
+    private void checkModuleInstalled() {
+       String s = MainActivity.getResult();
+        if(s.equals("已安装")){
+           SharedPreferences.Editor editor =  sharedPreferences.edit();
+            editor.putString(Config.KEY_IS_MODULE_INSTALLED,Config.VALUE_IS_INSTALL);
+            editor.commit();
+        }
     }
 
     private void checkPackageInstalled(Context context) {
@@ -109,38 +108,13 @@ public class InstallXposedAty extends Activity implements View.OnClickListener {
             Log.e(TAG, packageInfo.packageName);
             if (packageInfo.packageName.equals(getResources().getString(R.string.xposed_package_name))) {
                 SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putBoolean(Config.IS_INSTALL_XPOSED, true);
+                editor.putString(Config.KEY_IS_INSTALL_XPOSED,Config.VALUE_IS_INSTALL);
                 editor.commit();
-                //更新ui，将按钮马上安装变成已安装
-                new Thread() {
-                    @Override
-                    public void run() {
-                        Message msg = new Message();
-                        Bundle bundle = new Bundle();
-                        bundle.putString("isInstalled", "已安装");
-                        msg.setData(bundle);
-                        handler.sendMessage(msg);
-                        Log.e(TAG,"正在提交UI更新信息");
-                    }
-                }.start();
                 return;
             }
         }
-        new Thread(){
-            @Override
-            public void run() {
-                Message msg = new Message();
-                Bundle bundle = new Bundle();
-                bundle.putString("isInstalled", "安装框架");
-                msg.setData(bundle);
-                handler.sendMessage(msg);
-                Log.e(TAG,"正在提交UI更新信息");
-            }
-        }.start();
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putBoolean(Config.IS_INSTALL_XPOSED, false);
-    }
 
+    }
     @Override
     protected void onResume() {
         super.onResume();
@@ -151,7 +125,20 @@ public class InstallXposedAty extends Activity implements View.OnClickListener {
         } else {
             btn_isRoot.setText("未root");
         }
-        checkPackageInstalled(this);
+        //检查xposed是否已经安装
+        checkPackageInstalled(InstallXposedAty.this);
+        //检查模块是否安装
+        checkModuleInstalled();
+        String isXposedInstalled = sharedPreferences.getString(Config.KEY_IS_INSTALL_XPOSED,"未安装");
+        String isModuleInstalled = sharedPreferences.getString(Config.KEY_IS_MODULE_INSTALLED,"未安装");
+        if(isXposedInstalled.equals("已安装")){
+            btn_install_xposed.setText("框架已安装");
+            btn_install_xposed.setEnabled(false);
+        }
+        if (isModuleInstalled.equals("已安装")){
+            btn_install_module.setText("模块已安装");
+            btn_install_module.setEnabled(false);
+        }
     }
 
     private static final String path = Environment.getExternalStorageDirectory().toString();
@@ -161,16 +148,13 @@ public class InstallXposedAty extends Activity implements View.OnClickListener {
             case R.id.btn_root:
                 if (btn_isRoot.getText().toString().equals("未root")) {
                     Toast.makeText(InstallXposedAty.this, "请root", Toast.LENGTH_SHORT).show();
-                } else {
+                } else{
                     btn_isRoot.setEnabled(false);
                 }
                 break;
             case R.id.btn_xposed_click_install:
                 String s = btn_install_xposed.getText().toString();
                 if ((!TextUtils.isEmpty(s)) && s.equals("安装框架")) {
-                    //------------------------------------------
-                    // created by chenlei 2016/10/17/ 9:47
-                    //------------------------------------------
                         copyInstallPackageToSd(getApplicationContext(), new SuccessCallback() {
                             @Override
                             public void success() {
@@ -183,16 +167,22 @@ public class InstallXposedAty extends Activity implements View.OnClickListener {
                         });
 
 
-            }else if((!TextUtils.isEmpty(s)) && s.equals("已安装")){
-                    btn_install_xposed.setEnabled(false);
-                }
+            }
                 break;
             case R.id.btn_xposed_install_module:
-                break;
-            case R.id.btn_fresh:
-                Toast.makeText(InstallXposedAty.this,"正在点击刷新",Toast.LENGTH_SHORT).show();
-                checkPackageInstalled(getApplicationContext());
-                Toast.makeText(InstallXposedAty.this,sharedPreferences.getBoolean(Config.IS_INSTALL_XPOSED,false)+"",Toast.LENGTH_LONG).show();
+                    String sa = btn_install_module.getText().toString();
+                    if(sa.equals("安装模块")){
+                        //前往安装
+                        try {
+                            RootTools.sendShell("am start -n de.robv.android.xposed.installer/.WelcomeActivity",0);
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        } catch (RootToolsException e) {
+                            e.printStackTrace();
+                        } catch (TimeoutException e) {
+                            e.printStackTrace();
+                        }
+                    }
                 break;
         }
     }

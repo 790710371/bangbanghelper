@@ -12,15 +12,6 @@ import de.robv.android.xposed.callbacks.XC_LoadPackage;
 
 public class MyApplication extends Application {
     public static MyApplication instance;
-    XC_LoadPackage.LoadPackageParam lpparam;
-
-    public XC_LoadPackage.LoadPackageParam getLpparam() {
-        return lpparam;
-    }
-
-    public void setLpparam(XC_LoadPackage.LoadPackageParam lpparam) {
-        this.lpparam = lpparam;
-    }
 
     @Override
     public void onCreate() {
