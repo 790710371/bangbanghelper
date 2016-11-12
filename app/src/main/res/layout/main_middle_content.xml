@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:mero="http://schemas.android.com/apk/res-auto"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical"
-    android:background="#F5F5F5" >
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:background="#F5F5F5">
     <!-- 此部分为上半部分 -->
     <LinearLayout 
           android:layout_width="match_parent"
@@ -64,7 +64,7 @@
        android:id="@+id/panel_register_left_img"
        android:layout_width="40dp"
        android:layout_height="40dp"
-       android:src="@drawable/momo"
+       android:src="@drawable/xposed_icon"
        android:layout_gravity="center_vertical"
        android:layout_marginLeft="20dp"
        />
@@ -94,13 +94,17 @@
            />
        
    </LinearLayout>
-   <Button
+   <com.mero.wyt_register.widget.RoundButton
        android:id="@+id/btn_xposed_install"
        android:text="点击安装"
-       android:textColor="#000000"
-       android:background="@drawable/button_shape"
+       android:textColor="#ffffff"
+	   android:textSize="15sp"
        android:layout_width="80dp"
-       android:layout_height="wrap_content"
+       android:layout_height="40dp"
+	   app:btnPressedRatio="1.5"
+	   app:btnCornerRadius="360dp"
+	   app:btnSolidColor="#33aa44"
+	   app:btnStrokeColor="#33aa44"
        android:layout_gravity="center_vertical"
        />
     </LinearLayout>
@@ -141,7 +145,7 @@
               android:layout_height="wrap_content"
               android:text="一键新机"
               android:textSize="14sp"
-              android:textColor="#292421"
+              android:textColor="#000000"
               android:gravity="center_vertical"
               android:layout_gravity="center_vertical"
               android:paddingLeft="5dp"
@@ -161,13 +165,18 @@
         android:gravity="center"
         android:background="#FFFFFF"
         >
-   		<Button 
+   		<com.mero.wyt_register.widget.RoundButton
    		    android:layout_width="300dp"
    		    android:layout_height="50dp"
-   		    android:background="@drawable/button_shape"
-   		    android:textColor="#000000"
+			android:text="一键新机"
+			android:textSize="15sp"
+			android:textColor="#ffffff"
+			app:btnPressedRatio="1.5"
+			app:btnCornerRadius="10dp"
+			app:btnSolidColor="#33aa44"
+			app:btnStrokeColor="#3F51B5"
    		    android:gravity="center"
-   		    android:text="一键新机"/>
+   		    />
 	<TextView 
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
@@ -232,34 +241,34 @@
 		    android:layout_width="wrap_content"
 		    android:layout_height="80dp"
 		    android:layout_weight="1"
-		    mero:text="淘宝注册"
-		    mero:text_color="#000000"
-		    mero:text_size="7sp"
-		    mero:image_src="@drawable/taobao"
-		    mero:image_width="48dp"
-		    mero:image_height="48dp"
+		    app:text="淘宝注册"
+		    app:text_color="#000000"
+		    app:text_size="7sp"
+		    app:image_src="@drawable/taobao"
+		    app:image_width="48dp"
+		    app:image_height="48dp"
 		    />
 	    	<com.mero.wyt_register.widget.MixTextImage 
 		    android:layout_width="wrap_content"
 		    android:layout_height="80dp"
 		    android:layout_weight="1"
-		    mero:text="网易注册"
-		    mero:text_color="#000000"
-		    mero:text_size="7sp"
-		    mero:image_src="@drawable/tianmao"
-		    mero:image_width="48dp"
-		    mero:image_height="48dp"
+		    app:text="网易注册"
+		    app:text_color="#000000"
+		    app:text_size="7sp"
+		    app:image_src="@drawable/wangyi"
+		    app:image_width="48dp"
+		    app:image_height="48dp"
 		    />
 	    	<com.mero.wyt_register.widget.MixTextImage 
 		    android:layout_width="wrap_content"
 		    android:layout_height="80dp"
 		    android:layout_weight="1"
-		    mero:text="京东注册"
-		    mero:text_color="#000000"
-		    mero:text_size="7sp"
-		    mero:image_src="@drawable/jingdong"
-		    mero:image_width="48dp"
-		    mero:image_height="48dp"
+		    app:text="京东注册"
+		    app:text_color="#000000"
+		    app:text_size="7sp"
+		    app:image_src="@drawable/jingdong"
+		    app:image_width="48dp"
+		    app:image_height="48dp"
 		    />
 	   	 </LinearLayout>
 	    
@@ -273,34 +282,34 @@
 		    android:layout_width="wrap_content"
 		    android:layout_height="80dp"
 		    android:layout_weight="1"
-		    mero:text="陌陌注册"
-		    mero:text_color="#000000"
-		    mero:text_size="7sp"
-		    mero:image_src="@drawable/momo"
-		    mero:image_width="48dp"
-		    mero:image_height="48dp"
+		    app:text="陌陌注册"
+		    app:text_color="#000000"
+		    app:text_size="7sp"
+		    app:image_src="@drawable/momo"
+		    app:image_width="48dp"
+		    app:image_height="48dp"
 		    />
 	    	<com.mero.wyt_register.widget.MixTextImage 
 		    android:layout_width="wrap_content"
 		    android:layout_height="80dp"
 		    android:layout_weight="1"
-		    mero:text="微博注册"
-		    mero:text_color="#000000"
-		    mero:text_size="7sp"
-		    mero:image_src="@drawable/weibo"
-		    mero:image_width="48dp"
-		    mero:image_height="48dp"
+		    app:text="新浪注册"
+		    app:text_color="#000000"
+		    app:text_size="7sp"
+		    app:image_src="@drawable/xinlang"
+		    app:image_width="48dp"
+		    app:image_height="48dp"
 		    />
 	    	<com.mero.wyt_register.widget.MixTextImage 
 		    android:layout_width="wrap_content"
 		    android:layout_height="80dp"
 		    android:layout_weight="1"
-		    mero:text="微信注册"
-		    mero:text_color="#000000"
-		    mero:text_size="7sp"
-		    mero:image_src="@drawable/weixin"
-		    mero:image_width="48dp"
-		    mero:image_height="48dp"
+		    app:text="微信注册"
+		    app:text_color="#000000"
+		    app:text_size="7sp"
+		    app:image_src="@drawable/weixin"
+		    app:image_width="48dp"
+		    app:image_height="48dp"
 		    />
 	    </LinearLayout>
      </LinearLayout>

@@ -6,18 +6,18 @@
                 "to": {
                     "startLine": 2,
                     "startColumn": 4,
-                    "startOffset": 105,
-                    "endColumn": 264,
-                    "endOffset": 365
+                    "startOffset": 55,
+                    "endColumn": 111,
+                    "endOffset": 162
                 },
                 "from": {
-                    "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-kk-rKZ\\base_strings.xml",
+                    "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-kk-rKZ\\values-kk-rKZ.xml",
                     "position": {
-                        "startLine": 24,
+                        "startLine": 2,
                         "startColumn": 4,
-                        "startOffset": 3468,
-                        "endColumn": 268,
-                        "endOffset": 3732
+                        "startOffset": 55,
+                        "endColumn": 111,
+                        "endOffset": 162
                     }
                 }
             },
@@ -25,18 +25,18 @@
                 "to": {
                     "startLine": 3,
                     "startColumn": 4,
-                    "startOffset": 370,
-                    "endColumn": 128,
-                    "endOffset": 494
+                    "startOffset": 167,
+                    "endColumn": 107,
+                    "endOffset": 270
                 },
                 "from": {
-                    "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-kk-rKZ\\base_strings.xml",
+                    "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-kk-rKZ\\values-kk-rKZ.xml",
                     "position": {
-                        "startLine": 10,
+                        "startLine": 3,
                         "startColumn": 4,
-                        "startOffset": 1302,
-                        "endColumn": 128,
-                        "endOffset": 1426
+                        "startOffset": 167,
+                        "endColumn": 107,
+                        "endOffset": 270
                     }
                 }
             },
@@ -44,18 +44,18 @@
                 "to": {
                     "startLine": 4,
                     "startColumn": 4,
-                    "startOffset": 499,
-                    "endColumn": 184,
-                    "endOffset": 679
+                    "startOffset": 275,
+                    "endColumn": 122,
+                    "endOffset": 393
                 },
                 "from": {
-                    "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-kk-rKZ\\base_strings.xml",
+                    "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-kk-rKZ\\values-kk-rKZ.xml",
                     "position": {
-                        "startLine": 9,
+                        "startLine": 4,
                         "startColumn": 4,
-                        "startOffset": 1113,
-                        "endColumn": 188,
-                        "endOffset": 1297
+                        "startOffset": 275,
+                        "endColumn": 122,
+                        "endOffset": 393
                     }
                 }
             },
@@ -63,18 +63,18 @@
                 "to": {
                     "startLine": 5,
                     "startColumn": 4,
-                    "startOffset": 684,
-                    "endColumn": 127,
-                    "endOffset": 807
+                    "startOffset": 398,
+                    "endColumn": 102,
+                    "endOffset": 496
                 },
                 "from": {
-                    "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-kk-rKZ\\base_strings.xml",
+                    "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-kk-rKZ\\values-kk-rKZ.xml",
                     "position": {
-                        "startLine": 8,
+                        "startLine": 5,
                         "startColumn": 4,
-                        "startOffset": 985,
-                        "endColumn": 127,
-                        "endOffset": 1108
+                        "startOffset": 398,
+                        "endColumn": 102,
+                        "endOffset": 496
                     }
                 }
             },
@@ -82,18 +82,18 @@
                 "to": {
                     "startLine": 6,
                     "startColumn": 4,
-                    "startOffset": 812,
-                    "endColumn": 128,
-                    "endOffset": 936
+                    "startOffset": 501,
+                    "endColumn": 109,
+                    "endOffset": 606
                 },
                 "from": {
-                    "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-kk-rKZ\\base_strings.xml",
+                    "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-kk-rKZ\\values-kk-rKZ.xml",
                     "position": {
-                        "startLine": 7,
+                        "startLine": 6,
                         "startColumn": 4,
-                        "startOffset": 856,
-                        "endColumn": 128,
-                        "endOffset": 980
+                        "startOffset": 501,
+                        "endColumn": 109,
+                        "endOffset": 606
                     }
                 }
             },
@@ -101,18 +101,18 @@
                 "to": {
                     "startLine": 7,
                     "startColumn": 4,
-                    "startOffset": 941,
-                    "endColumn": 204,
-                    "endOffset": 1141
+                    "startOffset": 611,
+                    "endColumn": 84,
+                    "endOffset": 691
                 },
                 "from": {
-                    "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-kk-rKZ\\base_strings.xml",
+                    "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-kk-rKZ\\values-kk-rKZ.xml",
                     "position": {
-                        "startLine": 5,
+                        "startLine": 7,
                         "startColumn": 4,
-                        "startOffset": 437,
-                        "endColumn": 208,
-                        "endOffset": 641
+                        "startOffset": 611,
+                        "endColumn": 84,
+                        "endOffset": 691
                     }
                 }
             },
@@ -120,18 +120,18 @@
                 "to": {
                     "startLine": 8,
                     "startColumn": 4,
-                    "startOffset": 1146,
-                    "endColumn": 205,
-                    "endOffset": 1347
+                    "startOffset": 696,
+                    "endColumn": 105,
+                    "endOffset": 797
                 },
                 "from": {
-                    "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-kk-rKZ\\base_strings.xml",
+                    "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-kk-rKZ\\values-kk-rKZ.xml",
                     "position": {
-                        "startLine": 6,
+                        "startLine": 8,
                         "startColumn": 4,
-                        "startOffset": 646,
-                        "endColumn": 209,
-                        "endOffset": 851
+                        "startOffset": 696,
+                        "endColumn": 105,
+                        "endOffset": 797
                     }
                 }
             },
@@ -139,18 +139,18 @@
                 "to": {
                     "startLine": 9,
                     "startColumn": 4,
-                    "startOffset": 1352,
-                    "endColumn": 127,
-                    "endOffset": 1475
+                    "startOffset": 802,
+                    "endColumn": 118,
+                    "endOffset": 916
                 },
                 "from": {
-                    "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-kk-rKZ\\base_strings.xml",
+                    "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-kk-rKZ\\values-kk-rKZ.xml",
                     "position": {
-                        "startLine": 4,
+                        "startLine": 9,
                         "startColumn": 4,
-                        "startOffset": 309,
-                        "endColumn": 127,
-                        "endOffset": 432
+                        "startOffset": 802,
+                        "endColumn": 118,
+                        "endOffset": 916
                     }
                 }
             },
@@ -158,18 +158,18 @@
                 "to": {
                     "startLine": 10,
                     "startColumn": 4,
-                    "startOffset": 1480,
-                    "endColumn": 183,
-                    "endOffset": 1659
+                    "startOffset": 921,
+                    "endColumn": 80,
+                    "endOffset": 997
                 },
                 "from": {
-                    "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-kk-rKZ\\base_strings.xml",
+                    "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-kk-rKZ\\values-kk-rKZ.xml",
                     "position": {
-                        "startLine": 19,
+                        "startLine": 10,
                         "startColumn": 4,
-                        "startOffset": 2708,
-                        "endColumn": 183,
-                        "endOffset": 2887
+                        "startOffset": 921,
+                        "endColumn": 80,
+                        "endOffset": 997
                     }
                 }
             },
@@ -177,18 +177,18 @@
                 "to": {
                     "startLine": 11,
                     "startColumn": 4,
-                    "startOffset": 1664,
-                    "endColumn": 127,
-                    "endOffset": 1787
+                    "startOffset": 1002,
+                    "endColumn": 79,
+                    "endOffset": 1077
                 },
                 "from": {
-                    "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-kk-rKZ\\base_strings.xml",
+                    "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-kk-rKZ\\values-kk-rKZ.xml",
                     "position": {
-                        "startLine": 18,
+                        "startLine": 11,
                         "startColumn": 4,
-                        "startOffset": 2580,
-                        "endColumn": 127,
-                        "endOffset": 2703
+                        "startOffset": 1002,
+                        "endColumn": 79,
+                        "endOffset": 1077
                     }
                 }
             },
@@ -196,18 +196,18 @@
                 "to": {
                     "startLine": 12,
                     "startColumn": 4,
-                    "startOffset": 1792,
-                    "endColumn": 168,
-                    "endOffset": 1956
+                    "startOffset": 1082,
+                    "endColumn": 80,
+                    "endOffset": 1158
                 },
                 "from": {
-                    "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-kk-rKZ\\base_strings.xml",
+                    "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-kk-rKZ\\values-kk-rKZ.xml",
                     "position": {
-                        "startLine": 17,
+                        "startLine": 12,
                         "startColumn": 4,
-                        "startOffset": 2411,
-                        "endColumn": 168,
-                        "endOffset": 2575
+                        "startOffset": 1082,
+                        "endColumn": 80,
+                        "endOffset": 1158
                     }
                 }
             },
@@ -215,18 +215,18 @@
                 "to": {
                     "startLine": 13,
                     "startColumn": 4,
-                    "startOffset": 1961,
-                    "endColumn": 117,
-                    "endOffset": 2074
+                    "startOffset": 1163,
+                    "endColumn": 102,
+                    "endOffset": 1261
                 },
                 "from": {
-                    "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-kk-rKZ\\base_strings.xml",
+                    "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-kk-rKZ\\values-kk-rKZ.xml",
                     "position": {
-                        "startLine": 16,
+                        "startLine": 13,
                         "startColumn": 4,
-                        "startOffset": 2293,
-                        "endColumn": 117,
-                        "endOffset": 2406
+                        "startOffset": 1163,
+                        "endColumn": 102,
+                        "endOffset": 1261
                     }
                 }
             },
@@ -234,18 +234,18 @@
                 "to": {
                     "startLine": 14,
                     "startColumn": 4,
-                    "startOffset": 2079,
-                    "endColumn": 138,
-                    "endOffset": 2213
+                    "startOffset": 1266,
+                    "endColumn": 104,
+                    "endOffset": 1366
                 },
                 "from": {
-                    "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-kk-rKZ\\base_strings.xml",
+                    "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-kk-rKZ\\values-kk-rKZ.xml",
                     "position": {
-                        "startLine": 3,
+                        "startLine": 14,
                         "startColumn": 4,
-                        "startOffset": 170,
-                        "endColumn": 138,
-                        "endOffset": 304
+                        "startOffset": 1266,
+                        "endColumn": 104,
+                        "endOffset": 1366
                     }
                 }
             },
@@ -253,18 +253,18 @@
                 "to": {
                     "startLine": 15,
                     "startColumn": 4,
-                    "startOffset": 2218,
-                    "endColumn": 167,
-                    "endOffset": 2381
+                    "startOffset": 1371,
+                    "endColumn": 97,
+                    "endOffset": 1464
                 },
                 "from": {
-                    "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-kk-rKZ\\base_strings.xml",
+                    "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-kk-rKZ\\values-kk-rKZ.xml",
                     "position": {
-                        "startLine": 28,
+                        "startLine": 15,
                         "startColumn": 4,
-                        "startOffset": 4179,
-                        "endColumn": 167,
-                        "endOffset": 4342
+                        "startOffset": 1371,
+                        "endColumn": 97,
+                        "endOffset": 1464
                     }
                 }
             },
@@ -272,18 +272,18 @@
                 "to": {
                     "startLine": 16,
                     "startColumn": 4,
-                    "startOffset": 2386,
-                    "endColumn": 128,
-                    "endOffset": 2510
+                    "startOffset": 1469,
+                    "endColumn": 106,
+                    "endOffset": 1571
                 },
                 "from": {
-                    "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-kk-rKZ\\base_strings.xml",
+                    "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-kk-rKZ\\values-kk-rKZ.xml",
                     "position": {
-                        "startLine": 27,
+                        "startLine": 16,
                         "startColumn": 4,
-                        "startOffset": 4050,
-                        "endColumn": 128,
-                        "endOffset": 4174
+                        "startOffset": 1469,
+                        "endColumn": 106,
+                        "endOffset": 1571
                     }
                 }
             },
@@ -291,18 +291,18 @@
                 "to": {
                     "startLine": 17,
                     "startColumn": 4,
-                    "startOffset": 2515,
-                    "endColumn": 184,
-                    "endOffset": 2695
+                    "startOffset": 1576,
+                    "endColumn": 108,
+                    "endOffset": 1680
                 },
                 "from": {
-                    "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-kk-rKZ\\base_strings.xml",
+                    "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-kk-rKZ\\values-kk-rKZ.xml",
                     "position": {
-                        "startLine": 26,
+                        "startLine": 17,
                         "startColumn": 4,
-                        "startOffset": 3865,
-                        "endColumn": 184,
-                        "endOffset": 4045
+                        "startOffset": 1576,
+                        "endColumn": 108,
+                        "endOffset": 1680
                     }
                 }
             },
@@ -310,18 +310,18 @@
                 "to": {
                     "startLine": 18,
                     "startColumn": 4,
-                    "startOffset": 2700,
-                    "endColumn": 127,
-                    "endOffset": 2823
+                    "startOffset": 1685,
+                    "endColumn": 99,
+                    "endOffset": 1780
                 },
                 "from": {
-                    "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-kk-rKZ\\base_strings.xml",
+                    "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-kk-rKZ\\values-kk-rKZ.xml",
                     "position": {
-                        "startLine": 25,
+                        "startLine": 18,
                         "startColumn": 4,
-                        "startOffset": 3737,
-                        "endColumn": 127,
-                        "endOffset": 3860
+                        "startOffset": 1685,
+                        "endColumn": 99,
+                        "endOffset": 1780
                     }
                 }
             },
@@ -329,18 +329,18 @@
                 "to": {
                     "startLine": 19,
                     "startColumn": 4,
-                    "startOffset": 2828,
-                    "endColumn": 243,
-                    "endOffset": 3067
+                    "startOffset": 1785,
+                    "endColumn": 114,
+                    "endOffset": 1895
                 },
                 "from": {
-                    "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.4.0\\res\\values-kk-rKZ\\common_strings.xml",
+                    "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-kk-rKZ\\values-kk-rKZ.xml",
                     "position": {
-                        "startLine": 3,
+                        "startLine": 19,
                         "startColumn": 4,
-                        "startOffset": 170,
-                        "endColumn": 247,
-                        "endOffset": 413
+                        "startOffset": 1785,
+                        "endColumn": 114,
+                        "endOffset": 1895
                     }
                 }
             },
@@ -348,18 +348,18 @@
                 "to": {
                     "startLine": 20,
                     "startColumn": 4,
-                    "startOffset": 3072,
-                    "endColumn": 245,
-                    "endOffset": 3313
+                    "startOffset": 1900,
+                    "endColumn": 98,
+                    "endOffset": 1994
                 },
                 "from": {
-                    "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-kk-rKZ\\base_strings.xml",
+                    "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-kk-rKZ\\values-kk-rKZ.xml",
                     "position": {
-                        "startLine": 21,
+                        "startLine": 20,
                         "startColumn": 4,
-                        "startOffset": 3018,
-                        "endColumn": 249,
-                        "endOffset": 3263
+                        "startOffset": 1900,
+                        "endColumn": 98,
+                        "endOffset": 1994
                     }
                 }
             },
@@ -367,18 +367,18 @@
                 "to": {
                     "startLine": 21,
                     "startColumn": 4,
-                    "startOffset": 3318,
-                    "endColumn": 125,
-                    "endOffset": 3439
+                    "startOffset": 1999,
+                    "endColumn": 80,
+                    "endOffset": 2075
                 },
                 "from": {
-                    "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-kk-rKZ\\base_strings.xml",
+                    "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-kk-rKZ\\values-kk-rKZ.xml",
                     "position": {
-                        "startLine": 20,
+                        "startLine": 21,
                         "startColumn": 4,
-                        "startOffset": 2892,
-                        "endColumn": 125,
-                        "endOffset": 3013
+                        "startOffset": 1999,
+                        "endColumn": 80,
+                        "endOffset": 2075
                     }
                 }
             },
@@ -386,170 +386,18 @@
                 "to": {
                     "startLine": 22,
                     "startColumn": 4,
-                    "startOffset": 3444,
-                    "endColumn": 107,
-                    "endOffset": 3547
+                    "startOffset": 2080,
+                    "endColumn": 100,
+                    "endOffset": 2176
                 },
                 "from": {
-                    "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-kk-rKZ\\base_strings.xml",
+                    "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-kk-rKZ\\values-kk-rKZ.xml",
                     "position": {
                         "startLine": 22,
                         "startColumn": 4,
-                        "startOffset": 3268,
-                        "endColumn": 107,
-                        "endOffset": 3371
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 23,
-                    "startColumn": 4,
-                    "startOffset": 3552,
-                    "endColumn": 187,
-                    "endOffset": 3735
-                },
-                "from": {
-                    "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-kk-rKZ\\base_strings.xml",
-                    "position": {
-                        "startLine": 12,
-                        "startColumn": 4,
-                        "startOffset": 1562,
-                        "endColumn": 191,
-                        "endOffset": 1749
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 24,
-                    "startColumn": 4,
-                    "startOffset": 3740,
-                    "endColumn": 130,
-                    "endOffset": 3866
-                },
-                "from": {
-                    "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-kk-rKZ\\base_strings.xml",
-                    "position": {
-                        "startLine": 11,
-                        "startColumn": 4,
-                        "startOffset": 1431,
-                        "endColumn": 130,
-                        "endOffset": 1557
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 25,
-                    "startColumn": 4,
-                    "startOffset": 3871,
-                    "endColumn": 211,
-                    "endOffset": 4078
-                },
-                "from": {
-                    "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-kk-rKZ\\base_strings.xml",
-                    "position": {
-                        "startLine": 15,
-                        "startColumn": 4,
-                        "startOffset": 2077,
-                        "endColumn": 215,
-                        "endOffset": 2288
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 26,
-                    "startColumn": 4,
-                    "startOffset": 4083,
-                    "endColumn": 135,
-                    "endOffset": 4214
-                },
-                "from": {
-                    "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-kk-rKZ\\base_strings.xml",
-                    "position": {
-                        "startLine": 14,
-                        "startColumn": 4,
-                        "startOffset": 1941,
-                        "endColumn": 135,
-                        "endOffset": 2072
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 27,
-                    "startColumn": 4,
-                    "startOffset": 4219,
-                    "endColumn": 186,
-                    "endOffset": 4401
-                },
-                "from": {
-                    "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-kk-rKZ\\base_strings.xml",
-                    "position": {
-                        "startLine": 13,
-                        "startColumn": 4,
-                        "startOffset": 1754,
-                        "endColumn": 186,
-                        "endOffset": 1936
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 28,
-                    "startColumn": 4,
-                    "startOffset": 4406,
-                    "endColumn": 91,
-                    "endOffset": 4493
-                },
-                "from": {
-                    "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-kk-rKZ\\base_strings.xml",
-                    "position": {
-                        "startLine": 23,
-                        "startColumn": 4,
-                        "startOffset": 3376,
-                        "endColumn": 91,
-                        "endOffset": 3463
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 29,
-                    "startColumn": 4,
-                    "startOffset": 4498,
-                    "endColumn": 88,
-                    "endOffset": 4582
-                },
-                "from": {
-                    "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-kk-rKZ\\base_strings.xml",
-                    "position": {
-                        "startLine": 29,
-                        "startColumn": 4,
-                        "startOffset": 4347,
-                        "endColumn": 88,
-                        "endOffset": 4431
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 30,
-                    "startColumn": 4,
-                    "startOffset": 4587,
-                    "endColumn": 107,
-                    "endOffset": 4690
-                },
-                "from": {
-                    "file": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-kk-rKZ\\base_strings.xml",
-                    "position": {
-                        "startLine": 30,
-                        "startColumn": 4,
-                        "startOffset": 4436,
-                        "endColumn": 107,
-                        "endOffset": 4539
+                        "startOffset": 2080,
+                        "endColumn": 100,
+                        "endOffset": 2176
                     }
                 }
             }

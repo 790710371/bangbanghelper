@@ -36,7 +36,7 @@ public class XposedHookModule implements IXposedHookLoadPackage {
             XSharedPreferences xpre = new XSharedPreferences("com.mero.wyt_register",Config.ID);
             final Class<?> thiz = XposedHelpers.findClass("com.mero.wyt_register.MainActivity",lpparam.classLoader);
             final Class<?> cz = XposedHelpers.findClass("android.location.LocationManager",lpparam.classLoader);
-            final Class<?> wi = XposedHelpers.findClass("android.net.wifi.WifiManager",lpparam.classLoader);
+            final Class<?> wi = XposedHelpers.findClass("android.net.ssid.WifiManager",lpparam.classLoader);
                 hookMethod(thiz,"getResult","已安装");
                 hookMethod(TelephonyManager.class,"getSimSerialNumber",xpre.getString("simSerialNumber",null));//修改sim序列号
                 hookMethod(TelephonyManager.class,"getDeviceId",xpre.getString("imei",null));//修改设备IMEI
@@ -49,10 +49,9 @@ public class XposedHookModule implements IXposedHookLoadPackage {
                 XposedHelpers.setStaticObjectField(Build.class,"MODEL",xpre.getString("model",null)); //设置手机型号
                 XposedHelpers.setStaticObjectField(Build.class,"BRAND",xpre.getString("brand",null));//设置手机品牌
                 XposedHelpers.setStaticObjectField(Build.class,"MANUFACTURER",xpre.getString("manufacturer",null));//设置手机制造商
-//                XposedHelpers.setStaticObjectField(Build.class,"MANUFACTURER",xpre.getString("munufacturer",null));//设置手机制造商
 //                XposedHelpers.setStaticObjectField(Build.class,"HARDWARE",xpre.getString("hardware",null));//设置硬件型号
-//                XposedHelpers.setStaticObjectField(Build.VERSION.class,"SDK_INT",Integer.parseInt(xpre.getString("sdk_int",null)));//设置sdk版本
-//                XposedHelpers.setStaticObjectField(Build.VERSION.class,"RELEASE",xpre.getString("release",null));//设置系统版本
+                XposedHelpers.setStaticObjectField(Build.VERSION.class,"SDK_INT",xpre.getInt("sdk_int",23));//设置sdk版本
+                XposedHelpers.setStaticObjectField(Build.VERSION.class,"RELEASE",xpre.getString("release",null));//设置系统版本
 //        try{
 //            /**
 //             * hook地理位置，排除除了GPS定位的其他定位，基站和WiFi定位方式

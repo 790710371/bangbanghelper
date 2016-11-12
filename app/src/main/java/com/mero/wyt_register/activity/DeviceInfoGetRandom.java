@@ -1,7 +1,15 @@
 package com.mero.wyt_register.activity;
 
+import android.content.Context;
+import android.util.Log;
+
+import com.mero.wyt_register.utils.AppUtils;
+
 import java.text.DecimalFormat;
 import java.util.Random;
+
+import static com.amap.loc.c.h;
+import static com.mero.wyt_register.utils.AppUtils.getDispalyMetrics;
 
 /**
  * Created by chenlei on 2016/10/25.
@@ -266,24 +274,13 @@ public final  class DeviceInfoGetRandom {
 
 
     //得到屏幕分辨率
-    public static String  getRandomFenbianlvData(){
+    public static String  getRandomFenbianlvData(Context context){
+        int[] wh = AppUtils.getDispalyMetrics(context);
         String fenbianlv = "";
-        Random random =new Random();
-        int f = random.nextInt(4);
-        switch(f){
-            case 0:
-                fenbianlv = "480x800";
-                break;
-            case 1:
-                fenbianlv = "720x1280";
-                break;
-            case 2:
-                fenbianlv = "1080x1920";
-                break;
-            case 3:
-                fenbianlv = "480x854";
-                break;
-        }
+        int r = new Random().nextInt(10)+1;
+        wh[0]+=r;
+        wh[1]+=r;
+        fenbianlv = wh[0]+"x"+wh[1];
         return fenbianlv;
     }
 
@@ -478,5 +475,70 @@ public final  class DeviceInfoGetRandom {
         return (int)(Math.random()*(end-start+1)+start);
     }
 
-
+    /*
+    * 得到随机的SDK版本号,9到24
+    * */
+    public static int getSDK_INT_version(){
+        int version = 0;
+        version = Integer.valueOf((new Random().nextInt(15)+9));
+        return version;
+    }
+    /*
+    * 得到随机的Android版本号
+    * */
+    public static String getRandomRelease(){
+        String release = "";
+        int r = new Random().nextInt(16);
+        switch (r){
+            case 0:
+                release = "2.3";
+                break;
+            case 1:
+                release = "2.3.3";
+                break;
+            case 2:
+                release = "3.0";
+                break;
+            case 3:
+                release = "3.1";
+                break;
+            case 4:
+                release = "3.2";
+                break;
+            case 5:
+                release = "4.0";
+                break;
+            case 6:
+                release = "4.0.3";
+                break;
+            case 7:
+                release = "4.1";
+                break;
+            case 8:
+                release = "4.2";
+                break;
+            case 9:
+                release = "4.3";
+                break;
+            case 10:
+                release = "4.4";
+                break;
+            case 11:
+                release = "4.4W";
+                break;
+            case 12:
+                release = "5.0";
+                break;
+            case 13:
+                release = "5.1";
+                break;
+            case 14:
+                release = "6.0";
+                break;
+            case 15:
+                release = "7.0";
+                break;
+        }
+        return release;
+    }
 }

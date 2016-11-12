@@ -32,50 +32,32 @@
                 android:layout_height="80dp"
                 android:orientation="horizontal"
                 android:layout_gravity="center_horizontal">
-
-                <Button
+                <com.mero.wyt_register.widget.RoundButton
                     android:id="@+id/device_info_random_btn"
-                    android:background="@drawable/button_shape"
                     android:layout_width="100dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="40dp"
                     android:text="随机生成"
-                    android:layout_gravity="center"/>
-                <Button
+                    android:textSize="15sp"
+                    android:textColor="#ffffff"
+                    app:btnPressedRatio="1.5"
+                    app:btnCornerRadius="10dp"
+                    app:btnSolidColor="#3F51B5"
+                    app:btnStrokeColor="#3F51B5"
+                    android:layout_gravity="center"
+                    />
+                <com.mero.wyt_register.widget.RoundButton
                     android:id="@+id/btn_device_info_save"
-                    android:background="@drawable/button_shape"
                     android:layout_width="100dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="15dp"
                     android:text="保存"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp"
+                    app:btnPressedRatio="1.5"
+                    app:btnCornerRadius="10dp"
+                    app:btnSolidColor="#3F51B5"
+                    app:btnStrokeColor="#3F51B5"
                     android:layout_gravity="center"/>
-            </LinearLayout>
-
-            <!--分割线-->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:hint="@null"
-                android:background="#F5F5F5"/>
-            <LinearLayout
-                android:id="@+id/layout_resolution_item"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:orientation="horizontal">
-                <TextView
-                    android:id="@+id/tx_resolution"
-                    android:layout_width="100dp"
-                    android:layout_height="50dp"
-                    android:text="分辨率"
-                    android:gravity="center"
-                    android:textColor="#000000"/>
-                <EditText
-                    android:id="@+id/edt_resolution"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:text=""
-                    android:hint="@null"
-                    android:background="@null"
-                    android:gravity="center"
-                    android:maxLines="1"/>
             </LinearLayout>
 
             <TextView
@@ -88,13 +70,26 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:orientation="horizontal">
-                <TextView
-                    android:id="@+id/tx_IMEI"
-                    android:layout_width="100dp"
-                    android:layout_height="50dp"
-                    android:text="Android_ID"
-                    android:gravity="center"
-                    android:textColor="#000000"/>
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="10dp">
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/android_id"/>
+                    <TextView
+                        android:id="@+id/tx_IMEI"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="IMEI"
+                        android:gravity="center"
+                        android:textColor="#000000"/>
+                </LinearLayout>
+
                 <EditText
                     android:id="@+id/edt_IMEI"
                     android:layout_width="match_parent"
@@ -116,14 +111,26 @@
                 android:id="@+id/layout_sim_xuliehao_item"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:orientation="horizontal">
-                <TextView
-                    android:id="@+id/tx_sim_xulie_num"
-                    android:layout_width="100dp"
-                    android:layout_height="50dp"
-                    android:text="SIM序列"
-                    android:gravity="center"
-                    android:textColor="#000000"/>
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp">
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/sim"/>
+                    <TextView
+                        android:id="@+id/tx_sim_xulie_num"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="卡序列"
+                        android:gravity="center"
+                        android:textColor="#000000"/>
+                </LinearLayout>
                 <EditText
                     android:id="@+id/edt_sim_xulie_num"
                     android:layout_width="match_parent"
@@ -135,33 +142,42 @@
                     android:gravity="center"
                     android:maxLines="1"/>
             </LinearLayout>
-            <!--分割线-->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#f5f5f5"/>
 
             <!--分割线-->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="#f5f5f5"/>
+
             <LinearLayout
                 android:id="@+id/layout_imsi_item"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:orientation="horizontal">
-                <TextView
-                    android:id="@+id/tx_IMSI"
-                    android:layout_width="100dp"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal"
+                >
+                <LinearLayout
+                    android:layout_width="60dp"
                     android:layout_height="50dp"
-                    android:text="IMSI"
-                    android:gravity="center"
-                    android:textColor="#000000"/>
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/imsi"/>
+                    <TextView
+                        android:id="@+id/tx_IMSI"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="IMSI"
+                        android:gravity="center"
+                        android:textColor="#000000"/>
+                </LinearLayout>
                 <EditText
                     android:id="@+id/edt_IMSI"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="match_parent"
                     android:text=""
                     android:textColor="#dd000000"
                     android:hint="@null"
@@ -177,19 +193,32 @@
             <LinearLayout
                 android:id="@+id/layout_country_item"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
                 android:orientation="horizontal">
-                <TextView
-                    android:id="@+id/tx_phone_country"
-                    android:layout_width="100dp"
+                <LinearLayout
+                    android:layout_width="60dp"
                     android:layout_height="50dp"
-                    android:text="手机卡国家"
-                    android:gravity="center"
-                    android:textColor="#000000"/>
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/country"/>
+                    <TextView
+                        android:id="@+id/tx_phone_country"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="国家"
+                        android:gravity="center"
+                        android:textColor="#000000"/>
+                </LinearLayout>
+
                 <EditText
                     android:id="@+id/edt_phone_country"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:text=""
                     android:textColor="#dd000000"
                     android:hint="@null"
@@ -205,19 +234,31 @@
             <LinearLayout
                 android:id="@+id/layout_phone_number_item"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
                 android:orientation="horizontal">
-                <TextView
-                    android:id="@+id/tx_phone_number"
-                    android:layout_width="100dp"
-                    android:layout_height="50dp"
-                    android:text="手机号"
-                    android:gravity="center"
-                    android:textColor="#000000"/>
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/phone_number"/>
+                    <TextView
+                        android:id="@+id/tx_phone_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="手机号"
+                        android:gravity="center"
+                        android:textColor="#000000"/>
+                </LinearLayout>
                 <EditText
                     android:id="@+id/edt_phone_number"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:text=""
                     android:textColor="#dd000000"
                     android:hint="@null"
@@ -234,14 +275,27 @@
                 android:id="@+id/layout_yunyingshang_item"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
                 android:orientation="horizontal">
-                <TextView
-                    android:id="@+id/tx_yunyingshang_code"
-                    android:layout_width="100dp"
-                    android:layout_height="50dp"
-                    android:text="运营商"
-                    android:gravity="center"
-                    android:textColor="#000000"/>
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/provider"/>
+                    <TextView
+                        android:id="@+id/tx_yunyingshang_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="运营商"
+                        android:gravity="center"
+                        android:textColor="#000000"/>
+                </LinearLayout>
+
                 <EditText
                     android:id="@+id/edt_yunyingshang"
                     android:layout_width="match_parent"
@@ -258,19 +312,34 @@
                 android:layout_height="1dp"
                 android:background="#f5f5f5"/>
             <LinearLayout
-                android:id="@+id/layout_SDK_item"
+                android:id="@+id/layout_SDK_INT_item"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
                 android:orientation="horizontal">
-                <TextView
-                    android:id="@+id/tx__SDK"
-                    android:layout_width="100dp"
-                    android:layout_height="50dp"
-                    android:text="SDK版本"
-                    android:gravity="center"
-                    android:textColor="#000000"/>
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/sdk_version"/>
+
+                    <TextView
+                        android:id="@+id/tx__SDK_INT"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="SDK版本"
+                        android:gravity="center"
+                        android:textColor="#000000"/>
+
+                </LinearLayout>
+
                 <EditText
-                    android:id="@+id/edt_SDK"
+                    android:id="@+id/edt_SDK_INT"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:text=""
@@ -288,14 +357,27 @@
                 android:id="@+id/layout_release_item"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
                 android:orientation="horizontal">
-                <TextView
-                    android:id="@+id/tx__release"
-                    android:layout_width="100dp"
-                    android:layout_height="50dp"
-                    android:text="系统版本"
-                    android:gravity="center"
-                    android:textColor="#000000"/>
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/system_version"/>
+                    <TextView
+                        android:id="@+id/tx__release"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="系统版本"
+                        android:gravity="center"
+                        android:textColor="#000000"/>
+                </LinearLayout>
                 <EditText
                     android:id="@+id/edt_release"
                     android:layout_width="match_parent"
@@ -315,14 +397,26 @@
                 android:id="@+id/layout_hardware_item"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
                 android:orientation="horizontal">
-                <TextView
-                    android:id="@+id/tx__hardware"
-                    android:layout_width="100dp"
-                    android:layout_height="50dp"
-                    android:text="硬件"
-                    android:gravity="center"
-                    android:textColor="#000000"/>
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/cpu"/>
+                    <TextView
+                        android:id="@+id/tx__hardware"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="硬件"
+                        android:gravity="center"
+                        android:textColor="#000000"/>
+                </LinearLayout>
                 <EditText
                     android:id="@+id/edt_hardware"
                     android:layout_width="match_parent"
@@ -342,14 +436,27 @@
                 android:id="@+id/layout_manufacturer_item"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
                 android:orientation="horizontal">
-                <TextView
-                    android:id="@+id/tx__manufacturer"
-                    android:layout_width="100dp"
-                    android:layout_height="50dp"
-                    android:text="制造商"
-                    android:gravity="center"
-                    android:textColor="#000000"/>
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/manufature"/>
+                    <TextView
+                        android:id="@+id/tx__manufacturer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="制造商"
+                        android:gravity="center"
+                        android:textColor="#000000"/>
+                </LinearLayout>
                 <EditText
                     android:id="@+id/edt_manufacturer"
                     android:layout_width="match_parent"
@@ -370,14 +477,26 @@
                 android:id="@+id/layout_ip_item"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
                 android:orientation="horizontal">
-                <TextView
-                    android:id="@+id/tx_ip_address"
-                    android:layout_width="100dp"
-                    android:layout_height="50dp"
-                    android:text="IP"
-                    android:gravity="center"
-                    android:textColor="#000000"/>
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/ip"/>
+                    <TextView
+                        android:id="@+id/tx_ip_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="IP"
+                        android:gravity="center"
+                        android:textColor="#000000"/>
+                </LinearLayout>
 
                 <EditText
                     android:id="@+id/edt_ip_address"
@@ -397,14 +516,27 @@
                 android:id="@+id/layout_device_info_item"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
                 android:orientation="horizontal">
-                <TextView
-                    android:id="@+id/tx_device_info"
-                    android:layout_width="100dp"
-                    android:layout_height="50dp"
-                    android:text="型号"
-                    android:gravity="center"
-                    android:textColor="#000000"/>
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/type"/>
+                    <TextView
+                        android:id="@+id/tx_device_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="型号"
+                        android:gravity="center"
+                        android:textColor="#000000"/>
+                </LinearLayout>
+
                 <EditText
                     android:id="@+id/edt_device_type"
                     android:layout_width="match_parent"
@@ -470,22 +602,31 @@
                     <!--android:hint="@null"/>-->
             <!--</LinearLayout>-->
             <!--分割线-->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#f5f5f5"/>
             <LinearLayout
                 android:id="@+id/layout_location_item"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
                 android:orientation="horizontal">
-                <TextView
-                    android:id="@+id/tx_location"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:text="定位"
-                    android:gravity="center"
-                    android:textColor="#000000"/>
+                <RelativeLayout
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:paddingTop="15dp">
+                    <ImageView
+                        android:id="@+id/img_position"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/position"/>
+                    <TextView
+                        android:layout_below="@id/img_position"
+                        android:id="@+id/tx_location"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:text="定位"
+                        android:gravity="center"
+                        android:textColor="#000000"/>
+                </RelativeLayout>
                 <EditText
                     android:id="@+id/edt_location"
                     android:layout_width="match_parent"
@@ -506,14 +647,28 @@
                 android:id="@+id/layout_mac_item"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
                 android:orientation="horizontal">
-                <TextView
-                    android:id="@+id/tx_mac"
-                    android:layout_width="100dp"
-                    android:layout_height="50dp"
-                    android:text="Mac"
-                    android:gravity="center"
-                    android:textColor="#000000"/>
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/img_mac_address"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/mac"/>
+                    <TextView
+                        android:id="@+id/tx_mac"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Mac"
+                        android:gravity="center"
+                        android:textColor="#000000"/>
+                </LinearLayout>
+
                 <EditText
                     android:id="@+id/edt_mac"
                     android:layout_width="match_parent"
@@ -533,14 +688,27 @@
                 android:id="@+id/layout_ssid_item"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
                 android:orientation="horizontal">
-                <TextView
-                    android:id="@+id/tx_ssid"
-                    android:layout_width="100dp"
-                    android:layout_height="50dp"
-                    android:text="SSID"
-                    android:gravity="center"
-                    android:textColor="#000000"/>
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/img_ssid"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/ssid"/>
+                    <TextView
+                        android:id="@+id/tx_ssid"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="SSID"
+                        android:gravity="center"
+                        android:textColor="#000000"/>
+                </LinearLayout>
                 <EditText
                     android:id="@+id/edt_ssid"
                     android:layout_width="match_parent"
@@ -560,18 +728,31 @@
                 android:id="@+id/layout_bssid_item"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
                 android:orientation="horizontal">
-                <TextView
-                    android:id="@+id/tx_bssid"
-                    android:layout_width="100dp"
-                    android:layout_height="50dp"
-                    android:text="路由Mac"
-                    android:gravity="center"
-                    android:textColor="#000000"/>
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/img_luyou_mac"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/luyou_mac"/>
+                    <TextView
+                        android:id="@+id/tx_bssid"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="路由Mac"
+                        android:gravity="center"
+                        android:textColor="#000000"/>
+                </LinearLayout>
                 <EditText
                     android:id="@+id/edt_bssid"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="match_parent"
                     android:text=""
                     android:textColor="#dd000000"
                     android:background="@null"
