@@ -8,7 +8,6 @@ import android.os.Build;
 import android.telephony.TelephonyManager;
 
 import com.mero.wyt_register.Config;
-import com.mero.wyt_register.MainActivity;
 
 import java.lang.reflect.Method;
 import java.text.DecimalFormat;
@@ -35,8 +34,8 @@ public class XposedHookModule implements IXposedHookLoadPackage {
             }
             XSharedPreferences xpre = new XSharedPreferences("com.mero.wyt_register",Config.ID);
             final Class<?> thiz = XposedHelpers.findClass("com.mero.wyt_register.MainActivity",lpparam.classLoader);
-            final Class<?> cz = XposedHelpers.findClass("android.location.LocationManager",lpparam.classLoader);
-            final Class<?> wi = XposedHelpers.findClass("android.net.ssid.WifiManager",lpparam.classLoader);
+//            final Class<?> cz = XposedHelpers.findClass("android.location.LocationManager",lpparam.classLoader);
+//            final Class<?> wi = XposedHelpers.findClass("android.net.ssid.WifiManager",lpparam.classLoader);
                 hookMethod(thiz,"getResult","已安装");
                 hookMethod(TelephonyManager.class,"getSimSerialNumber",xpre.getString("simSerialNumber",null));//修改sim序列号
                 hookMethod(TelephonyManager.class,"getDeviceId",xpre.getString("imei",null));//修改设备IMEI

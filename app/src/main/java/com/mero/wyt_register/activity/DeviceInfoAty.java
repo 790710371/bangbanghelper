@@ -9,6 +9,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Message;
 import android.os.Process;
 import android.util.Log;
 import android.view.View;
@@ -97,7 +98,16 @@ public class DeviceInfoAty extends Activity implements View.OnClickListener {
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
-
+    //刷新UI
+    private final Handler handler = new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            Bundle bundle = msg.getData();
+            String position = bundle.getString("position");
+            edt_show_location.setText(position);
+        }
+    };
     private void initView() {
         customTitleBar = (CustomTitleBar) findViewById(R.id.title_bar_device_info);
         customTitleBar.onClick(new CustomTitleBar.TitleBarImageListener() {
@@ -175,7 +185,7 @@ public class DeviceInfoAty extends Activity implements View.OnClickListener {
         //设置默认返回地址
         locationClientOption.setNeedAddress(true);
         //设置是否只定位一次
-        locationClientOption.setOnceLocation(true);
+//        locationClientOption.setOnceLocation(true);
         if(locationClientOption.isOnceLocation()){
             locationClientOption.setOnceLocationLatest(true);
         }
@@ -201,7 +211,11 @@ public class DeviceInfoAty extends Activity implements View.OnClickListener {
             if (amapLocation != null) {
                 if (amapLocation.getErrorCode() == 0) {
                     s =   MapUtils.getLocationStr(amapLocation);
-                    edt_show_location.setText(s);
+                    Message msg = handler.obtainMessage();
+                    Bundle bundle =new Bundle();
+                    bundle.putString("position",s);
+                    msg.setData(bundle);
+                    handler.sendMessage(msg);
                 }
             }
         }

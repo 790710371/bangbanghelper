@@ -16,6 +16,7 @@
         app:textColor="#FFF">
     </com.mero.wyt_register.widget.CustomTitleBar>
 
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -255,6 +256,7 @@
                         android:gravity="center"
                         android:textColor="#000000"/>
                 </LinearLayout>
+
                 <EditText
                     android:id="@+id/edt_phone_number"
                     android:layout_width="match_parent"
@@ -627,6 +629,7 @@
                         android:gravity="center"
                         android:textColor="#000000"/>
                 </RelativeLayout>
+
                 <EditText
                     android:id="@+id/edt_location"
                     android:layout_width="match_parent"
@@ -635,7 +638,8 @@
                     android:textColor="#dd000000"
                     android:background="@null"
                     android:gravity="center"
-                    android:hint="@null"/>
+                    android:hint="@null"
+                    android:layout_weight="1" />
             </LinearLayout>
 
             <!--分割线-->
@@ -668,6 +672,7 @@
                         android:gravity="center"
                         android:textColor="#000000"/>
                 </LinearLayout>
+
 
                 <EditText
                     android:id="@+id/edt_mac"

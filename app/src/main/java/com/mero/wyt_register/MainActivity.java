@@ -71,6 +71,8 @@ public class MainActivity extends Activity implements OnClickListener {
 	}
 	//用于判断模块是否安装
 	public static  String getResult(){
+		Log.e(TAG,"正在检查模块是否安装");
+		Toast.makeText(MyApplication.getMyApplication(),"正在检查模块是否安装",Toast.LENGTH_SHORT).show();
 		return "未安装";
 	}
 
