@@ -12,14 +12,11 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
-import android.os.Handler;
-import android.os.Message;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.gms.appindexing.Action;
@@ -31,6 +28,7 @@ import com.mero.wyt_register.MainActivity;
 import com.mero.wyt_register.R;
 import com.mero.wyt_register.utils.AppUtils;
 import com.mero.wyt_register.widget.CustomTitleBar;
+import com.mero.wyt_register.widget.RoundButton;
 import com.stericson.RootTools.RootTools;
 import com.stericson.RootTools.RootToolsException;
 
@@ -42,15 +40,14 @@ import java.io.OutputStream;
 import java.util.List;
 import java.util.concurrent.TimeoutException;
 
-import static com.mero.wyt_register.MainActivity.getResult;
-
 public class InstallXposedAty extends Activity implements View.OnClickListener {
     private static final String TAG = "InstallXposedAty";
     private CustomTitleBar title_bar;
-    private Button btn_isRoot;
-    private Button btn_install_xposed;
-    private Button btn_install_module;
+    private RoundButton btn_isRoot;
+    private RoundButton btn_install_xposed;
+    private RoundButton btn_install_module;
     private SharedPreferences sharedPreferences;
+    private SharedPreferences.Editor editor;
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -66,6 +63,7 @@ public class InstallXposedAty extends Activity implements View.OnClickListener {
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
         }
         sharedPreferences = getSharedPreferences(Config.ID,MODE_PRIVATE);
+        editor = sharedPreferences.edit();
         setContentView(R.layout.xposed_install);
         initView();
         // ATTENTION: This was auto-generated to implement the App Indexing API.
@@ -82,9 +80,9 @@ public class InstallXposedAty extends Activity implements View.OnClickListener {
                 finish();
             }
         });
-        btn_isRoot = (Button) findViewById(R.id.btn_root);
-        btn_install_module = (Button) findViewById(R.id.btn_xposed_install_module);
-        btn_install_xposed = (Button) findViewById(R.id.btn_xposed_click_install);
+        btn_isRoot = (RoundButton) findViewById(R.id.btn_root);
+        btn_install_module = (RoundButton) findViewById(R.id.btn_xposed_install_module);
+        btn_install_xposed = (RoundButton) findViewById(R.id.btn_xposed_click_install);
         btn_isRoot.setOnClickListener(this);
         btn_install_module.setOnClickListener(this);
         btn_install_xposed.setOnClickListener(this);
@@ -92,27 +90,19 @@ public class InstallXposedAty extends Activity implements View.OnClickListener {
 
     }
 
-    private void checkModuleInstalled() {
-       String s = MainActivity.getResult();
-        if(s.equals("已安装")){
-           SharedPreferences.Editor editor =  sharedPreferences.edit();
-            editor.putString(Config.KEY_IS_MODULE_INSTALLED,Config.VALUE_IS_INSTALL);
-            editor.commit();
-        }
-    }
 
-    private void checkPackageInstalled(Context context) {
+    private String checkPackageInstalled(Context context) {
+        String is ="";
         PackageManager pm = context.getPackageManager();
         List<PackageInfo> listInfo = pm.getInstalledPackages(0);
         for (PackageInfo packageInfo : listInfo) {
             Log.e(TAG, packageInfo.packageName);
             if (packageInfo.packageName.equals(getResources().getString(R.string.xposed_package_name))) {
-                SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString(Config.KEY_IS_INSTALL_XPOSED,Config.VALUE_IS_INSTALL);
-                editor.commit();
-                return;
+                is="已安装";
+                break;
             }
         }
+        return  is;
 
     }
     @Override
@@ -125,19 +115,31 @@ public class InstallXposedAty extends Activity implements View.OnClickListener {
         } else {
             btn_isRoot.setText("未root");
         }
+        Log.e(TAG,"正在执行安装界面的onResume方法");
         //检查xposed是否已经安装
-        checkPackageInstalled(InstallXposedAty.this);
-        //检查模块是否安装
-        checkModuleInstalled();
-        String isXposedInstalled = sharedPreferences.getString(Config.KEY_IS_INSTALL_XPOSED,"未安装");
-        String isModuleInstalled = sharedPreferences.getString(Config.KEY_IS_MODULE_INSTALLED,"未安装");
+        String isXposedInstalled = checkPackageInstalled(this);
+        Log.e(TAG,"isXposedInstalled:"+isXposedInstalled);
         if(isXposedInstalled.equals("已安装")){
             btn_install_xposed.setText("框架已安装");
             btn_install_xposed.setEnabled(false);
+            editor.putString(Config.KEY_IS_INSTALL_XPOSED,Config.VALUE_IS_INSTALL);
+            editor.commit();
+        }else{
+            btn_install_xposed.setText("安装框架");
+            editor.putString(Config.KEY_IS_INSTALL_XPOSED,Config.VALUE_NOT_INSTALLED);
+            editor.commit();
         }
+        String isModuleInstalled = MainActivity.getResult();
+        Log.e(TAG,"isModuleInstalled:"+isModuleInstalled);
         if (isModuleInstalled.equals("已安装")){
             btn_install_module.setText("模块已安装");
             btn_install_module.setEnabled(false);
+            editor.putString(Config.KEY_IS_MODULE_INSTALLED,Config.VALUE_IS_INSTALL);
+            editor.commit();
+        }else {
+            btn_install_module.setText("安装模块");
+            editor.putString(Config.KEY_IS_MODULE_INSTALLED,Config.VALUE_NOT_INSTALLED);
+            editor.commit();
         }
     }
 

@@ -10,31 +10,46 @@
         android:layout_height="wrap_content"
         app:text="帮帮助手"
         />
-    <Button
+    <com.mero.wyt_register.widget.RoundButton
         android:id="@+id/btn_root"
         android:layout_width="200dp"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_marginTop="100dp"
         android:layout_gravity="center_horizontal"
         android:text="是否root"
-        android:textColor="#FFFFFF"
-        android:background="@drawable/button_shape"/>
-    <Button
+        android:textSize="15sp"
+        android:textColor="#ffffff"
+        app:btnPressedRatio="1.5"
+        app:btnCornerRadius="10dp"
+        app:btnSolidColor="#3F51B5"
+        app:btnStrokeColor="#3F51B5"
+        />
+    <com.mero.wyt_register.widget.RoundButton
         android:id="@+id/btn_xposed_click_install"
         android:layout_width="200dp"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_marginTop="50dp"
         android:layout_gravity="center_horizontal"
         android:text="安装框架"
-        android:textColor="#FFFFFF"
-        android:background="@drawable/button_shape"/>
-    <Button
+        android:textSize="15sp"
+        android:textColor="#ffffff"
+        app:btnPressedRatio="1.5"
+        app:btnCornerRadius="10dp"
+        app:btnSolidColor="#3F51B5"
+        app:btnStrokeColor="#3F51B5"/>
+    <com.mero.wyt_register.widget.RoundButton
         android:id="@+id/btn_xposed_install_module"
         android:layout_width="200dp"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_marginTop="50dp"
         android:layout_gravity="center_horizontal"
         android:text="安装模块"
-        android:textColor="#FFFFFF"
-        android:background="@drawable/button_shape"/>
+        android:textSize="15sp"
+        android:textColor="#ffffff"
+        app:btnPressedRatio="1.5"
+        app:btnCornerRadius="10dp"
+        app:btnSolidColor="#3F51B5"
+        app:btnStrokeColor="#3F51B5"
+
+        />
 </LinearLayout>

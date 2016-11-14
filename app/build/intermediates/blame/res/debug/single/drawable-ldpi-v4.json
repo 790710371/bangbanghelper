@@ -1,7 +1,7 @@
 [
     {
-        "merged": "F:\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\jingdong.png",
-        "source": "F:\\bangbanghelper\\app\\src\\main\\res\\drawable-ldpi\\jingdong.png"
+        "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\wangyi.png",
+        "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\drawable-ldpi\\wangyi.png"
     },
     {
         "merged": "F:\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\taobao.png",
@@ -16,32 +16,16 @@
         "source": "F:\\bangbanghelper\\app\\src\\main\\res\\drawable-ldpi\\viewpager02.png"
     },
     {
-        "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\jingdong.png",
-        "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\drawable-ldpi\\jingdong.png"
-    },
-    {
-        "merged": "F:\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\viewpager03.png",
-        "source": "F:\\bangbanghelper\\app\\src\\main\\res\\drawable-ldpi\\viewpager03.png"
-    },
-    {
-        "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\taobao.png",
-        "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\drawable-ldpi\\taobao.png"
-    },
-    {
         "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_launcher.png",
         "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\drawable-ldpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\weixin.png",
-        "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\drawable-ldpi\\weixin.png"
+        "merged": "F:\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\wangyi.png",
+        "source": "F:\\bangbanghelper\\app\\src\\main\\res\\drawable-ldpi\\wangyi.png"
     },
     {
-        "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\tianmao.png",
-        "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\drawable-ldpi\\tianmao.png"
-    },
-    {
-        "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\viewpager02.png",
-        "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\drawable-ldpi\\viewpager02.png"
+        "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\common_ic_googleplayservices.png",
+        "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.6.1\\res\\drawable-ldpi-v4\\common_ic_googleplayservices.png"
     },
     {
         "merged": "F:\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\viewpager01.png",
@@ -50,10 +34,6 @@
     {
         "merged": "F:\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_launcher.png",
         "source": "F:\\bangbanghelper\\app\\src\\main\\res\\drawable-ldpi\\ic_launcher.png"
-    },
-    {
-        "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\viewpager03.png",
-        "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\drawable-ldpi\\viewpager03.png"
     },
     {
         "merged": "F:\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\left.png",
@@ -72,10 +52,6 @@
         "source": "F:\\bangbanghelper\\app\\src\\main\\res\\drawable-ldpi\\weixin.png"
     },
     {
-        "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\left.png",
-        "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\drawable-ldpi\\left.png"
-    },
-    {
         "merged": "F:\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\momo.png",
         "source": "F:\\bangbanghelper\\app\\src\\main\\res\\drawable-ldpi\\momo.png"
     },
@@ -84,7 +60,63 @@
         "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\drawable-ldpi\\viewpager01.png"
     },
     {
-        "merged": "F:\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\tianmao.png",
-        "source": "F:\\bangbanghelper\\app\\src\\main\\res\\drawable-ldpi\\tianmao.png"
+        "merged": "F:\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\xinlang.png",
+        "source": "F:\\bangbanghelper\\app\\src\\main\\res\\drawable-ldpi\\xinlang.png"
+    },
+    {
+        "merged": "F:\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\android_id.png",
+        "source": "F:\\bangbanghelper\\app\\src\\main\\res\\drawable-ldpi\\android_id.png"
+    },
+    {
+        "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\xposed_icon.png",
+        "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\drawable-ldpi\\xposed_icon.png"
+    },
+    {
+        "merged": "F:\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\jingdong.png",
+        "source": "F:\\bangbanghelper\\app\\src\\main\\res\\drawable-ldpi\\jingdong.png"
+    },
+    {
+        "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\jingdong.png",
+        "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\drawable-ldpi\\jingdong.png"
+    },
+    {
+        "merged": "F:\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\viewpager03.png",
+        "source": "F:\\bangbanghelper\\app\\src\\main\\res\\drawable-ldpi\\viewpager03.png"
+    },
+    {
+        "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\taobao.png",
+        "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\drawable-ldpi\\taobao.png"
+    },
+    {
+        "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\weixin.png",
+        "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\drawable-ldpi\\weixin.png"
+    },
+    {
+        "merged": "F:\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\common_ic_googleplayservices.png",
+        "source": "F:\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.6.1\\res\\drawable-ldpi-v4\\common_ic_googleplayservices.png"
+    },
+    {
+        "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\viewpager02.png",
+        "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\drawable-ldpi\\viewpager02.png"
+    },
+    {
+        "merged": "F:\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\xposed_icon.png",
+        "source": "F:\\bangbanghelper\\app\\src\\main\\res\\drawable-ldpi\\xposed_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\viewpager03.png",
+        "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\drawable-ldpi\\viewpager03.png"
+    },
+    {
+        "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\android_id.png",
+        "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\drawable-ldpi\\android_id.png"
+    },
+    {
+        "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\left.png",
+        "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\drawable-ldpi\\left.png"
+    },
+    {
+        "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\xinlang.png",
+        "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\drawable-ldpi\\xinlang.png"
     }
 ]

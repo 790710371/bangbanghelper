@@ -8,8 +8,14 @@ import android.os.Handler;
 import android.util.Log;
 import com.mero.wyt_register.Config;
 import com.mero.wyt_register.MainActivity;
+import com.mero.wyt_register.MyApplication;
 import com.mero.wyt_register.R;
+import com.mero.wyt_register.db.DbHelper;
+import com.mero.wyt_register.db.DeviceModelDao;
 import com.mero.wyt_register.utils.DeviceUtils;
+
+import static com.mero.wyt_register.Config.VALUE_FALSE;
+import static com.mero.wyt_register.Config.VALUE_TRUE;
 
 /**
  *@项目名称: 简易通注册助手
@@ -32,20 +38,23 @@ import com.mero.wyt_register.utils.DeviceUtils;
 	}
 	private void init() {
 		SharedPreferences sharedPreferences = getSharedPreferences(Config.ID, MODE_PRIVATE);
-		isFirstIn = sharedPreferences.getBoolean("isFirstIn", true);
+		isFirstIn = sharedPreferences.getBoolean(Config.KEY_IS_FIRST_IN, Config.VALUE_TRUE);
 		Log.e(TAG, "正在判断是否为首次进入软件...");
 		Log.e(TAG,isFirstIn+"" );
 		if(!isFirstIn){
 			handler.sendEmptyMessageDelayed(GO_HOME,TIME);
-			Log.e(TAG,isFirstIn+"第一次判断" );
 			Log.e(TAG, "非首次进入");
 		}else{
 			Log.e(TAG, "首次进入");
+			//创建数据库和表
+			DbHelper dbHelper = new DbHelper(MyApplication.getMyApplication());
+			//插入数据到数据库
+			DeviceModelDao dao = new DeviceModelDao(MyApplication.getMyApplication());
+			dao.insertModelToDb(dao.addObjectToList());
+
 			handler.sendEmptyMessageDelayed(GO_GUIDE,TIME);
 			SharedPreferences.Editor editor1 = sharedPreferences.edit();
-			Log.e(TAG,isFirstIn+"第二次判断" );
-			editor1.putBoolean("isFirstIn", false);
-			Log.e(TAG,isFirstIn+"第三次判断" );
+			editor1.putBoolean(Config.KEY_IS_FIRST_IN, Config.VALUE_FALSE);
 			editor1.commit();
 		}
 	}

@@ -81,24 +81,27 @@ public class DeviceUtils {
 
     //获取手机运营商信息
     public static String getProviderInfo(Context context) {
+        Log.e(TAG,"正在获取运营商中");
         String providerInfo = "";
         String IMSI = "";
         TelephonyManager tm = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
         try {
             IMSI = tm.getSubscriberId();
+            Log.e(TAG,IMSI);
             if(!TextUtils.isEmpty(IMSI)){
                 if (IMSI.startsWith("46000") || IMSI.startsWith("46002")||IMSI.startsWith("46007")) {
                     providerInfo = "中国移动";
                 }
-                if (IMSI.startsWith("46001")||IMSI.startsWith("46007")) {
+                else if (IMSI.startsWith("46001")||IMSI.startsWith("46007")) {
                     providerInfo = "中国联通";
                 }
-                if (IMSI.startsWith("46003")||(IMSI.startsWith("46005"))) {
+                else if (IMSI.startsWith("46003")||(IMSI.startsWith("46005"))) {
                     providerInfo = "中国电信";
                 }
-                if(IMSI .startsWith("46020")){
+                else  if(IMSI .startsWith("46020")){
                     providerInfo = "中国铁通";
-                }
+                }else
+                    providerInfo = "未知运营商";
             }else{
                 providerInfo = "无服务商";
             }

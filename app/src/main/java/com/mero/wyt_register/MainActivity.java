@@ -4,14 +4,10 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build.VERSION;
 import android.os.Build.VERSION_CODES;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.Gravity;
@@ -19,7 +15,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
@@ -29,19 +24,19 @@ import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.mero.wyt_register.activity.CleanDetailAty;
 import com.mero.wyt_register.activity.DeviceInfoAty;
 import com.mero.wyt_register.activity.InstallXposedAty;
 import com.mero.wyt_register.activity.SettingAty;
 import com.mero.wyt_register.widget.MixTextImage;
+import com.mero.wyt_register.widget.RoundButton;
 import com.stericson.RootTools.RootTools;
-
-import java.util.List;
 
 public class MainActivity extends Activity implements OnClickListener {
 	private static final String TAG = "MainActivity";
 	private MixTextImage mixTextImage = null;
 	private ImageView menuImage;
-	private Button btn_install_xposed;
+	private RoundButton btn_install_xposed;
 	private PopupWindow window;
 	private SharedPreferences sharedPreferences;
 	/**
@@ -67,7 +62,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	}
 	private void initView() {
 		//得到配置信息
-		btn_install_xposed = (Button) findViewById(R.id.btn_xposed_install);
+		btn_install_xposed = (RoundButton) findViewById(R.id.btn_xposed_install);
 		mixTextImage = (MixTextImage) findViewById(R.id.mix_01);
 		menuImage = (ImageView) findViewById(R.id.menu_icon);
 		mixTextImage.setOnClickListener(this);
@@ -82,10 +77,12 @@ public class MainActivity extends Activity implements OnClickListener {
 	@Override
 	protected void onResume() {
 		super.onResume();
+		Log.e(TAG,"正在执行onResum");
 		sharedPreferences = getSharedPreferences(Config.ID,MODE_PRIVATE);
 		boolean isRoot = RootTools.isRootAvailable();
 		String isXposedInstalled = sharedPreferences.getString(Config.KEY_IS_INSTALL_XPOSED,Config.VALUE_NOT_INSTALLED);
-		String isModuleInstalled = sharedPreferences.getString(Config.KEY_IS_MODULE_INSTALLED,Config.VALUE_NOT_INSTALLED);
+		String isModuleInstalled =getResult();
+		Log.e(TAG,"正在进行判断:"+"isXposedInstalled:"+isXposedInstalled+"\t+isModuleInstalled:"+isModuleInstalled);
 		if(isRoot==true&&isXposedInstalled.equals("已安装")&&isModuleInstalled.equals("已安装")){
 			btn_install_xposed.setText("已安装");
 			btn_install_xposed.setEnabled(false);
@@ -124,7 +121,6 @@ public class MainActivity extends Activity implements OnClickListener {
 				Log.e(TAG,"点击按钮的文字是："+s);
 				if((!TextUtils.isEmpty(s))&&s.equals("点击安装")){
 					startActivity(new Intent(MainActivity.this,InstallXposedAty.class));
-					finish();
 				}
 				break;
 			case R.id.mix_01:
@@ -135,17 +131,16 @@ public class MainActivity extends Activity implements OnClickListener {
 				if(null!=window){
 					window.dismiss();
 				}
-				finish();
 				break;
 			case R.id.tx_item_main_item2:
 				startActivity(new Intent(this, DeviceInfoAty.class));
 				if(null!=window){
 					window.dismiss();
 				}
-				finish();
 				break;
 			case R.id.tx_item_main_item3:
 				Toast.makeText(this,"正在点击帮助按钮",Toast.LENGTH_SHORT).show();
+				startActivity(new Intent(this, CleanDetailAty.class));
 				break;
 			case R.id.tx_item_main_item4:
 				Toast.makeText(this,"正在点击作者按钮",Toast.LENGTH_SHORT).show();

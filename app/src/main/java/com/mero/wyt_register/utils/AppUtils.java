@@ -12,6 +12,9 @@ import android.content.pm.PackageManager;
 import android.content.pm.Signature;
 import android.net.Uri;
 import android.text.TextUtils;
+import android.util.DisplayMetrics;
+import android.view.Display;
+import android.view.WindowManager;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;
@@ -73,6 +76,18 @@ public final class AppUtils {
     public static long getMaxMemory() {
 
         return Runtime.getRuntime().maxMemory() / 1024;
+    }
+    //得到分辨率
+    public static  int[] getDispalyMetrics(Context context){
+        int mScreenWidth = 0;
+        int mScreenHeight = 0;
+        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+        Display display = wm.getDefaultDisplay();
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        display.getMetrics(displayMetrics);
+        mScreenWidth = displayMetrics.widthPixels;
+        mScreenHeight = displayMetrics.heightPixels;
+        return new int[]{mScreenWidth,mScreenHeight};
     }
 
 

@@ -8,6 +8,7 @@ import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Display;
 import android.view.MotionEvent;
+import android.view.VelocityTracker;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.HorizontalScrollView;
@@ -23,7 +24,7 @@ import com.nineoldandroids.view.ViewHelper;
  *注意：由Mero开发，禁止外泄以及使用本程序于其他的商业目的 。
  */
 public class SlidingMenu extends HorizontalScrollView{
-
+	public static final String TAG = "SlidingMenu";
 	private ViewGroup mMenuLayout;
 	private ViewGroup mMainLayout;
 	private int mScreenWidth;
@@ -33,8 +34,10 @@ public class SlidingMenu extends HorizontalScrollView{
 	private int mMenuWidth;
 	private LinearLayout layout;
 	private float d;
-	private String TAG;
 	private float inLeftOrRight;
+	private int count = 0;
+	private float velocityMax =0.0f;
+	private boolean isNeedScrollByMaxVelocity = false;
 	/**
 	 * @param context
 	 * @param attrs
@@ -76,6 +79,9 @@ public class SlidingMenu extends HorizontalScrollView{
 	 */
 	@Override
 	public boolean onTouchEvent(MotionEvent ev) {
+		VelocityTracker velocityTracker = VelocityTracker.obtain();//获取速度跟踪器
+		velocityTracker.addMovement(ev);
+		velocityTracker.computeCurrentVelocity(1,8.0f);
 		switch (ev.getAction()) {
 			case MotionEvent.ACTION_DOWN:
 				downX = ev.getX();//按下的横坐标
@@ -93,7 +99,7 @@ public class SlidingMenu extends HorizontalScrollView{
 					}
 					//右移
 					if(d>0){
-						if(ds>mScreenWidth/5){
+						if(ds>mScreenWidth/5||isNeedScrollByMaxVelocity==true){
 							this.smoothScrollTo(0, 0);
 							flag = true;//显示
 						}else{
@@ -104,7 +110,7 @@ public class SlidingMenu extends HorizontalScrollView{
 				}else if(flag == true){
 					//左移
 					if(d<0){
-						if(ds<mScreenWidth/5){
+						if(ds<mScreenWidth/5||isNeedScrollByMaxVelocity==true){
 							this.smoothScrollTo(0, 0);
 							flag = true;
 						}else{
@@ -116,11 +122,23 @@ public class SlidingMenu extends HorizontalScrollView{
 					if(d>0){
 						this.smoothScrollTo(0, 0);
 						flag = true;
+						break;
 					}
 				}
+				velocityMax = 0.0f;//恢复初始值
+				isNeedScrollByMaxVelocity = false;//恢复初始状态
 				return true;
-			default:
+				case MotionEvent.ACTION_MOVE :
+					float velocityX = velocityTracker.getYVelocity();
+					if(velocityX>3.0f){
+						velocityMax = velocityX;
+					}
+					if(velocityMax>3.0f){
+						isNeedScrollByMaxVelocity = true;
+					}
 				break;
+				default:
+					break;
 		}
 		return super.onTouchEvent(ev);
 	}
@@ -142,9 +160,11 @@ public class SlidingMenu extends HorizontalScrollView{
 	@Override
 	protected void onScrollChanged(int l, int t, int oldl, int oldt) {
 		super.onScrollChanged(l, t, oldl, oldt);
+		count++;
+		Log.e(TAG,l+"进度l"+l);
 		//缩放比例
 		float scale = (float)l/mMenuWidth;
-		Log.e("TAG", scale+"");
+		Log.e(TAG, scale+"缩放度");
 		//左菜单缩放
 		float scaleLeft = 1-0.3f*scale;
 		ViewHelper.setScaleX(mMenuLayout, scaleLeft);
