@@ -25,7 +25,6 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -77,6 +76,9 @@
         </receiver>
 
         <activity
+            android:name="com.mero.wyt_register.activity.MainActivity"
+            android:launchMode="singleTask" />
+        <activity
             android:name="com.mero.wyt_register.activity.WelcomeAty"
             android:theme="@android:style/Theme.NoTitleBar" >
             <intent-filter>
@@ -90,18 +92,12 @@
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar" />
         <activity
-            android:name="com.mero.wyt_register.MainActivity"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar" />
-        <activity
             android:name="com.mero.wyt_register.activity.SettingAty"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar" />
         <activity
             android:name="com.mero.wyt_register.activity.CleanDetailAty"
             android:theme="@android:style/Theme.NoTitleBar" />
-
         <!-- Xposed -->
         <meta-data
             android:name="xposedmodule"

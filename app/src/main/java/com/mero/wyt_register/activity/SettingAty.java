@@ -6,15 +6,10 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
-import android.view.View;
 import android.view.WindowManager;
 import android.widget.CompoundButton;
-import android.widget.Toast;
 
 import com.mero.wyt_register.Config;
-import com.mero.wyt_register.MainActivity;
 import com.mero.wyt_register.R;
 import com.mero.wyt_register.widget.CustomTitleBar;
 import com.mero.wyt_register.widget.SwitchButton;
@@ -32,7 +27,8 @@ public class SettingAty extends Activity{
         //沉浸式状态栏
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-//            getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+            getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+
         }
         sharedPreferences = this.getSharedPreferences(Config.ID, Context.MODE_PRIVATE);
         isAutoChanged = sharedPreferences.getBoolean("isAutoChanged",false);

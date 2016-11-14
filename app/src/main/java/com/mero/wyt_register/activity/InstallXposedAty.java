@@ -24,7 +24,6 @@ import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.mero.wyt_register.Config;
-import com.mero.wyt_register.MainActivity;
 import com.mero.wyt_register.R;
 import com.mero.wyt_register.utils.AppUtils;
 import com.mero.wyt_register.widget.CustomTitleBar;

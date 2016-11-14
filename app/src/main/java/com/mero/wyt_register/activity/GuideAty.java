@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import com.mero.wyt_register.MainActivity;
+
 import com.mero.wyt_register.R;
 import com.mero.wyt_register.adapter.ViewPagerAdapter;
 

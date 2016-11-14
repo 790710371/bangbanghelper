@@ -1,12 +1,9 @@
-package com.mero.wyt_register;
+package com.mero.wyt_register.activity;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.net.Uri;
-import android.os.Build.VERSION;
-import android.os.Build.VERSION_CODES;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -20,17 +17,13 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.appindexing.Action;
-import com.google.android.gms.appindexing.AppIndex;
-import com.google.android.gms.appindexing.Thing;
-import com.google.android.gms.common.api.GoogleApiClient;
-import com.mero.wyt_register.activity.CleanDetailAty;
-import com.mero.wyt_register.activity.DeviceInfoAty;
-import com.mero.wyt_register.activity.InstallXposedAty;
-import com.mero.wyt_register.activity.SettingAty;
+import com.mero.wyt_register.Config;
+import com.mero.wyt_register.R;
 import com.mero.wyt_register.widget.MixTextImage;
 import com.mero.wyt_register.widget.RoundButton;
 import com.stericson.RootTools.RootTools;
+
+import static android.R.attr.start;
 
 public class MainActivity extends Activity implements OnClickListener {
 	private static final String TAG = "MainActivity";
@@ -39,28 +32,21 @@ public class MainActivity extends Activity implements OnClickListener {
 	private RoundButton btn_install_xposed;
 	private PopupWindow window;
 	private SharedPreferences sharedPreferences;
-	/**
-	 * ATTENTION: This was auto-generated to implement the App Indexing API.
-	 * See https://g.co/AppIndexing/AndroidStudio for more information.
-	 */
-	private GoogleApiClient client;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		//沉浸式状态栏
-		if (VERSION.SDK_INT >= VERSION_CODES.KITKAT) {
-			getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-//			getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
-		}
 		setContentView(R.layout.main);
-		sharedPreferences = this.getSharedPreferences(Config.ID, Context.MODE_PRIVATE);
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+			//透明状态栏
+			getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+		}
 		initView();
-		// ATTENTION: This was auto-generated to implement the App Indexing API.
-		// See https://g.co/AppIndexing/AndroidStudio for more information.
-		client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
+		initData();
 	}
-	private void initView() {
+
+
+	public void initView() {
 		//得到配置信息
 		btn_install_xposed = (RoundButton) findViewById(R.id.btn_xposed_install);
 		mixTextImage = (MixTextImage) findViewById(R.id.mix_01);
@@ -69,10 +55,14 @@ public class MainActivity extends Activity implements OnClickListener {
 		menuImage.setOnClickListener(this);
 		btn_install_xposed.setOnClickListener(this);
 	}
+
+	public void initData() {
+		sharedPreferences = getSharedPreferences(Config.ID,MODE_PRIVATE);
+	}
+
+
 	//用于判断模块是否安装
 	public static  String getResult(){
-		Log.e(TAG,"正在检查模块是否安装");
-		Toast.makeText(MyApplication.getMyApplication(),"正在检查模块是否安装",Toast.LENGTH_SHORT).show();
 		return "未安装";
 	}
 
@@ -80,7 +70,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	protected void onResume() {
 		super.onResume();
 		Log.e(TAG,"正在执行onResum");
-		sharedPreferences = getSharedPreferences(Config.ID,MODE_PRIVATE);
+
 		boolean isRoot = RootTools.isRootAvailable();
 		String isXposedInstalled = sharedPreferences.getString(Config.KEY_IS_INSTALL_XPOSED,Config.VALUE_NOT_INSTALLED);
 		String isModuleInstalled =getResult();
@@ -151,39 +141,17 @@ public class MainActivity extends Activity implements OnClickListener {
 		}
 	}
 
-	/**
-	 * ATTENTION: This was auto-generated to implement the App Indexing API.
-	 * See https://g.co/AppIndexing/AndroidStudio for more information.
-	 */
-	public Action getIndexApiAction() {
-		Thing object = new Thing.Builder()
-				.setName("Main Page") // TODO: Define a title for the content shown.
-				// TODO: Make sure this auto-generated URL is correct.
-				.setUrl(Uri.parse("http://[ENTER-YOUR-URL-HERE]"))
-				.build();
-		return new Action.Builder(Action.TYPE_VIEW)
-				.setObject(object)
-				.setActionStatus(Action.STATUS_TYPE_COMPLETED)
-				.build();
-	}
+
 
 	@Override
 	public void onStart() {
 		super.onStart();
 
-		// ATTENTION: This was auto-generated to implement the App Indexing API.
-		// See https://g.co/AppIndexing/AndroidStudio for more information.
-		client.connect();
-		AppIndex.AppIndexApi.start(client, getIndexApiAction());
+
 	}
 
 	@Override
 	public void onStop() {
 		super.onStop();
-
-		// ATTENTION: This was auto-generated to implement the App Indexing API.
-		// See https://g.co/AppIndexing/AndroidStudio for more information.
-		AppIndex.AppIndexApi.end(client, getIndexApiAction());
-		client.disconnect();
 	}
 }

@@ -3,6 +3,15 @@
 
     <item
         is-multidex="false"
+        jar="C:\Users\chenlei\Desktop\bangbanghelper\app\libs\systembartint-1.0.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="06404f77b92ec723cc132e825afe85a07da85ee6">
+        <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\pre-dexed\debug\systembartint-1.0.4_8880538ff2ddf594b4255a11feea2223a4aeb9f3.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\9.6.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"

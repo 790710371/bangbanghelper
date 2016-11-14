@@ -5,18 +5,34 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.WindowManager;
 
+import com.mero.wyt_register.BaseActivity;
 import com.mero.wyt_register.R;
 
-public class CleanDetailAty extends Activity {
+public class CleanDetailAty extends BaseActivity {
+
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.clean_detail_layout);
-        //沉浸式状态栏
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-//			getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
-        }
+    public int getLayoutResourceId() {
+        return R.layout.clean_detail_layout;
+    }
+
+    @Override
+    public int getDialogIcon() {
+        return 0;
+    }
+
+    @Override
+    public int setStatusBarColor() {
+        return R.color.status_solid;
+    }
+
+    @Override
+    public void initView() {
+
+    }
+
+    @Override
+    public void initData() {
+
     }
 }

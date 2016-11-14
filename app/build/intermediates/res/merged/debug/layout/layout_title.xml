@@ -5,7 +5,7 @@
     android:layout_height="80dp"
     android:orientation="horizontal"
     android:background="#339933"
-    android:clipToPadding="true"
+
     android:fitsSystemWindows="true">
     <RelativeLayout
         android:id="@+id/relative_title_bar_left"

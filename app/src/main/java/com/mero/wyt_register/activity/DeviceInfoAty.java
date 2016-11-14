@@ -14,7 +14,6 @@ import android.os.Process;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -27,7 +26,6 @@ import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.mero.wyt_register.Config;
-import com.mero.wyt_register.MainActivity;
 import com.mero.wyt_register.MyApplication;
 import com.mero.wyt_register.R;
 import com.mero.wyt_register.db.DeviceModelDao;

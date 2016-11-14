@@ -51,16 +51,16 @@ public final class R {
 		public static final int userInputValue = 0x7f0100cd;
 	}
 	public static final class color {
-		public static final int common_google_signin_btn_text_dark = 0x7f090063;
-		public static final int common_google_signin_btn_text_dark_default = 0x7f090012;
-		public static final int common_google_signin_btn_text_dark_disabled = 0x7f090013;
-		public static final int common_google_signin_btn_text_dark_focused = 0x7f090014;
-		public static final int common_google_signin_btn_text_dark_pressed = 0x7f090015;
-		public static final int common_google_signin_btn_text_light = 0x7f090064;
-		public static final int common_google_signin_btn_text_light_default = 0x7f090016;
-		public static final int common_google_signin_btn_text_light_disabled = 0x7f090017;
-		public static final int common_google_signin_btn_text_light_focused = 0x7f090018;
-		public static final int common_google_signin_btn_text_light_pressed = 0x7f090019;
+		public static final int common_google_signin_btn_text_dark = 0x7f0900f6;
+		public static final int common_google_signin_btn_text_dark_default = 0x7f090022;
+		public static final int common_google_signin_btn_text_dark_disabled = 0x7f090023;
+		public static final int common_google_signin_btn_text_dark_focused = 0x7f090024;
+		public static final int common_google_signin_btn_text_dark_pressed = 0x7f090025;
+		public static final int common_google_signin_btn_text_light = 0x7f0900f7;
+		public static final int common_google_signin_btn_text_light_default = 0x7f090026;
+		public static final int common_google_signin_btn_text_light_disabled = 0x7f090027;
+		public static final int common_google_signin_btn_text_light_focused = 0x7f090028;
+		public static final int common_google_signin_btn_text_light_pressed = 0x7f090029;
 	}
 	public static final class dimen {
 	}
@@ -118,7 +118,7 @@ public final class R {
 		public static final int radio = 0x7f0a005e;
 		public static final int rfc822 = 0x7f0a0034;
 		public static final int standard = 0x7f0a003d;
-		public static final int text = 0x7f0a00cc;
+		public static final int text = 0x7f0a00d5;
 		public static final int text1 = 0x7f0a0021;
 		public static final int text2 = 0x7f0a0022;
 		public static final int thing_proto = 0x7f0a0023;

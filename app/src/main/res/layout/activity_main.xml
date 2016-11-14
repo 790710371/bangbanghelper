@@ -5,15 +5,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     >
-	<!-- 该2行标志该布局为沉浸式标题栏 -->
     <!-- 标题栏 -->
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
         android:orientation="horizontal"
-        android:background="#339933"
-        android:clipToPadding="true"
-    	android:fitsSystemWindows="true">
+        android:background="#339933">
     	<TextView
         	android:text="帮帮助手"
         	android:layout_width="wrap_content"
@@ -29,7 +26,8 @@
     	    android:layout_height="32dp"
     	    android:src="@drawable/menu_add"
 			android:layout_alignParentRight="true"
-			android:paddingTop="10dp"
+			android:layout_centerVertical="true"
+			android:paddingTop="14dp"
 			android:layout_marginRight="10dp"/>
     </RelativeLayout>
     <!-- 中间部分 -->

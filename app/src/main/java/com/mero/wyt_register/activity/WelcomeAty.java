@@ -7,15 +7,10 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import com.mero.wyt_register.Config;
-import com.mero.wyt_register.MainActivity;
 import com.mero.wyt_register.MyApplication;
 import com.mero.wyt_register.R;
 import com.mero.wyt_register.db.DbHelper;
 import com.mero.wyt_register.db.DeviceModelDao;
-import com.mero.wyt_register.utils.DeviceUtils;
-
-import static com.mero.wyt_register.Config.VALUE_FALSE;
-import static com.mero.wyt_register.Config.VALUE_TRUE;
 
 /**
  *@项目名称: 简易通注册助手

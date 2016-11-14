@@ -3,6 +3,7 @@ package com.mero.wyt_register.widget; /**
  */
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -16,6 +17,8 @@ import android.widget.LinearLayout;
 
 import com.nineoldandroids.view.ViewHelper;
 
+import java.lang.reflect.Method;
+
 /**
  *@项目名称: SlidingMenu
  *@文件名称: SlidingMenu.java
@@ -28,6 +31,7 @@ public class SlidingMenu extends HorizontalScrollView{
 	private ViewGroup mMenuLayout;
 	private ViewGroup mMainLayout;
 	private int mScreenWidth;
+	private int mScreenHeight;
 	private int mPaddingRight = 100;
 	private float downX;
 	private float upX;
@@ -50,6 +54,7 @@ public class SlidingMenu extends HorizontalScrollView{
 		DisplayMetrics displayMetrics = new DisplayMetrics();
 		display.getMetrics(displayMetrics);
 		mScreenWidth = displayMetrics.widthPixels;
+		mScreenHeight = displayMetrics.heightPixels;
 	}
 
 	/*
@@ -151,8 +156,16 @@ public class SlidingMenu extends HorizontalScrollView{
 	@Override
 	protected void onLayout(boolean changed, int l, int t, int r, int b) {
 		super.onLayout(changed, l, t, r, b);
-		this.scrollTo(mMenuWidth, 0);
 		flag = false;
+		//虚拟键隐藏
+		if(!checkDeviceHasNavigationBar(getContext())){
+			this.scrollTo(mMenuWidth, 0);
+			return;
+		}
+		//虚拟键弹出
+		this.layout(0,0,mScreenWidth,mScreenHeight-getSwapKeyHeight(getContext()));
+		this.scrollTo(mMenuWidth,0);
+
 	}
 	/* (non-Javadoc)
 	 * @see android.view.View#onScrollChanged(int, int, int, int)
@@ -180,5 +193,87 @@ public class SlidingMenu extends HorizontalScrollView{
 		ViewHelper.setTranslationX(mMenuLayout, mMenuWidth * scale);
 	}
 
+	/**
+	 * 获得屏幕高度
+	 */
+	public static int getScreenHeight(Context context) {
+		WindowManager wm = (WindowManager) context
+				.getSystemService(Context.WINDOW_SERVICE);
+		DisplayMetrics outMetrics = new DisplayMetrics();
+		wm.getDefaultDisplay().getMetrics(outMetrics);
+		return outMetrics.heightPixels;
+	}
+	//获取屏幕原始尺寸高度，包括虚拟功能键高度
+	public static int getDpi(Context context) {
+		int dpi = 0;
+		WindowManager windowManager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+		Display display = windowManager.getDefaultDisplay();
+		DisplayMetrics displayMetrics = new DisplayMetrics();
+		@SuppressWarnings("rawtypes")
+		Class c;
+		try {
+			c = Class.forName("android.view.Display");
+			@SuppressWarnings("unchecked")
+			Method method = c.getMethod("getRealMetrics", DisplayMetrics.class);
+			method.invoke(display, displayMetrics);
+			dpi = displayMetrics.heightPixels;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return dpi;
+	}
+	//判断是否开启虚拟键
+	public static boolean checkDeviceHasNavigationBar(Context context) {
+		boolean hasNavigationBar = false;
+		Resources rs = context.getResources();
+		int id = rs.getIdentifier("config_showNavigationBar", "bool", "android");
+		if (id > 0) {
+			hasNavigationBar = rs.getBoolean(id);
+		}
+		try {
+			Class systemPropertiesClass = Class.forName("android.os.SystemProperties");
+			Method m = systemPropertiesClass.getMethod("get", String.class);
+			String navBarOverride = (String) m.invoke(systemPropertiesClass, "qemu.hw.mainkeys");
+			if(!"".equals(navBarOverride)){
+				if("1".equals(navBarOverride)){
+					hasNavigationBar = false;
+				}else if("0".equals(navBarOverride)){
+					hasNavigationBar = true;
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return hasNavigationBar;
+
+	}
+	//得到虚拟键的高度
+	public static int getSwapKeyHeight(Context context){
+		Log.e(TAG,"虚拟键高度是:"+(getDpi(context) -getScreenHeight(context)));
+		return getDpi(context) -getScreenHeight(context);
+	}
+	/**
+	 * 获得状态栏的高度
+	 *
+	 * @param context
+	 * @return
+	 */
+	public static int getStatusHeight(Context context)
+	{
+
+		int statusHeight = -1;
+		try
+		{
+			Class<?> clazz = Class.forName("com.android.internal.R$dimen");
+			Object object = clazz.newInstance();
+			int height = Integer.parseInt(clazz.getField("status_bar_height")
+					.get(object).toString());
+			statusHeight = context.getResources().getDimensionPixelSize(height);
+		} catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+		return statusHeight;
+	}
 
 }
