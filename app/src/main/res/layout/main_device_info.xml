@@ -627,16 +627,17 @@
                         android:gravity="center"
                         android:textColor="#000000"/>
                 </RelativeLayout>
-                <EditText
-                    android:id="@+id/edt_location"
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:text=""
-                    android:textColor="#dd000000"
-                    android:background="@null"
-                    android:gravity="center"
-                    android:hint="@null"/>
             </LinearLayout>
+
+            <EditText
+                android:id="@+id/edt_location"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:text=""
+                android:textColor="#dd000000"
+                android:background="@null"
+                android:gravity="center"
+                android:hint="@null"/>
 
             <!--分割线-->
             <TextView
