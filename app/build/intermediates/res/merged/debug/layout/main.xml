@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:scrollbars="none"
     android:fadingEdge="none"
-    android:background="@drawable/background_install_xposed"
+    android:background="@drawable/menu_background"
     >
     <!--上面的最后2行是为了去除滚动条和阴影效果-->
     <LinearLayout

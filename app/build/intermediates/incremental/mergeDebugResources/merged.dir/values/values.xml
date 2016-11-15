@@ -558,6 +558,8 @@
     <string name="library_circularprogressbutton_repositoryLink">https://github.com/dmytrodanylyk/circular-progress-button</string>
     <string name="search_menu_title">Search</string>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="wyt_my_theme">我的主题</string>
+    <string name="wyt_user_name">登录</string>
     <string name="xposed_app_description">一款牛逼的Xposed模块</string>
     <string name="xposed_package_name">de.robv.android.xposed.installer</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>

@@ -640,7 +640,9 @@
                     android:gravity="center"
                     android:hint="@null"
                     android:layout_weight="1" />
+
             </LinearLayout>
+
 
             <!--分割线-->
             <TextView

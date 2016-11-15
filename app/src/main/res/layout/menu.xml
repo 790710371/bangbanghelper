@@ -4,95 +4,178 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
     <LinearLayout
-        android:id="@+id/menu_item_01"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="50dp"
-        >
+        android:layout_marginTop="100dp"
+        android:paddingLeft="50dp"
+        android:orientation="horizontal">
         <ImageView
-            android:id="@+id/img_memu_item_01"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:src="@drawable/weibo"
-            />
-
+            android:id="@+id/img_menu_icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/img_menu_user_icon"/>
         <TextView
+            android:id="@+id/tx_menu_user_name"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="10dp"
-            android:gravity="center"
-            android:text="menu1"
-            android:textSize="20sp" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="10dp"
+            android:text="@string/wyt_user_name"
+            android:textColor="#FFFFFF"
+            android:gravity="center_vertical"/>
     </LinearLayout>
+
     <LinearLayout
-        android:id="@+id/menu_item_02"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="50dp"
-        >
-        <ImageView
-            android:id="@+id/img_memu_item_02"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:src="@drawable/weibo"
-            />
-
-        <TextView
+        android:orientation="vertical"
+        android:layout_marginTop="20dp">
+        <LinearLayout
+            android:id="@+id/menu_item_01"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="10dp"
-            android:gravity="center"
-            android:text="menu2"
-            android:textSize="20sp" />
-    </LinearLayout>
-    <LinearLayout
-        android:id="@+id/menu_item_03"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="50dp"
-        >
-        <ImageView
-            android:id="@+id/img_memu_item_03"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:src="@drawable/weibo"
-            />
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="50dp"
+            >
+            <ImageView
+                android:id="@+id/img_memu_item_01"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/menu_item_theme"
+                />
 
-        <TextView
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="@string/wyt_my_theme"
+                android:textStyle="bold"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/menu_item_02"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="10dp"
-            android:gravity="center"
-            android:text="menu3"
-            android:textSize="20sp" />
-    </LinearLayout>
-    <LinearLayout
-        android:id="@+id/menu_item_04"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="50dp"
-        >
-        <ImageView
-            android:id="@+id/img_memu_item_04"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:src="@drawable/weibo"
-            />
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="50dp"
+            >
+            <ImageView
+                android:id="@+id/img_memu_item_02"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/yaoyiyao"
+                />
 
-        <TextView
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="摇一摇"
+                android:textStyle="bold"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/menu_item_03"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="10dp"
-            android:gravity="center"
-            android:text="menu4"
-            android:textSize="20sp" />
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="50dp"
+            >
+
+            <ImageView
+                android:id="@+id/img_memu_item_03"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/zhibo"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="帮帮直播秀"
+                android:textStyle="bold"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/menu_item_04"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="50dp"
+            >
+            <ImageView
+                android:id="@+id/img_memu_item_04"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/load"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="应用下载"
+                android:textStyle="bold"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/menu_item_05"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="50dp"
+            >
+            <ImageView
+                android:id="@+id/img_memu_item_05"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/jifen"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="我的积分"
+                android:textStyle="bold"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/menu_item_06"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="50dp"
+            >
+            <ImageView
+                android:id="@+id/img_memu_item_06"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/version_update"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="版本更新"
+                android:textStyle="bold"
+                android:textSize="15sp" />
+        </LinearLayout>
     </LinearLayout>
+
+
 </LinearLayout>
