@@ -54,14 +54,14 @@
             android:layout_height="50dp"
             android:orientation="horizontal">
             <ImageView
-                android:id="@+id/img_login_account"
+                android:id="@+id/img_register_account"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:src="@drawable/account"
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center_vertical"/>
             <EditText
-                android:id="@+id/edt_login_account"
+                android:id="@+id/edt_register_account"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:hint="账号"
@@ -86,14 +86,14 @@
             android:background="#FFF"
             android:baselineAligned="false">
             <ImageView
-                android:id="@+id/img_login_pwd"
+                android:id="@+id/img_register_pwd"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:layout_marginLeft="10dp"
                 android:src="@drawable/pwd"
                 android:layout_gravity="center_vertical"/>
             <EditText
-                android:id="@+id/edt_login_pwd"
+                android:id="@+id/edt_register_pwd"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="密码"
@@ -112,7 +112,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="20dp">
         <com.mero.wyt_register.widget.RoundButton
-            android:id="@+id/btn_login_click_to_login"
+            android:id="@+id/btn_to_register"
             android:layout_width="300dp"
             android:layout_height="50dp"
             android:text="注册"

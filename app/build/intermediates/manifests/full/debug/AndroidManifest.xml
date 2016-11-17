@@ -113,6 +113,7 @@
             android:name="com.mero.wyt_register.activity.RegisterAty"
             android:screenOrientation="portrait" >
         </activity>
+        <activity android:name="com.mero.wyt_register.activity.PullToFreshLayoutTest" />
         <!-- Xposed -->
         <meta-data
             android:name="xposedmodule"

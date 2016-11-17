@@ -135,7 +135,7 @@ public class MainActivity extends Activity implements OnClickListener {
 				startActivity(new Intent(this, CleanDetailAty.class));
 				break;
 			case R.id.tx_item_main_item4:
-				Toast.makeText(this,"正在点击作者按钮",Toast.LENGTH_SHORT).show();
+				startActivity(new Intent(MainActivity.this,PullToFreshLayoutTest.class));
 				break;
 
 		}

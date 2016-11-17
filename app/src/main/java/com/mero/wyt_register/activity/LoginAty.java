@@ -1,6 +1,8 @@
 package com.mero.wyt_register.activity;
 
 import android.app.ProgressDialog;
+import android.os.Handler;
+import android.os.Message;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
@@ -13,6 +15,8 @@ import com.mero.wyt_register.R;
 import com.mero.wyt_register.net.LoginService;
 import com.mero.wyt_register.widget.RoundButton;
 
+import static com.amap.loc.c.m;
+
 /**
  * Created by chenlei on 2016/11/16.
  */
@@ -23,6 +27,8 @@ public class LoginAty extends BaseActivity implements View.OnClickListener{
     private EditText edt_pwd = null;
     private RoundButton btn_login_click_to_login;
     private TextView tx_register;
+    private ProgressDialog pd;//进度条
+    private static  final int DISMISS = 0 ;
     @Override
     public void initView() {
         edt_account = (EditText) findViewById(R.id.edt_login_account);
@@ -37,7 +43,14 @@ public class LoginAty extends BaseActivity implements View.OnClickListener{
     public void initData() {
 
     }
-
+    private final Handler handler = new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            if(msg.what==DISMISS){
+                pd.dismiss();
+            }
+        }
+    };
     @Override
     public int getLayoutResourceId() {
         return R.layout.wyt_login;
@@ -80,11 +93,35 @@ public class LoginAty extends BaseActivity implements View.OnClickListener{
                 String token =  Config.getTokenFromPreferences(this);
                 //如果token不为空，就使用token
                 if(!TextUtils.isEmpty(token)){
-                    new LoginService(LoginAty.this,Config.URL,token);
+                    new LoginService(LoginAty.this, Config.URL, token, new LoginService.ISuccessCallback() {
+                        @Override
+                        public void onSuccess(String response, int id) {
+
+                        }
+                    }, new LoginService.IFailCallback() {
+                        @Override
+                        public void onFail(String s) {
+
+                        }
+                    });
                 }
+                //显示进度对话框
+                pd = ProgressDialog.show(this,"温馨提示","正在登录",false,true);
                 //采用账号密码登录
                 if(TextUtils.isEmpty(token)) {
-                    new LoginService(LoginAty.this,Config.URL,wyt_account,wyt_pwd);
+                    new LoginService(LoginAty.this, Config.URL, wyt_account, wyt_pwd, new LoginService.ISuccessCallback() {
+                        @Override
+                        public void onSuccess(String response, int id) {
+                            pd.setMessage("登录成功");
+                            handler.sendEmptyMessageDelayed(DISMISS,1000);
+                        }
+                    }, new LoginService.IFailCallback() {
+                        @Override
+                        public void onFail(String s) {
+                            pd.setMessage("登录失败");
+                            handler.sendEmptyMessageDelayed(DISMISS,1000);
+                        }
+                    });
                 }
                 break;
             case R.id.tx_login_click_to_register:

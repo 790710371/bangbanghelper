@@ -40,7 +40,7 @@ public final class R {
 		public static final int cpb_stroke_width = 0x7f05031a;
 	}
 	public static final class drawable {
-		public static final int cpb_background = 0x7f02006e;
+		public static final int cpb_background = 0x7f02006f;
 	}
 	public static final class string {
 		public static final int define_circularprogressbutton = 0x7f060037;

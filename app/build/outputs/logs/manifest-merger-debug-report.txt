@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:2:1-123:12
+ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:2:1-124:12
 	package
 		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:3:5-36
 		INJECTED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml
@@ -122,7 +122,7 @@ ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.
 	android:name
 		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:31:22-65
 application
-ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:33:5-121:19
+ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:33:5-122:19
 MERGED from [com.google.android.gms:play-services-appindexing:9.6.1] C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\9.6.1\AndroidManifest.xml:18:5-19
 MERGED from [com.google.android.gms:play-services-base:9.6.1] C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.6.1\AndroidManifest.xml:18:5-20:19
 MERGED from [com.google.android.gms:play-services-basement:9.6.1] C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.6.1\AndroidManifest.xml:19:5-21:19
@@ -276,24 +276,28 @@ ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.
 		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:108:12-48
 	android:name
 		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:107:19-55
+activity#com.mero.wyt_register.activity.PullToFreshLayoutTest
+ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:110:9-67
+	android:name
+		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:110:19-65
 meta-data#xposedmodule
-ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:111:9-113:36
+ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:112:9-114:36
 	android:value
-		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:113:13-33
+		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:114:13-33
 	android:name
-		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:112:13-40
+		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:113:13-40
 meta-data#xposedminversion
-ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:114:9-116:34
+ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:115:9-117:34
 	android:value
-		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:116:13-31
+		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:117:13-31
 	android:name
-		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:115:13-44
+		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:116:13-44
 meta-data#xposeddescription
-ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:117:9-119:62
+ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:118:9-120:62
 	android:value
-		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:119:13-59
+		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:120:13-59
 	android:name
-		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:118:13-45
+		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:119:13-45
 activity#com.google.android.gms.common.api.GoogleApiActivity
 ADDED from [com.google.android.gms:play-services-base:9.6.1] C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.6.1\AndroidManifest.xml:19:9-172
 	android:exported

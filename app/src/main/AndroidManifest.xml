@@ -107,6 +107,7 @@
         <activity android:name=".activity.RegisterAty"
            android:screenOrientation="portrait">
         </activity>
+        <activity android:name=".activity.PullToFreshLayoutTest"/>
         <!-- Xposed -->
         <meta-data
             android:name="xposedmodule"
