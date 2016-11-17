@@ -101,6 +101,7 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.6.1/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.6.1/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.6.1/jars" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.zhy/okhttputils/2.6.2/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental-safeguard" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/jniLibs" />
@@ -116,28 +117,31 @@
     </content>
     <orderEntry type="jdk" jdkName="Android API 24 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" exported="" name="okio-1.9.0" level="project" />
     <orderEntry type="library" exported="" name="support-v4-24.2.1" level="project" />
     <orderEntry type="library" exported="" name="support-compat-24.2.1" level="project" />
-    <orderEntry type="library" exported="" name="support-media-compat-24.2.1" level="project" />
     <orderEntry type="library" exported="" name="animated-vector-drawable-24.2.1" level="project" />
     <orderEntry type="library" exported="" name="play-services-base-9.6.1" level="project" />
     <orderEntry type="library" exported="" name="support-fragment-24.2.1" level="project" />
     <orderEntry type="library" exported="" name="gson-2.3.1" level="project" />
-    <orderEntry type="library" exported="" name="support-core-ui-24.2.1" level="project" />
     <orderEntry type="library" exported="" name="nineoldandroids-2.4.0" level="project" />
-    <orderEntry type="library" exported="" name="appcompat-v7-24.2.1" level="project" />
-    <orderEntry type="library" exported="" name="support-vector-drawable-24.2.1" level="project" />
-    <orderEntry type="library" exported="" name="support-core-utils-24.2.1" level="project" />
-    <orderEntry type="library" exported="" name="api-82" level="project" />
     <orderEntry type="library" exported="" name="play-services-appindexing-9.6.1" level="project" />
-    <orderEntry type="library" exported="" name="play-services-tasks-9.6.1" level="project" />
-    <orderEntry type="library" exported="" name="play-services-basement-9.6.1" level="project" />
-    <orderEntry type="library" exported="" name="support-annotations-24.2.1" level="project" />
     <orderEntry type="library" exported="" name="api-82-sources" level="project" />
-    <orderEntry type="library" exported="" name="AMap_Location_V3.0.0_20160922" level="project" />
     <orderEntry type="library" exported="" name="firebase-common-9.6.1" level="project" />
     <orderEntry type="library" exported="" name="systembartint-1.0.4" level="project" />
     <orderEntry type="library" exported="" name="library-1.1.3" level="project" />
     <orderEntry type="library" exported="" name="RootTools" level="project" />
+    <orderEntry type="library" exported="" name="support-media-compat-24.2.1" level="project" />
+    <orderEntry type="library" exported="" name="support-core-ui-24.2.1" level="project" />
+    <orderEntry type="library" exported="" name="appcompat-v7-24.2.1" level="project" />
+    <orderEntry type="library" exported="" name="support-vector-drawable-24.2.1" level="project" />
+    <orderEntry type="library" exported="" name="support-core-utils-24.2.1" level="project" />
+    <orderEntry type="library" exported="" name="api-82" level="project" />
+    <orderEntry type="library" exported="" name="play-services-tasks-9.6.1" level="project" />
+    <orderEntry type="library" exported="" name="play-services-basement-9.6.1" level="project" />
+    <orderEntry type="library" exported="" name="support-annotations-24.2.1" level="project" />
+    <orderEntry type="library" exported="" name="okhttp-3.4.2" level="project" />
+    <orderEntry type="library" exported="" name="AMap_Location_V3.0.0_20160922" level="project" />
+    <orderEntry type="library" exported="" name="okhttputils-2.6.2" level="project" />
   </component>
 </module>

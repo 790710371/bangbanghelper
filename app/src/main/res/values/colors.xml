@@ -4,11 +4,11 @@
     <color name="ksw_md_ripple_checked">#33019285</color>
 
     <color name="ksw_md_solid_shadow">#33000000</color>
-
     <color name="ksw_md_solid_normal">#ECECEC</color>
     <color name="ksw_md_solid_checked">#019285</color>
     <color name="ksw_md_solid_disable">#FFFFFF</color>
     <color name="ksw_md_solid_checked_disable">#aaaaaa</color>
+    <color name="register">#94E8E5</color>
     <color name="status_solid">#339933</color>
     <color name="white">#FFFFFF</color><!--白色 -->
     <color name="ivory">#FFFFF0</color><!--象牙色 -->

@@ -31,4 +31,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:24.2.1'
     provided 'de.robv.android.xposed:api:82'
     compile files('libs/systembartint-1.0.4.jar')
+    compile 'com.squareup.okhttp3:okhttp:3.4.2'
+    compile 'com.zhy:okhttputils:2.6.2'
 }

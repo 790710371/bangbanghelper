@@ -38,8 +38,8 @@
 </declare-styleable>
     <!--标题栏控件-->
     <declare-styleable name="Title_bar">
-        <attr name="img_src" format="reference"/>
-        <attr name="img_bg" format="reference"/>
+        <attr name="background_color" format="color"/>
+        <attr name="background_img" format="reference"/>
         <attr name="img_alpha" format="float"/>
         <attr name="img_width" format="dimension"/>
         <attr name="img_height" format="dimension"/>

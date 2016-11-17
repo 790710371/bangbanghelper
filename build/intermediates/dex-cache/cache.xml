@@ -12,6 +12,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\exploded-aar\com.zhy\okhttputils\2.6.2\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="155fef2600f48631a9e9665c0873743b6d24e324">
+        <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\pre-dexed\debug\com.zhy-okhttputils-2.6.2_0d30b3f86456e62783e331689d1de75ec2761ffa.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\9.6.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
@@ -75,6 +84,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="C:\Users\chenlei\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.4.2\ccde00f7ccc77af5a6d5752e2cb21f6d8998289f\okhttp-3.4.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="ccde00f7ccc77af5a6d5752e2cb21f6d8998289f">
+        <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\pre-dexed\debug\okhttp-3.4.2_19773c4e16bb194415811f94b3a471316a7e5ddc.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\chenlei\Desktop\bangbanghelper\app\libs\gson-2.3.1.jar"
         jumboMode="false"
         optimize="true"
@@ -135,6 +153,15 @@
         revision="24.0.3"
         sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
         <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-24.2.1_cc79ff2194857293e100ab7531fb0345656fa9e9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\chenlei\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.9.0\f824591a0016efbaeddb8300bee54832a1398cfa\okio-1.9.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="f824591a0016efbaeddb8300bee54832a1398cfa">
+        <dex dex="C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\pre-dexed\debug\okio-1.9.0_ac86fc4cc542f9fb5dbfd9fc4f2632012ffefc4f.jar" />
     </item>
     <item
         is-multidex="false"

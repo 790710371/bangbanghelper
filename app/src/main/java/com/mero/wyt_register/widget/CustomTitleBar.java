@@ -35,9 +35,11 @@ public class CustomTitleBar extends RelativeLayout {
         String text = typedArray.getString(R.styleable.Title_bar_text);//文字内容
         int textSize = (int) typedArray.getDimension(R.styleable.Mix_text_size,20);//文字大小
         int textColor = typedArray.getInt(R.styleable.Title_bar_textColor,0xFFFFFFFF);//文字颜色
+        int backgoundColor = typedArray.getInt(R.styleable.Title_bar_background_color,R.color.status_solid);//背景颜色
         tx_middle.setText(text);
         tx_middle.setTextSize(textSize);
         tx_middle.setTextColor(textColor);
+        this.setBackgroundColor(backgoundColor);
         typedArray.recycle();;
     }
 
