@@ -3582,7 +3582,11 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f0a0062;
         public static final int action_mode_bar_stub=0x7f0a0061;
         public static final int action_mode_close_button=0x7f0a0046;
+<<<<<<< Updated upstream
         public static final int action_settings=0x7f0a00f9;
+=======
+        public static final int action_settings=0x7f0a00fe;
+>>>>>>> Stashed changes
         public static final int activity_chooser_view_content=0x7f0a0047;
         public static final int add=0x7f0a0013;
         public static final int adjust_height=0x7f0a002a;
@@ -3594,12 +3598,24 @@ containing a value of this type.
         public static final int beginning=0x7f0a0027;
         public static final int bottom=0x7f0a0042;
         public static final int btn_device_info_save=0x7f0a0081;
+<<<<<<< Updated upstream
         public static final int btn_login_click_to_login=0x7f0a00ec;
         public static final int btn_root=0x7f0a00f6;
         public static final int btn_to_register=0x7f0a00f4;
         public static final int btn_xposed_click_install=0x7f0a00f7;
         public static final int btn_xposed_install=0x7f0a00bd;
         public static final int btn_xposed_install_module=0x7f0a00f8;
+=======
+        public static final int btn_login_click_to_login=0x7f0a00f0;
+        public static final int btn_root=0x7f0a00fb;
+        public static final int btn_select_camera=0x7f0a00e8;
+        public static final int btn_select_pic_cancle=0x7f0a00ea;
+        public static final int btn_select_pic_photo_lib=0x7f0a00e9;
+        public static final int btn_to_register=0x7f0a00f9;
+        public static final int btn_xposed_click_install=0x7f0a00fc;
+        public static final int btn_xposed_install=0x7f0a00bd;
+        public static final int btn_xposed_install_module=0x7f0a00fd;
+>>>>>>> Stashed changes
         public static final int buttonPanel=0x7f0a004e;
         public static final int cancel_action=0x7f0a00d5;
         public static final int checkbox=0x7f0a005c;
@@ -3626,14 +3642,24 @@ containing a value of this type.
         public static final int edt_hardware=0x7f0a009c;
         public static final int edt_ip_address=0x7f0a00a2;
         public static final int edt_location=0x7f0a00a9;
+<<<<<<< Updated upstream
         public static final int edt_login_account=0x7f0a00e9;
         public static final int edt_login_pwd=0x7f0a00eb;
+=======
+        public static final int edt_login_account=0x7f0a00ed;
+        public static final int edt_login_pwd=0x7f0a00ef;
+>>>>>>> Stashed changes
         public static final int edt_mac=0x7f0a00ad;
         public static final int edt_manufacturer=0x7f0a009f;
         public static final int edt_phone_country=0x7f0a008d;
         public static final int edt_phone_number=0x7f0a0090;
+<<<<<<< Updated upstream
         public static final int edt_register_account=0x7f0a00f1;
         public static final int edt_register_pwd=0x7f0a00f3;
+=======
+        public static final int edt_register_account=0x7f0a00f6;
+        public static final int edt_register_pwd=0x7f0a00f8;
+>>>>>>> Stashed changes
         public static final int edt_release=0x7f0a0099;
         public static final int edt_sim_xulie_num=0x7f0a0087;
         public static final int edt_ssid=0x7f0a00b1;
@@ -3644,7 +3670,11 @@ containing a value of this type.
         public static final int expand_activities_button=0x7f0a0048;
         public static final int expanded_menu=0x7f0a005b;
         public static final int fragment_menu=0x7f0a007e;
+<<<<<<< Updated upstream
         public static final int go=0x7f0a00e7;
+=======
+        public static final int go=0x7f0a00eb;
+>>>>>>> Stashed changes
         public static final int home=0x7f0a0004;
         public static final int homeAsUp=0x7f0a000d;
         public static final int html=0x7f0a0032;
@@ -3655,8 +3685,13 @@ containing a value of this type.
         public static final int image=0x7f0a0049;
         public static final int img_icon_left=0x7f0a00d2;
         public static final int img_left=0x7f0a0076;
+<<<<<<< Updated upstream
         public static final int img_login_account=0x7f0a00e8;
         public static final int img_login_pwd=0x7f0a00ea;
+=======
+        public static final int img_login_account=0x7f0a00ec;
+        public static final int img_login_pwd=0x7f0a00ee;
+>>>>>>> Stashed changes
         public static final int img_luyou_mac=0x7f0a00b3;
         public static final int img_mac_address=0x7f0a00ab;
         public static final int img_memu_item_01=0x7f0a00c7;
@@ -3667,10 +3702,17 @@ containing a value of this type.
         public static final int img_memu_item_06=0x7f0a00d1;
         public static final int img_menu_icon=0x7f0a00c4;
         public static final int img_position=0x7f0a00a7;
+<<<<<<< Updated upstream
         public static final int img_register_account=0x7f0a00f0;
         public static final int img_register_pwd=0x7f0a00f2;
         public static final int img_ssid=0x7f0a00af;
         public static final int img_upload_img=0x7f0a00ee;
+=======
+        public static final int img_register_account=0x7f0a00f5;
+        public static final int img_register_pwd=0x7f0a00f7;
+        public static final int img_ssid=0x7f0a00af;
+        public static final int img_upload_img=0x7f0a00f3;
+>>>>>>> Stashed changes
         public static final int index_entity_types=0x7f0a0038;
         public static final int info=0x7f0a00de;
         public static final int instant_message=0x7f0a0026;
@@ -3732,6 +3774,10 @@ containing a value of this type.
         public static final int pull_to_refresh_head=0x7f0a00e2;
         public static final int radio=0x7f0a005e;
         public static final int refreshable_view=0x7f0a007c;
+<<<<<<< Updated upstream
+=======
+        public static final int register=0x7f0a00f2;
+>>>>>>> Stashed changes
         public static final int relative_title_bar_left=0x7f0a0075;
         public static final int rfc822=0x7f0a0034;
         public static final int screen=0x7f0a0015;
@@ -3749,6 +3795,10 @@ containing a value of this type.
         public static final int search_src_text=0x7f0a006e;
         public static final int search_voice_btn=0x7f0a0072;
         public static final int select_dialog_listview=0x7f0a0073;
+<<<<<<< Updated upstream
+=======
+        public static final int select_pic_popup=0x7f0a00e7;
+>>>>>>> Stashed changes
         public static final int shortcut=0x7f0a005d;
         public static final int showCustom=0x7f0a000f;
         public static final int showHome=0x7f0a0010;
@@ -3775,7 +3825,11 @@ containing a value of this type.
         public static final int title=0x7f0a004d;
         public static final int title_bar_device_info=0x7f0a007f;
         public static final int title_bar_setting=0x7f0a00bf;
+<<<<<<< Updated upstream
         public static final int title_bar_xposed_install=0x7f0a00f5;
+=======
+        public static final int title_bar_xposed_install=0x7f0a00fa;
+>>>>>>> Stashed changes
         public static final int title_template=0x7f0a0052;
         public static final int top=0x7f0a0043;
         public static final int topPanel=0x7f0a0051;
@@ -3796,7 +3850,11 @@ containing a value of this type.
         public static final int tx_item_main_item3=0x7f0a00b8;
         public static final int tx_item_main_item4=0x7f0a00b9;
         public static final int tx_location=0x7f0a00a8;
+<<<<<<< Updated upstream
         public static final int tx_login_click_to_register=0x7f0a00ed;
+=======
+        public static final int tx_login_click_to_register=0x7f0a00f1;
+>>>>>>> Stashed changes
         public static final int tx_mac=0x7f0a00ac;
         public static final int tx_menu_user_name=0x7f0a00c5;
         public static final int tx_middle_title=0x7f0a0077;
@@ -3807,7 +3865,11 @@ containing a value of this type.
         public static final int tx_show_cpu_info=0x7f0a00e1;
         public static final int tx_sim_xulie_num=0x7f0a0086;
         public static final int tx_ssid=0x7f0a00b0;
+<<<<<<< Updated upstream
         public static final int tx_upload_img=0x7f0a00ef;
+=======
+        public static final int tx_upload_img=0x7f0a00f4;
+>>>>>>> Stashed changes
         public static final int tx_yunyingshang_code=0x7f0a0092;
         public static final int up=0x7f0a0008;
         public static final int updated_at=0x7f0a00e6;
@@ -3877,6 +3939,7 @@ containing a value of this type.
         public static final int select_dialog_item_material=0x7f030030;
         public static final int select_dialog_multichoice_material=0x7f030031;
         public static final int select_dialog_singlechoice_material=0x7f030032;
+<<<<<<< Updated upstream
         public static final int support_simple_spinner_dropdown_item=0x7f030033;
         public static final int viewpager_01=0x7f030034;
         public static final int viewpager_02=0x7f030035;
@@ -3885,6 +3948,17 @@ containing a value of this type.
         public static final int wyt_login=0x7f030038;
         public static final int wyt_register=0x7f030039;
         public static final int xposed_install=0x7f03003a;
+=======
+        public static final int select_pic_popup_window=0x7f030033;
+        public static final int support_simple_spinner_dropdown_item=0x7f030034;
+        public static final int viewpager_01=0x7f030035;
+        public static final int viewpager_02=0x7f030036;
+        public static final int viewpager_03=0x7f030037;
+        public static final int welcom_activity=0x7f030038;
+        public static final int wyt_login=0x7f030039;
+        public static final int wyt_register=0x7f03003a;
+        public static final int xposed_install=0x7f03003b;
+>>>>>>> Stashed changes
     }
     public static final class menu {
         public static final int main=0x7f0c0000;
@@ -3923,6 +3997,10 @@ containing a value of this type.
         public static final int abc_toolbar_collapse_description=0x7f060012;
         public static final int action_settings=0x7f060035;
         public static final int app_name=0x7f060036;
+<<<<<<< Updated upstream
+=======
+        public static final int btn_select_pic_cancle=0x7f060037;
+>>>>>>> Stashed changes
         public static final int common_google_play_services_enable_button=0x7f060013;
         public static final int common_google_play_services_enable_text=0x7f060014;
         public static final int common_google_play_services_enable_title=0x7f060015;
@@ -3943,6 +4021,7 @@ containing a value of this type.
         public static final int common_open_on_phone=0x7f060024;
         public static final int common_signin_button_text=0x7f060025;
         public static final int common_signin_button_text_long=0x7f060026;
+<<<<<<< Updated upstream
         public static final int define_circularprogressbutton=0x7f060037;
         public static final int hello_world=0x7f060038;
         public static final int library_circularprogressbutton_author=0x7f060039;
@@ -3969,6 +4048,36 @@ containing a value of this type.
         public static final int wyt_user_name=0x7f06004c;
         public static final int xposed_app_description=0x7f06004d;
         public static final int xposed_package_name=0x7f06004e;
+=======
+        public static final int define_circularprogressbutton=0x7f060038;
+        public static final int hello_world=0x7f060039;
+        public static final int library_circularprogressbutton_author=0x7f06003a;
+        public static final int library_circularprogressbutton_authorWebsite=0x7f06003b;
+        public static final int library_circularprogressbutton_isOpenSource=0x7f06003c;
+        public static final int library_circularprogressbutton_libraryDescription=0x7f06003d;
+        public static final int library_circularprogressbutton_libraryName=0x7f06003e;
+        public static final int library_circularprogressbutton_libraryVersion=0x7f06003f;
+        public static final int library_circularprogressbutton_libraryWebsite=0x7f060040;
+        public static final int library_circularprogressbutton_licenseId=0x7f060041;
+        public static final int library_circularprogressbutton_repositoryLink=0x7f060042;
+        public static final int login_fail=0x7f060043;
+        public static final int login_success=0x7f060044;
+        public static final int not_updated_yet=0x7f060045;
+        public static final int pull_to_refresh=0x7f060046;
+        public static final int refreshing=0x7f060047;
+        public static final int release_to_refresh=0x7f060048;
+        public static final int search_menu_title=0x7f060027;
+        public static final int select_pic_camera=0x7f060049;
+        public static final int select_pic_photo_lib=0x7f06004a;
+        public static final int status_bar_notification_info_overflow=0x7f060028;
+        public static final int time_error=0x7f06004b;
+        public static final int updated_at=0x7f06004c;
+        public static final int updated_just_now=0x7f06004d;
+        public static final int wyt_my_theme=0x7f06004e;
+        public static final int wyt_user_name=0x7f06004f;
+        public static final int xposed_app_description=0x7f060050;
+        public static final int xposed_package_name=0x7f060051;
+>>>>>>> Stashed changes
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f07008b;

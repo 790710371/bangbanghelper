@@ -64,9 +64,9 @@ public class DeviceModelDao {
             db.endTransaction();
             db.close();
 
-        }
+        }}
 
-    }
+
     //查询数据
     public Object[] queryDeviceInfo(int ids){
         DbHelper dbHelper = new DbHelper(context);

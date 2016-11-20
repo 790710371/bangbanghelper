@@ -644,7 +644,7 @@ public final class R {
 		public static final int select_dialog_item_material = 0x7f030030;
 		public static final int select_dialog_multichoice_material = 0x7f030031;
 		public static final int select_dialog_singlechoice_material = 0x7f030032;
-		public static final int support_simple_spinner_dropdown_item = 0x7f030033;
+		public static final int support_simple_spinner_dropdown_item = 0x7f030034;
 	}
 	public static final class string {
 		public static final int abc_action_bar_home_description = 0x7f060000;

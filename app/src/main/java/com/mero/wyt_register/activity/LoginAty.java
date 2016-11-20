@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.os.Handler;
 import android.os.Message;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -14,6 +15,8 @@ import com.mero.wyt_register.Config;
 import com.mero.wyt_register.R;
 import com.mero.wyt_register.net.LoginService;
 import com.mero.wyt_register.widget.RoundButton;
+
+import org.w3c.dom.Text;
 
 import static com.amap.loc.c.m;
 
@@ -91,38 +94,25 @@ public class LoginAty extends BaseActivity implements View.OnClickListener{
                 }
 
                 String token =  Config.getTokenFromPreferences(this);
-                //如果token不为空，就使用token
-                if(!TextUtils.isEmpty(token)){
-                    new LoginService(LoginAty.this, Config.URL, token, new LoginService.ISuccessCallback() {
-                        @Override
-                        public void onSuccess(String response, int id) {
-
-                        }
-                    }, new LoginService.IFailCallback() {
-                        @Override
-                        public void onFail(String s) {
-
-                        }
-                    });
-                }
+                Log.e(TAG,"token的值"+token);
                 //显示进度对话框
                 pd = ProgressDialog.show(this,"温馨提示","正在登录",false,true);
-                //采用账号密码登录
-                if(TextUtils.isEmpty(token)) {
-                    new LoginService(LoginAty.this, Config.URL, wyt_account, wyt_pwd, new LoginService.ISuccessCallback() {
-                        @Override
-                        public void onSuccess(String response, int id) {
-                            pd.setMessage("登录成功");
-                            handler.sendEmptyMessageDelayed(DISMISS,1000);
-                        }
-                    }, new LoginService.IFailCallback() {
-                        @Override
-                        public void onFail(String s) {
-                            pd.setMessage("登录失败");
-                            handler.sendEmptyMessageDelayed(DISMISS,1000);
-                        }
-                    });
-                }
+                new LoginService(Config.URL, Config.KEY_LOGIN, wyt_account, wyt_pwd, "", new LoginService.ISuccessCallback() {
+                    @Override
+                    public void onSuccess(String response, int id) {
+                        pd.setMessage("登录成功");
+                        handler.sendEmptyMessageDelayed(DISMISS,1000);
+                    }
+                }, new LoginService.IFailCallback() {
+                    @Override
+                    public void onFail(String s) {
+                        pd.setMessage("登录失败");
+                        handler.sendEmptyMessageDelayed(DISMISS,1000);
+                    }
+                });
+
+//                }
+
                 break;
             case R.id.tx_login_click_to_register:
                 showActivity(this,RegisterAty.class);

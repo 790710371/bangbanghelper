@@ -1572,7 +1572,11 @@ int id action_menu_presenter 0x7f0a0003
 int id action_mode_bar 0x7f0a0062
 int id action_mode_bar_stub 0x7f0a0061
 int id action_mode_close_button 0x7f0a0046
+<<<<<<< Updated upstream
 int id action_settings 0x7f0a00f9
+=======
+int id action_settings 0x7f0a00fe
+>>>>>>> Stashed changes
 int id activity_chooser_view_content 0x7f0a0047
 int id add 0x7f0a0013
 int id adjust_height 0x7f0a002a
@@ -1584,12 +1588,24 @@ int id auto 0x7f0a003f
 int id beginning 0x7f0a0027
 int id bottom 0x7f0a0042
 int id btn_device_info_save 0x7f0a0081
+<<<<<<< Updated upstream
 int id btn_login_click_to_login 0x7f0a00ec
 int id btn_root 0x7f0a00f6
 int id btn_to_register 0x7f0a00f4
 int id btn_xposed_click_install 0x7f0a00f7
 int id btn_xposed_install 0x7f0a00bd
 int id btn_xposed_install_module 0x7f0a00f8
+=======
+int id btn_login_click_to_login 0x7f0a00f0
+int id btn_root 0x7f0a00fb
+int id btn_select_camera 0x7f0a00e8
+int id btn_select_pic_cancle 0x7f0a00ea
+int id btn_select_pic_photo_lib 0x7f0a00e9
+int id btn_to_register 0x7f0a00f9
+int id btn_xposed_click_install 0x7f0a00fc
+int id btn_xposed_install 0x7f0a00bd
+int id btn_xposed_install_module 0x7f0a00fd
+>>>>>>> Stashed changes
 int id buttonPanel 0x7f0a004e
 int id cancel_action 0x7f0a00d5
 int id checkbox 0x7f0a005c
@@ -1616,14 +1632,24 @@ int id edt_device_type 0x7f0a00a5
 int id edt_hardware 0x7f0a009c
 int id edt_ip_address 0x7f0a00a2
 int id edt_location 0x7f0a00a9
+<<<<<<< Updated upstream
 int id edt_login_account 0x7f0a00e9
 int id edt_login_pwd 0x7f0a00eb
+=======
+int id edt_login_account 0x7f0a00ed
+int id edt_login_pwd 0x7f0a00ef
+>>>>>>> Stashed changes
 int id edt_mac 0x7f0a00ad
 int id edt_manufacturer 0x7f0a009f
 int id edt_phone_country 0x7f0a008d
 int id edt_phone_number 0x7f0a0090
+<<<<<<< Updated upstream
 int id edt_register_account 0x7f0a00f1
 int id edt_register_pwd 0x7f0a00f3
+=======
+int id edt_register_account 0x7f0a00f6
+int id edt_register_pwd 0x7f0a00f8
+>>>>>>> Stashed changes
 int id edt_release 0x7f0a0099
 int id edt_sim_xulie_num 0x7f0a0087
 int id edt_ssid 0x7f0a00b1
@@ -1634,7 +1660,11 @@ int id end_padder 0x7f0a00df
 int id expand_activities_button 0x7f0a0048
 int id expanded_menu 0x7f0a005b
 int id fragment_menu 0x7f0a007e
+<<<<<<< Updated upstream
 int id go 0x7f0a00e7
+=======
+int id go 0x7f0a00eb
+>>>>>>> Stashed changes
 int id home 0x7f0a0004
 int id homeAsUp 0x7f0a000d
 int id html 0x7f0a0032
@@ -1645,8 +1675,13 @@ int id ifRoom 0x7f0a002e
 int id image 0x7f0a0049
 int id img_icon_left 0x7f0a00d2
 int id img_left 0x7f0a0076
+<<<<<<< Updated upstream
 int id img_login_account 0x7f0a00e8
 int id img_login_pwd 0x7f0a00ea
+=======
+int id img_login_account 0x7f0a00ec
+int id img_login_pwd 0x7f0a00ee
+>>>>>>> Stashed changes
 int id img_luyou_mac 0x7f0a00b3
 int id img_mac_address 0x7f0a00ab
 int id img_memu_item_01 0x7f0a00c7
@@ -1657,10 +1692,17 @@ int id img_memu_item_05 0x7f0a00cf
 int id img_memu_item_06 0x7f0a00d1
 int id img_menu_icon 0x7f0a00c4
 int id img_position 0x7f0a00a7
+<<<<<<< Updated upstream
 int id img_register_account 0x7f0a00f0
 int id img_register_pwd 0x7f0a00f2
 int id img_ssid 0x7f0a00af
 int id img_upload_img 0x7f0a00ee
+=======
+int id img_register_account 0x7f0a00f5
+int id img_register_pwd 0x7f0a00f7
+int id img_ssid 0x7f0a00af
+int id img_upload_img 0x7f0a00f3
+>>>>>>> Stashed changes
 int id index_entity_types 0x7f0a0038
 int id info 0x7f0a00de
 int id instant_message 0x7f0a0026
@@ -1722,6 +1764,10 @@ int id progress_horizontal 0x7f0a0006
 int id pull_to_refresh_head 0x7f0a00e2
 int id radio 0x7f0a005e
 int id refreshable_view 0x7f0a007c
+<<<<<<< Updated upstream
+=======
+int id register 0x7f0a00f2
+>>>>>>> Stashed changes
 int id relative_title_bar_left 0x7f0a0075
 int id rfc822 0x7f0a0034
 int id screen 0x7f0a0015
@@ -1739,6 +1785,10 @@ int id search_plate 0x7f0a006d
 int id search_src_text 0x7f0a006e
 int id search_voice_btn 0x7f0a0072
 int id select_dialog_listview 0x7f0a0073
+<<<<<<< Updated upstream
+=======
+int id select_pic_popup 0x7f0a00e7
+>>>>>>> Stashed changes
 int id shortcut 0x7f0a005d
 int id showCustom 0x7f0a000f
 int id showHome 0x7f0a0010
@@ -1765,7 +1815,11 @@ int id time 0x7f0a00da
 int id title 0x7f0a004d
 int id title_bar_device_info 0x7f0a007f
 int id title_bar_setting 0x7f0a00bf
+<<<<<<< Updated upstream
 int id title_bar_xposed_install 0x7f0a00f5
+=======
+int id title_bar_xposed_install 0x7f0a00fa
+>>>>>>> Stashed changes
 int id title_template 0x7f0a0052
 int id top 0x7f0a0043
 int id topPanel 0x7f0a0051
@@ -1786,7 +1840,11 @@ int id tx_item_main_item2 0x7f0a00b7
 int id tx_item_main_item3 0x7f0a00b8
 int id tx_item_main_item4 0x7f0a00b9
 int id tx_location 0x7f0a00a8
+<<<<<<< Updated upstream
 int id tx_login_click_to_register 0x7f0a00ed
+=======
+int id tx_login_click_to_register 0x7f0a00f1
+>>>>>>> Stashed changes
 int id tx_mac 0x7f0a00ac
 int id tx_menu_user_name 0x7f0a00c5
 int id tx_middle_title 0x7f0a0077
@@ -1797,7 +1855,11 @@ int id tx_setting_show_item2 0x7f0a00c2
 int id tx_show_cpu_info 0x7f0a00e1
 int id tx_sim_xulie_num 0x7f0a0086
 int id tx_ssid 0x7f0a00b0
+<<<<<<< Updated upstream
 int id tx_upload_img 0x7f0a00ef
+=======
+int id tx_upload_img 0x7f0a00f4
+>>>>>>> Stashed changes
 int id tx_yunyingshang_code 0x7f0a0092
 int id up 0x7f0a0008
 int id updated_at 0x7f0a00e6
@@ -1863,6 +1925,7 @@ int layout pull_to_fresh_layout 0x7f03002f
 int layout select_dialog_item_material 0x7f030030
 int layout select_dialog_multichoice_material 0x7f030031
 int layout select_dialog_singlechoice_material 0x7f030032
+<<<<<<< Updated upstream
 int layout support_simple_spinner_dropdown_item 0x7f030033
 int layout viewpager_01 0x7f030034
 int layout viewpager_02 0x7f030035
@@ -1871,6 +1934,17 @@ int layout welcom_activity 0x7f030037
 int layout wyt_login 0x7f030038
 int layout wyt_register 0x7f030039
 int layout xposed_install 0x7f03003a
+=======
+int layout select_pic_popup_window 0x7f030033
+int layout support_simple_spinner_dropdown_item 0x7f030034
+int layout viewpager_01 0x7f030035
+int layout viewpager_02 0x7f030036
+int layout viewpager_03 0x7f030037
+int layout welcom_activity 0x7f030038
+int layout wyt_login 0x7f030039
+int layout wyt_register 0x7f03003a
+int layout xposed_install 0x7f03003b
+>>>>>>> Stashed changes
 int menu main 0x7f0c0000
 int string abc_action_bar_home_description 0x7f060000
 int string abc_action_bar_home_description_format 0x7f060001
@@ -1905,6 +1979,10 @@ int string abc_shareactionprovider_share_with_application 0x7f060011
 int string abc_toolbar_collapse_description 0x7f060012
 int string action_settings 0x7f060035
 int string app_name 0x7f060036
+<<<<<<< Updated upstream
+=======
+int string btn_select_pic_cancle 0x7f060037
+>>>>>>> Stashed changes
 int string common_google_play_services_enable_button 0x7f060013
 int string common_google_play_services_enable_text 0x7f060014
 int string common_google_play_services_enable_title 0x7f060015
@@ -1925,6 +2003,7 @@ int string common_google_play_services_wear_update_text 0x7f060023
 int string common_open_on_phone 0x7f060024
 int string common_signin_button_text 0x7f060025
 int string common_signin_button_text_long 0x7f060026
+<<<<<<< Updated upstream
 int string define_circularprogressbutton 0x7f060037
 int string hello_world 0x7f060038
 int string library_circularprogressbutton_author 0x7f060039
@@ -1951,6 +2030,36 @@ int string wyt_my_theme 0x7f06004b
 int string wyt_user_name 0x7f06004c
 int string xposed_app_description 0x7f06004d
 int string xposed_package_name 0x7f06004e
+=======
+int string define_circularprogressbutton 0x7f060038
+int string hello_world 0x7f060039
+int string library_circularprogressbutton_author 0x7f06003a
+int string library_circularprogressbutton_authorWebsite 0x7f06003b
+int string library_circularprogressbutton_isOpenSource 0x7f06003c
+int string library_circularprogressbutton_libraryDescription 0x7f06003d
+int string library_circularprogressbutton_libraryName 0x7f06003e
+int string library_circularprogressbutton_libraryVersion 0x7f06003f
+int string library_circularprogressbutton_libraryWebsite 0x7f060040
+int string library_circularprogressbutton_licenseId 0x7f060041
+int string library_circularprogressbutton_repositoryLink 0x7f060042
+int string login_fail 0x7f060043
+int string login_success 0x7f060044
+int string not_updated_yet 0x7f060045
+int string pull_to_refresh 0x7f060046
+int string refreshing 0x7f060047
+int string release_to_refresh 0x7f060048
+int string search_menu_title 0x7f060027
+int string select_pic_camera 0x7f060049
+int string select_pic_photo_lib 0x7f06004a
+int string status_bar_notification_info_overflow 0x7f060028
+int string time_error 0x7f06004b
+int string updated_at 0x7f06004c
+int string updated_just_now 0x7f06004d
+int string wyt_my_theme 0x7f06004e
+int string wyt_user_name 0x7f06004f
+int string xposed_app_description 0x7f060050
+int string xposed_package_name 0x7f060051
+>>>>>>> Stashed changes
 int style AlertDialog_AppCompat 0x7f07008b
 int style AlertDialog_AppCompat_Light 0x7f07008c
 int style Animation_AppCompat_Dialog 0x7f07008d

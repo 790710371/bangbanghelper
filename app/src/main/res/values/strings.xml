@@ -17,4 +17,7 @@
     <string name="time_error">时间有问题</string>
     <string name="login_success">登录成功</string>
     <string name="login_fail">登录失败</string>
+    <string name="select_pic_camera">拍照</string>
+    <string name="select_pic_photo_lib">从相册选择</string>
+    <string name="btn_select_pic_cancle">取消</string>
 </resources>

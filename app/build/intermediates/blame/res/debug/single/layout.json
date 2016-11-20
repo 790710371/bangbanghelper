@@ -176,6 +176,10 @@
         "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\layout\\wyt_register.xml"
     },
     {
+        "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_pic_popup_window.xml",
+        "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\layout\\select_pic_popup_window.xml"
+    },
+    {
         "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
         "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
     },
