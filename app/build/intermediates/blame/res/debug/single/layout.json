@@ -20,12 +20,12 @@
         "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\notification_template_big_media.xml"
     },
     {
-        "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\main_middle_content.xml",
-        "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\layout\\main_middle_content.xml"
-    },
-    {
         "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
         "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\main_middle_content.xml",
+        "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\layout\\main_middle_content.xml"
     },
     {
         "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
@@ -98,6 +98,10 @@
     {
         "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
         "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\abc_select_dialog_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\swipeback_layout.xml",
+        "source": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\src\\main\\res\\layout\\swipeback_layout.xml"
     },
     {
         "merged": "C:\\Users\\chenlei\\Desktop\\bangbanghelper\\app\\build\\intermediates\\res\\merged\\debug\\layout\\mix_text_image.xml",

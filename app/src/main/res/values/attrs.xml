@@ -68,5 +68,19 @@
         <!-- 自动计算按下(pressed)状态颜色的系数, 值为0时不自动计算 -->
         <attr name="btnPressedRatio" format="float"/>
     </declare-styleable>
+    <declare-styleable name="SwipeBackLayout">
+        <attr name="edge_size" format="dimension"/>
+        <attr name="edge_flag">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+            <enum name="bottom" value="2" />
+            <enum name="all" value="3" />
+        </attr>
+        <attr name="shadow_left" format="reference"/>
+        <attr name="shadow_right" format="reference"/>
+        <attr name="shadow_bottom" format="reference"/>
+    </declare-styleable>
+
+    <attr name="SwipeBackLayoutStyle" format="reference"/>
 
 </resources>

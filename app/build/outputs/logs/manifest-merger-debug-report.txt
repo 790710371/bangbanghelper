@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:2:1-124:12
+ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:2:1-126:12
 	package
 		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:3:5-36
 		INJECTED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml
@@ -122,7 +122,7 @@ ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.
 	android:name
 		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:31:22-65
 application
-ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:33:5-122:19
+ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:33:5-124:19
 MERGED from [com.google.android.gms:play-services-appindexing:9.6.1] C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\9.6.1\AndroidManifest.xml:18:5-19
 MERGED from [com.google.android.gms:play-services-base:9.6.1] C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.6.1\AndroidManifest.xml:18:5-20:19
 MERGED from [com.google.android.gms:play-services-basement:9.6.1] C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.6.1\AndroidManifest.xml:19:5-21:19
@@ -145,7 +145,7 @@ MERGED from [com.android.support:animated-vector-drawable:24.2.1] C:\Users\chenl
 	android:icon
 		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:36:9-45
 	android:theme
-		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:38:9-47
+		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:38:9-56
 	android:name
 		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:34:9-38
 supports-screens
@@ -257,47 +257,51 @@ ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.
 	android:name
 		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:97:19-58
 activity#com.mero.wyt_register.activity.LoginAty
-ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:99:9-106:20
+ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:99:9-107:20
 	android:screenOrientation
 		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:101:13-49
 	android:exported
 		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:100:13-36
+	android:theme
+		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:102:13-51
 	android:name
 		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:99:19-52
 intent-filter#android.intent.category.DEFAULT+login.action
-ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:102:13-105:29
+ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:103:13-106:29
 action#login.action
-ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:103:17-62
+ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:104:17-62
 	android:name
-		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:103:25-52
+		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:104:25-52
 activity#com.mero.wyt_register.activity.RegisterAty
-ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:107:9-109:20
+ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:108:9-111:20
 	android:screenOrientation
-		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:108:12-48
+		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:109:12-48
+	android:theme
+		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:110:13-51
 	android:name
-		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:107:19-55
+		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:108:19-55
 activity#com.mero.wyt_register.activity.PullToFreshLayoutTest
-ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:110:9-67
+ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:112:9-67
 	android:name
-		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:110:19-65
+		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:112:19-65
 meta-data#xposedmodule
-ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:112:9-114:36
+ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:114:9-116:36
 	android:value
-		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:114:13-33
+		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:116:13-33
 	android:name
-		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:113:13-40
+		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:115:13-40
 meta-data#xposedminversion
-ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:115:9-117:34
+ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:117:9-119:34
 	android:value
-		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:117:13-31
+		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:119:13-31
 	android:name
-		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:116:13-44
+		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:118:13-44
 meta-data#xposeddescription
-ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:118:9-120:62
+ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:120:9-122:62
 	android:value
-		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:120:13-59
+		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:122:13-59
 	android:name
-		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:119:13-45
+		ADDED from C:\Users\chenlei\Desktop\bangbanghelper\app\src\main\AndroidManifest.xml:121:13-45
 activity#com.google.android.gms.common.api.GoogleApiActivity
 ADDED from [com.google.android.gms:play-services-base:9.6.1] C:\Users\chenlei\Desktop\bangbanghelper\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.6.1\AndroidManifest.xml:19:9-172
 	android:exported

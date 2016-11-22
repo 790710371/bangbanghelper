@@ -6,7 +6,6 @@ import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
-import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
 import android.provider.MediaStore;
@@ -17,7 +16,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.mero.wyt_register.BaseActivity;
+import com.mero.wyt_register.Base.BaseSwipeBackLayout;
 import com.mero.wyt_register.Config;
 import com.mero.wyt_register.R;
 import com.mero.wyt_register.net.RegisterService;
@@ -27,16 +26,11 @@ import com.mero.wyt_register.utils.SDCardUtils;
 import com.mero.wyt_register.widget.RoundButton;
 import com.mero.wyt_register.widget.SelectPicPopupWindow;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.File;
-
 /**
  * Created by chenlei on 2016/11/17.
  */
 
-public class RegisterAty extends BaseActivity implements View.OnClickListener {
+public class RegisterAty extends BaseSwipeBackLayout implements View.OnClickListener {
     private ImageView img_upload;
     private EditText edt_account = null;
     private EditText edt_pwd = null;

@@ -140,7 +140,7 @@
               android:layout_marginTop="5dp"
               android:layout_marginLeft="5dp"
               />
-          <TextView 
+          <TextView
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:text="一键新机"
@@ -166,6 +166,7 @@
         android:background="#FFFFFF"
         >
    		<com.mero.wyt_register.widget.RoundButton
+			android:id="@+id/btn_main_clean"
    		    android:layout_width="300dp"
    		    android:layout_height="50dp"
 			android:text="一键新机"

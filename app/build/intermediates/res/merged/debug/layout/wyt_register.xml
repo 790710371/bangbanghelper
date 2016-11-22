@@ -5,7 +5,8 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f5f5f5">
+    android:background="#f5f5f5"
+    >
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -98,6 +99,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="密码"
+                android:inputType="textPassword"
                 android:maxLines="1"
                 android:textSize="15sp"
                 android:textColorHighlight="#77000000"

@@ -9,12 +9,14 @@
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
             backward-compatibility can go here.
+
         -->
     </style>
 
     <!-- Application theme. -->
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name= "android:windowIsTranslucent" >true </item>
     </style>
     <style name="SwitchButtonMD">
         <item name="kswThumbDrawable">@drawable/ksw_md_thumb</item>
@@ -26,6 +28,13 @@
         <item name="kswThumbMarginBottom">-14dp</item>
         <item name="kswThumbWidth">@dimen/ksw_md_thumb_ripple_size</item>
         <item name="kswThumbHeight">@dimen/ksw_md_thumb_ripple_size</item>
+    </style>
+
+    <style name="SwipeBackLayout">
+        <item name="edge_size">50dip</item>
+        <item name="shadow_left">@drawable/shadow_left</item>
+        <item name="shadow_right">@drawable/shadow_right</item>
+        <item name="shadow_bottom">@drawable/shadow_bottom</item>
     </style>
 
 </resources>

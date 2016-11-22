@@ -3,7 +3,7 @@ package com.mero.wyt_register.activity;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.mero.wyt_register.BaseActivity;
+import com.mero.wyt_register.Base.BaseActivity;
 import com.mero.wyt_register.R;
 import com.mero.wyt_register.widget.PullToFreshLayout;
 

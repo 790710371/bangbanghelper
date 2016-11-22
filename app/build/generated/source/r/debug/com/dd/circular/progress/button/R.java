@@ -8,20 +8,20 @@ package com.dd.circular.progress.button;
 
 public final class R {
 	public static final class attr {
-		public static final int cpb_colorIndicator = 0x7f0100a5;
-		public static final int cpb_colorIndicatorBackground = 0x7f0100a6;
-		public static final int cpb_colorProgress = 0x7f0100a4;
-		public static final int cpb_cornerRadius = 0x7f0100a9;
-		public static final int cpb_iconComplete = 0x7f0100a8;
-		public static final int cpb_iconError = 0x7f0100a7;
-		public static final int cpb_paddingProgress = 0x7f0100aa;
-		public static final int cpb_selectorComplete = 0x7f01009e;
-		public static final int cpb_selectorError = 0x7f01009f;
-		public static final int cpb_selectorIdle = 0x7f01009d;
-		public static final int cpb_textComplete = 0x7f0100a0;
-		public static final int cpb_textError = 0x7f0100a2;
-		public static final int cpb_textIdle = 0x7f0100a1;
-		public static final int cpb_textProgress = 0x7f0100a3;
+		public static final int cpb_colorIndicator = 0x7f0100a6;
+		public static final int cpb_colorIndicatorBackground = 0x7f0100a7;
+		public static final int cpb_colorProgress = 0x7f0100a5;
+		public static final int cpb_cornerRadius = 0x7f0100aa;
+		public static final int cpb_iconComplete = 0x7f0100a9;
+		public static final int cpb_iconError = 0x7f0100a8;
+		public static final int cpb_paddingProgress = 0x7f0100ab;
+		public static final int cpb_selectorComplete = 0x7f01009f;
+		public static final int cpb_selectorError = 0x7f0100a0;
+		public static final int cpb_selectorIdle = 0x7f01009e;
+		public static final int cpb_textComplete = 0x7f0100a1;
+		public static final int cpb_textError = 0x7f0100a3;
+		public static final int cpb_textIdle = 0x7f0100a2;
+		public static final int cpb_textProgress = 0x7f0100a4;
 	}
 	public static final class color {
 		public static final int cpb_blue = 0x7f09002d;
@@ -55,7 +55,7 @@ public final class R {
 		public static final int library_circularprogressbutton_repositoryLink = 0x7f060042;
 	}
 	public static final class styleable {
-		public static final int[] CircularProgressButton = { 0x7f01009d, 0x7f01009e, 0x7f01009f, 0x7f0100a0, 0x7f0100a1, 0x7f0100a2, 0x7f0100a3, 0x7f0100a4, 0x7f0100a5, 0x7f0100a6, 0x7f0100a7, 0x7f0100a8, 0x7f0100a9, 0x7f0100aa };
+		public static final int[] CircularProgressButton = { 0x7f01009e, 0x7f01009f, 0x7f0100a0, 0x7f0100a1, 0x7f0100a2, 0x7f0100a3, 0x7f0100a4, 0x7f0100a5, 0x7f0100a6, 0x7f0100a7, 0x7f0100a8, 0x7f0100a9, 0x7f0100aa, 0x7f0100ab };
 		public static final int CircularProgressButton_cpb_colorIndicator = 8;
 		public static final int CircularProgressButton_cpb_colorIndicatorBackground = 9;
 		public static final int CircularProgressButton_cpb_colorProgress = 7;

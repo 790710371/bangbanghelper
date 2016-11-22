@@ -10,21 +10,17 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.mero.wyt_register.BaseActivity;
+import com.mero.wyt_register.Base.BaseSwipeBackLayout;
 import com.mero.wyt_register.Config;
 import com.mero.wyt_register.R;
 import com.mero.wyt_register.net.LoginService;
 import com.mero.wyt_register.widget.RoundButton;
 
-import org.w3c.dom.Text;
-
-import static com.amap.loc.c.m;
-
 /**
  * Created by chenlei on 2016/11/16.
  */
 
-public class LoginAty extends BaseActivity implements View.OnClickListener{
+public class LoginAty extends BaseSwipeBackLayout implements View.OnClickListener{
     private static final String TAG = "LoginAty";
     private EditText edt_account = null;
     private EditText edt_pwd = null;
@@ -115,7 +111,7 @@ public class LoginAty extends BaseActivity implements View.OnClickListener{
 
                 break;
             case R.id.tx_login_click_to_register:
-                showActivity(this,RegisterAty.class);
+                showActivity(LoginAty.this,RegisterAty.class);
                 break;
         }
 

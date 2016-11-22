@@ -35,7 +35,7 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/Theme.AppCompat">
+        android:theme="@android:style/Theme.NoTitleBar">
 
         <!-- 屏幕适配方案 -->
         <supports-screens
@@ -98,14 +98,16 @@
             android:theme="@android:style/Theme.NoTitleBar"/>
         <activity android:name=".activity.LoginAty"
             android:exported="true"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat">
             <intent-filter>
                 <action android:name="login.action"></action>
                 <category android:name="android.intent.category.DEFAULT"></category>
             </intent-filter>
         </activity>
         <activity android:name=".activity.RegisterAty"
-           android:screenOrientation="portrait">
+           android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat">
         </activity>
         <activity android:name=".activity.PullToFreshLayoutTest"/>
         <!-- Xposed -->
